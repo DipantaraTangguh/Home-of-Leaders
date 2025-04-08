@@ -80,7 +80,7 @@ const LoginPage = () => {
 
               {/* Input Password */}
               <input
-                type={showPassword ? "text" : "password"}
+                type={showPassword ? "text" : "password"} 
                 placeholder="Masukkan password Anda"
                 className="w-full text-sm md:text-base bg-transparent outline-none pl-8 pr-10"
                 value={password}
@@ -111,7 +111,7 @@ const LoginPage = () => {
           {/* Login Button */}
           <button
             type="button"
-            className={`w-full bg-blue-900 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 ${
+            className={`w-full bg-blue-900 text-white py-2 rounded-lg font-semibold ${
               email.length > 0 && password.length > 0
                 ? "bg-[#0D4690] text-white cursor-pointer"
                 : "bg-gray-400 text-white cursor-not-allowed"

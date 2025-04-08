@@ -59,7 +59,7 @@ function EmailVerificationPage() {
           {/* Login Button */}
           <button
             type="button"
-            className={`w-full bg-blue-900 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 ${
+            className={`w-full bg-blue-900 text-white py-2 rounded-lg font-semibold  ${
               email.length > 0
                 ? "bg-[#0D4690] text-white cursor-pointer"
                 : "bg-gray-400 text-white cursor-not-allowed"
