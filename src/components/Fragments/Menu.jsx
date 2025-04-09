@@ -21,7 +21,6 @@ const Menu = () => {
           item={item}
           active={active}
           setActive={setActive}
-          // Di sini item akan tampil di semua ukuran layar
           extraClasses="block md:inline-block"
         />
       ))}

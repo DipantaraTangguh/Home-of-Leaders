@@ -30,11 +30,7 @@ const LoginPage = () => {
                 : "opacity-0 scale-90 translate-y-3"
             }`}
           >
-            <img 
-            src="/images/bcf-logo.png" 
-            alt="BCF Logo" 
-            className="h-17" 
-            />
+            <img src="/images/bcf-logo.png" alt="BCF Logo" className="h-17" />
             <img
               src="/images/hol-logo.png"
               alt="Home of Leaders Logo"
@@ -80,7 +76,7 @@ const LoginPage = () => {
 
               {/* Input Password */}
               <input
-                type={showPassword ? "text" : "password"} 
+                type={showPassword ? "text" : "password"}
                 placeholder="Masukkan password Anda"
                 className="w-full text-sm md:text-base bg-transparent outline-none pl-8 pr-10"
                 value={password}
@@ -143,7 +139,7 @@ const LoginPage = () => {
       <div className="hidden md:flex md:w-1/2 text-white justify-center items-center p-8 rounded-l-lg">
         <div className="text-center">
           <img
-            src="./public/images/Illustrations/selamat-datang-alumni.png"
+            src="images/Illustrations/selamat-datang-alumni.png"
             alt="Illustration"
             className="w-140 mx-auto mb-4"
           />
