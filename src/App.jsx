@@ -8,9 +8,9 @@ function App() {
   return (
     <div>
       {/* <EmailVerificationPage/> */}
-      <LoginPage />
+      {/* <LoginPage /> */}
       {/* <Navbar /> */}
-      {/* <LandingPage /> */}
+      <LandingPage />
     </div>
   );
 }

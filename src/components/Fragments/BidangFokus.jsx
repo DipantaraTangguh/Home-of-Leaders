@@ -73,19 +73,26 @@ const centers = {
   research: {
     title: "Research Center",
     content: (
-      <p>
-        Berfokus pada pengembangan{" "}
-        <strong>pengembangan penelitian dan kajian</strong> terkait{" "}
-        <strong>Sustainable Developement Goals (SDGs)</strong>, khususnya{" "}
-        <strong>
-          isu kesehatan, pendidikan, dan lingkungan oleh para alumni
-        </strong>{" "}
-        dengan latar belakang terkait (khususnya akademisi).{" "}
-        <strong>Mengupayakan skema kolaborasi</strong> dengan dunia usaha,
-        lembaga nasional dan internasional, universitas dan Sekretariat SDGs
-        Bapennas melalui SDGs Hub yang dikembangkan bersama divisi Sustainable
-        Development Initiative.
-      </p>
+      <div>
+        <p>
+          Berfokus pada pengembangan{" "}
+          <strong>pengembangan penelitian dan kajian</strong> terkait{" "}
+          <strong>Sustainable Developement Goals (SDGs)</strong>, khususnya{" "}
+          <strong>
+            isu kesehatan, pendidikan, dan lingkungan oleh para alumni
+          </strong>{" "}
+          dengan latar belakang terkait (khususnya akademisi).{" "}
+          <strong>Mengupayakan skema kolaborasi</strong> dengan dunia usaha,
+          lembaga nasional dan internasional, universitas dan Sekretariat SDGs
+          Bapennas melalui SDGs Hub yang dikembangkan bersama divisi Sustainable
+          Development Initiative.
+        </p>
+        <img
+          src="/images/research-center-img.png"
+          alt="research-center"
+          className="w-xs mt-4"
+        />
+      </div>
     ),
   },
   advocacy: {
