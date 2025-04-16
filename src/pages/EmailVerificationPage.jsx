@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { FaEnvelope } from "react-icons/fa";
+import { HolBcfLogo } from "../components/Elements/HolBcfLogo";
+import { RightIlustration } from "../components/Elements/RightIlustration";
 
 function EmailVerificationPage() {
   // State Variables
@@ -9,32 +12,15 @@ function EmailVerificationPage() {
       {/* Left Side Email Verification Form */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-8">
         {/* Logos */}
-        <div className="flex justify-center items-center h-auto w-full mb-10">
-          {/* Logo BCF */}
-          <img
-            src="/images/bcf-logo.png"
-            alt="BCF Logo"
-            className="h-17"
-          />
-
-          {/* space between logo */}
-          <div className="w-"></div>
-
-          {/* Logo Home of Leaders */}
-          <img
-            src="/images/hol-logo.png"
-            alt="Home of Leaders Logo"
-            className="h-17"
-          />
-        </div>
+        <HolBcfLogo />
 
         {/* Title Card */}
         <div className="bg-white p-8 py-20 rounded-lg shadow-md w-full max-w-xl">
           {/* Title Card */}
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">
+          <h2 className="text-2xl font-semibold text-black-800 mb-4">
             Verifikasi Email
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-grawy-600 mb-6">
             Masukkan email dan password sudah didaftarkan sebelumnya oleh tim{" "}
             <strong>BCF</strong> yaa!
           </p>
@@ -45,7 +31,9 @@ function EmailVerificationPage() {
               Email
             </label>
             <div className="flex items-center border rounded px-3 py-2 bg-gray-100">
-              <span className="text-gray-500">✉</span>
+              <span className="text-gray-500">
+                <FaEnvelope />
+              </span>
               <input
                 type="email"
                 placeholder="Masukkan email Anda"
@@ -72,15 +60,7 @@ function EmailVerificationPage() {
       </div>
 
       {/* Riht Side  Illustration*/}
-      <div className="hidden md:flex md:w-1/2 text-white justify-center items-center p-8 rounded-l-lg">
-        <div className="text-center">
-          <img
-            src="./public/images/Illustrations/verifikasi-email-alumni.png"
-            alt="Illustration"
-            className="w-140 mx-auto mb-4"
-          />
-        </div>
-      </div>
+      <RightIlustration imageSrc="/images/Illustrations/verifikasi-email-alumni.png" />
     </div>
   );
 }
