@@ -9,7 +9,7 @@ const LandingPage = () => {
 
       {/* Jumbotron */}
       <div className="landing-page container mx-auto ">
-        <div className="jumbotron w-full ">
+        <div className="jumbotron w-full mt-10 ">
           <img
             src="/images/landing-page.png"
             alt="Landing Banner"
