@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { FaEye, FaEyeSlash, FaEnvelope, FaLock } from "react-icons/fa";
+import { RightIlustration } from "../components/Elements/RightIlustration";
 
 const LoginPage = () => {
   // State Variables
@@ -61,7 +63,9 @@ const LoginPage = () => {
               Email
             </label>
             <div className="flex items-center border rounded px-3 py-2 bg-gray-100">
-              <span className="text-gray-500">✉</span>
+              <span className="text-gray-500">
+                <FaEnvelope />
+              </span>
               <input
                 type="email"
                 placeholder="Masukkan email Anda"
@@ -79,7 +83,9 @@ const LoginPage = () => {
             </label>
             <div className="relative flex items-center border rounded-md px-3 py-2 bg-gray-100">
               {/* key Icon */}
-              <span className="text-gray-500 absolute left-3">🔑</span>
+              <span className="text-gray-500 absolute left-3">
+                <FaLock />
+              </span>
 
               {/* Input Password */}
               <input
@@ -95,7 +101,7 @@ const LoginPage = () => {
                 className="absolute right-3 text-gray-500 focus:outline-none"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? "🙈" : "👁️"}
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
           </div>
@@ -130,32 +136,26 @@ const LoginPage = () => {
         </div>
 
         {/* Footer */}
-        <p className="text-sm text-gray-500 mt-6">
-          Baca{" "}
-          <a href="#" className="text-orange-500">
-            Syarat Ketentuan
-          </a>{" "}
-          dan{" "}
-          <a href="#" className="text-orange-500">
-            Kebijakan Privasi
-          </a>{" "}
-          kami.
-        </p>
-        <p className="text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} Bakrie Center Foundation.
-        </p>
+        <div className=" flex flex-col justify-center items-center">
+          <p className="text-sm text-gray-500 mt-6">
+            Baca{" "}
+            <a href="#" className="text-orange-500">
+              Syarat Ketentuan
+            </a>{" "}
+            dan{" "}
+            <a href="#" className="text-orange-500">
+              Kebijakan Privasi
+            </a>{" "}
+            kami.
+          </p>
+          <p className="text-sm text-gray-500">
+            &copy; {new Date().getFullYear()} Bakrie Center Foundation.
+          </p>
+        </div>
       </div>
 
       {/* Right Side (Illustration) */}
-      <div className="hidden md:flex md:w-1/2 text-white justify-center items-center p-8 rounded-l-lg">
-        <div className="text-center">
-          <img
-            src="images/Illustrations/selamat-datang-alumni.png"
-            alt="Illustration"
-            className="w-140 mx-auto mb-4"
-          />
-        </div>
-      </div>
+      <RightIlustration imageSrc="images/Illustrations/selamat-datang-alumni.png" />
     </div>
   );
 };
