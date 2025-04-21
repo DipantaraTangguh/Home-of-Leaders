@@ -12,7 +12,7 @@ function EmailVerificationPage() {
         <div className="flex justify-center items-center h-auto w-full mb-10">
           {/* Logo BCF */}
           <img
-            src="/images/bcf-logo.png"
+            src="/images/logo/bcf-logo.png"
             alt="BCF Logo"
             className="h-17"
           />
@@ -22,7 +22,7 @@ function EmailVerificationPage() {
 
           {/* Logo Home of Leaders */}
           <img
-            src="/images/hol-logo.png"
+            src="/images/logo/hol-logo.png"
             alt="Home of Leaders Logo"
             className="h-17"
           />

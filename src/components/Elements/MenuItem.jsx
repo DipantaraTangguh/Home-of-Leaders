@@ -1,14 +1,13 @@
-const MenuItem = ({ item, active, setActive, extraClasses = "" }) => {
-  const isActive = active === item;
+const MenuItem = ({ item, path, activePath, onClick, extraClasses = "" }) => {
+  const isActive = activePath === path;
 
   return (
     <button
-      onClick={() => setActive(item)}
+      onClick={onClick}
       className={`
         relative text-gray-700 font-medium hover:text-blue-600
         ${isActive ? "text-blue-700 font-semibold" : ""}
-        ${extraClasses}
-      `}
+        ${extraClasses}`}
     >
       {item}
       {isActive && (

@@ -4,7 +4,7 @@ const ProfilePicture = () => {
   return (
     <div className="relative">
       <img
-        src="/images/profile-picture.png"
+        src="/images/icon/profile-picture.png"
         alt="Profile"
         className="w-13 h-13 rounded-full border-2 border-gray-300"
       />

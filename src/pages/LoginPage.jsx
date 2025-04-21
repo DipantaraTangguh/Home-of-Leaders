@@ -1,11 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   // State Variables
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="flex min-h-screen bg-gray-100 ">
@@ -15,7 +18,7 @@ const LoginPage = () => {
         <div className="flex justify-center items-center h-auto w-full transition-all duration-700 ease-in-out mb-5">
           {/* HOL Logo Before ANomation */}
           <img
-            src="/images/hol-logo.png"
+            src="/images/logo/hol-logo.png"
             alt="Home of Leaders Logo"
             className={`h-25 transition-all duration-700 ease-in-out ${
               email.length ? "opacity-0 scale-90" : "opacity-100 scale-100"
@@ -30,9 +33,13 @@ const LoginPage = () => {
                 : "opacity-0 scale-90 translate-y-3"
             }`}
           >
-            <img src="/images/bcf-logo.png" alt="BCF Logo" className="h-17" />
             <img
-              src="/images/hol-logo.png"
+              src="/images/logo/bcf-logo.png"
+              alt="BCF Logo"
+              className="h-17"
+            />
+            <img
+              src="/images/logo/hol-logo.png"
               alt="Home of Leaders Logo"
               className="h-17"
             />
@@ -99,9 +106,10 @@ const LoginPage = () => {
               <input type="checkbox" className="w-4 h-4" />
               <span className="text-orange-500 text-sm">Ingat Saya</span>
             </label>
-            <a href="#" className="text-orange-500 text-sm">
+            {/* <a href="#" className="text-orange-500 text-sm"></a> */}
+            <Link to="/forgot-password" className="text-orange-500 text-sm">
               Lupa Password?
-            </a>
+            </Link>
           </div>
 
           {/* Login Button */}
@@ -113,6 +121,9 @@ const LoginPage = () => {
                 : "bg-gray-400 text-white cursor-not-allowed"
             }`}
             disabled={!email.length > 0 && !password.length > 0}
+            onClick={() => {
+              navigate("/landing-page");
+            }}
           >
             Masuk
           </button>

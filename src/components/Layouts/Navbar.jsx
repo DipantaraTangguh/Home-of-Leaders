@@ -3,9 +3,11 @@ import Logo from "../Elements/Logo";
 import Menu from "../Fragments/Menu";
 import ProfilePicture from "../Elements/ProfilePicture";
 import { Menu as MenuIcon, X as CloseIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-white shadow-md">
@@ -23,7 +25,7 @@ const Navbar = () => {
 
         {/* Menu Desktop (hanya muncul di layar medium ke atas) */}
         <div className="hidden md:flex">
-          <Menu />
+          <Menu navigate={navigate} />
         </div>
 
         {/* Profile Picture */}
@@ -35,7 +37,7 @@ const Navbar = () => {
       {/* Menu Mobile (muncul saat isOpen = true) */}
       {isOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-lg p-4 transition-all duration-300">
-          <Menu />
+          <Menu navigate={navigate} />
         </div>
       )}
     </nav>
