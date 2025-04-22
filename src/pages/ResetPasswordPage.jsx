@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash, FaCheckCircle, FaLock } from "react-icons/fa";
-import { HolBcfLogo } from "../components/Elements/HolBcfLogo";
 import { RightIlustration } from "../components/Elements/RightIlustration";
+import { HolBcfLogo } from "../components/Elements/HolBcfLogo";
 
 function ResetPasswordPage() {
   const [password, setPassword] = useState("");

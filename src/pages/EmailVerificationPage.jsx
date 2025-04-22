@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
-import { HolBcfLogo } from "../components/Elements/HolBcfLogo";
 import { RightIlustration } from "../components/Elements/RightIlustration";
+import { useNavigate } from "react-router-dom";
 
 function EmailVerificationPage() {
+  const navigate = useNavigate();
+
   // State Variables
   const [email, setEmail] = useState("");
 
@@ -70,6 +72,9 @@ function EmailVerificationPage() {
                 : "bg-gray-400 text-white cursor-not-allowed"
             }`}
             disabled={!email.length > 0}
+            onClick={() => {
+              navigate("/reset-password");
+            }}
           >
             Masuk
           </button>

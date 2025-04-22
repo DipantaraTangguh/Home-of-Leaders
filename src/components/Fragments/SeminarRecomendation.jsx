@@ -1,4 +1,3 @@
-import { Pointer, Section } from "lucide-react";
 import GrayLine from "../Elements/GrayLine";
 import { useState } from "react";
 

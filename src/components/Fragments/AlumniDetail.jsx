@@ -1,9 +1,9 @@
 import React from "react";
+import Navbar from "../Layouts/Navbar";
 import { Link, useParams } from "react-router-dom";
-import Navbar from "../Layouts/navbar";
 import alumniData from "../../assets/data/alumniData";
 
-export default function AlumniDetail() {
+const AlumniDetail = () => {
   const { slug } = useParams();
   const alum = alumniData.find((a) => a.slug === slug);
 
@@ -86,4 +86,6 @@ export default function AlumniDetail() {
       </div>
     </>
   );
-}
+};
+
+export default AlumniDetail;
