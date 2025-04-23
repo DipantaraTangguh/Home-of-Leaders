@@ -16,7 +16,7 @@ const ProgramDescription = () => {
                 Deskripsi Program
               </h2>
               <hr className="border-t border-gray-300 mb-4" />
-              <p className="text-justify">
+              <p className="text-justify text-lg">
                 Forum ikatan alumni lintas generasi – Home of Leaders dari
                 program-program Bakrie Center Foundation (Bakrie Graduate
                 Fellowship, LEAD Indonesia, dan Campus Leaders Program), untuk
@@ -28,8 +28,8 @@ const ProgramDescription = () => {
             </div>
 
             {/* Visi dan Misi */}
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="bg-orange-50 border-l-4 border-orange-400 p-4 rounded-xl w-full md:w-1/2">
+            <div className="text-lg">
+              <div className="bg-orange-50 border-l-4 border-orange-400 px-4 py-7 rounded-xl w-full">
                 <h3 className="text-orange-600 font-bold text-lg mb-2">Visi</h3>
                 <p>
                   Terciptanya alumni BCF yang berdaya melalui kolaborasi
@@ -38,7 +38,7 @@ const ProgramDescription = () => {
                 </p>
               </div>
 
-              <div className="bg-orange-50 border-l-4 border-orange-400 p-4 rounded-xl w-full md:w-1/2">
+              <div className="bg-orange-50 border-l-4 border-orange-400 px-4 py-7 rounded-xl w-full my-5">
                 <h3 className="text-orange-600 font-bold text-lg mb-2">Misi</h3>
                 <p>
                   Peningkatan kontribusi dan solidaritas alumni BCF dalam

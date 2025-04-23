@@ -7,6 +7,7 @@ import DetailHomeofLeaders from "../components/Fragments/DetailHomeofLeaders";
 import Jumbotron from "../components/Fragments/Jumbotron";
 import ProgramDescription from "../components/Fragments/ProgramDescription";
 import Navbar from "../components/Layouts/Navbar";
+import { Footer } from "../components/Layouts/Footer";
 
 const LandingPage = () => {
   return (
@@ -34,6 +35,8 @@ const LandingPage = () => {
 
       {/* Detail Home of Leaders */}
       <DetailHomeofLeaders />
+
+      <Footer />
     </>
   );
 };
