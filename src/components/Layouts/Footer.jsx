@@ -1,4 +1,5 @@
 import { FaEnvelope, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -32,24 +33,24 @@ export const Footer = () => {
             <h4 className="font-semibold text-blue-800 mb-3">Menu</h4>
             <ul className="space-y-1 text-sm text-gray-800">
               <li>
-                <a href="#" className="hover:text-blue-800">
+                <Link to="/landing-page" className="hover:text-blue-800">
                   Beranda
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-800">
+                <Link to="/alumni-center" className="hover:text-blue-800">
                   Alumni Center
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-800">
+                <Link to="/advocacy-center/iysf" className="hover:text-blue-800">
                   Advocacy Center
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-800">
+                <Link to="/surat-rekomendasi" className="hover:text-blue-800">
                   Surat Rekomendasi
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

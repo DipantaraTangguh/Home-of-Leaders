@@ -12,6 +12,8 @@ import ResetPasswordPage from "./pages/ResetPasswordPage";
 import ResearchDetailPublikasi from "./components/Fragments/ResearchDetailPublikasi";
 import ResearchCenterProsidingPage from "./pages/ResearchCenterProsidingPage";
 import ResearchCenterMyresearchPage from "./pages/ResearchCenterMyResearchPage";
+import CffDetailPage from "./pages/CffDetailPage";
+import BaDetailPage from "./pages/BaDetailPage";
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
           <Route path="/forgot-password" element={<EmailVerificationPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route path="/alumni/:slug" element={<AlumniDetail />} />
+          <Route path="/callforfellows/detail" element={<CffDetailPage />} />
+          <Route path="/bondingactivities/detail" element={<BaDetailPage />} />
         </Routes>
       </BrowserRouter>
     </div>

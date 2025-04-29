@@ -1,8 +1,14 @@
-import { AlumniCenterCard } from "../Elements/AlumniCenterCard";
-import { CallForFellows } from "../../assets/data/CallForFellows";
+import { useNavigate } from "react-router-dom";
+import { AlumniCenterCardCFF, AlumniCenterCardBA, AlumniCenterCardIYSF } from "../Elements/AlumniCenterCard";
+import { CallForFellowsData } from "../../assets/data/CallForFellowsData";
+import { BondingActivitiesData } from "../../assets/data/BondingActivitiesData";
+import { AdvocacyCentreData } from "../../assets/data/AdvocacyCentreData";
 
 // CALL FOR FELLOWS SECTION WRAPPER
 export const CallForFellowsSection = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="flex flex-col lg:flex-row bg-[#F5D6C0] rounded-[40px] py-12 px-6 lg:px-12 gap-5 mb-10">
       {/* INFO BOX */}
@@ -17,25 +23,20 @@ export const CallForFellowsSection = () => {
           mereka. Temukan peluang untuk memaksimalkan potensi dirimu di
           #CallForFellows!
         </p>
-        <button className="bg-[#E89229] hover:bg-[#feeadc] hover:text-[#E89229] transition text-[#FFFFFF] px-6 py-2 rounded-full text-sm font-semibold border border-[#E89229]">
+        <button onClick={() => navigate("/callforfellows/detail")}className="bg-[#E89229] hover:bg-[#feeadc] hover:text-[#E89229] transition text-[#FFFFFF] px-6 py-2 rounded-full text-sm font-semibold border border-[#E89229]">
           Lihat Detail
         </button>
       </div>
 
       {/* SCROLLABLE CARD WRAPPER */}
-      <div className="w-full rounded-[40px] overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory">
+      <div className="w-full rounded-[40px] overflow-x-auto scroll-smooth snap-x snap-mandatory">
         <div className="flex gap-5 px-6 py-8 w-fit scroll-ml-6">
-          {CallForFellows.map((fellows, index) => (
-            <AlumniCenterCard
-              key={index}
-              companyImage={fellows.companyImage}
-              companyName={fellows.companyName}
-              jobPosition={fellows.jobPosition}
-              tags={fellows.tags}
-              duration={fellows.duration}
-              place={fellows.place}
-              applyingDate={fellows.applyingDate}
+          {CallForFellowsData.map((fellows) => (
+            <AlumniCenterCardCFF
+              key={fellows.id}
+              fellows={fellows}
               dateWhenMakeInformation={fellows.dateWhenMakeInformation}
+              disableButton={false}
             />
           ))}
         </div>
@@ -46,29 +47,27 @@ export const CallForFellowsSection = () => {
 
 // BONDING ACTIVITIES SECTION WRAPPER
 export const BondingActivitiesSection = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="flex flex-col lg:flex-row bg-[#BEC4D5] rounded-[40px] py-12 px-6 lg:px-12 gap-5 mb-10">
       {/* SCROLLABLE CARD WRAPPER */}
-      <div className="w-full rounded-[40px] overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory">
+      <div className="w-full rounded-[40px] overflow-x-auto scroll-smooth snap-x snap-mandatory">
         <div className="flex gap-5 px-6 py-8 w-fit scroll-ml-6">
-          {CallForFellows.map((bonding, index) => (
-            <AlumniCenterCard
-              key={index}
-              companyImage={bonding.companyImage}
-              companyName={bonding.companyName}
-              jobPosition={bonding.jobPosition}
-              tags={bonding.tags}
-              duration={bonding.duration}
-              place={bonding.place}
-              applyingDate={bonding.applyingDate}
+          {BondingActivitiesData.map((bonding) => (
+            <AlumniCenterCardBA
+              key={bonding.id}
+              bonding={bonding}
               dateWhenMakeInformation={bonding.dateWhenMakeInformation}
+              disableButton={false}
             />
           ))}
         </div>
       </div>
 
       {/* INFO BOX */}
-      <div className="bg-[#F2F3F6] rounded-[40px] p-15 lg:p-22 max-w-full lg:max-w-[480px] flex flex-col justify-between drop-shadow-lg">
+      <div className="bg-[#F2F3F6] rounded-[40px] p-15 lg:p-20 max-w-full lg:max-w-[480px] flex flex-col justify-between drop-shadow-lg">
         <h2 className="text-4xl font-bold text-[#0D4690] mb-4">
           Bonding Activities
         </h2>
@@ -80,7 +79,7 @@ export const BondingActivitiesSection = () => {
           memperkuat koneksi sekaligus menciptakan kolaborasi yang bermanfaat
           antar alumni.
         </p>
-        <button className="bg-[#0D4690] hover:bg-[#216EFFB2] transition text-white px-6 py-2 rounded-full text-sm font-semibold">
+        <button onClick={() => navigate("/bondingactivities/detail")} className="bg-[#0D4690] hover:bg-[#216EFFB2] transition text-white px-6 py-2 rounded-full text-sm font-semibold">
           Lihat Detail
         </button>
       </div>
@@ -90,12 +89,15 @@ export const BondingActivitiesSection = () => {
 
 // INDONESIA YOUTH SUSTAINABILITY FORUM SECTION WRAPPER
 export const IYSFSection = () => {
+  
+  const navigate = useNavigate();
+
   return (
-    <section className="flex flex-col lg:flex-row bg-[#479F76] rounded-[40px] py-12 px-6 lg:px-12 gap-5 mb-10">
+    <section className="flex flex-col lg:flex-row bg-[#479F76] rounded-[40px] py-12 px-6 lg:px-12 gap-5">
       {/* INFO BOX */}
-      <div className="bg-[#F5FBF7] rounded-[40px] p-15 lg:p-22 max-w-full lg:max-w-[480px] flex flex-col justify-between drop-shadow-lg">
-        <h2 className="text-4xl font-bold text-[#479F76] mb-4">
-          Indonesia <spam className="text-[#E89229]">Youth</spam>{" "}
+      <div className="bg-[#F5FBF7] rounded-[40px] p-15 max-w-full lg:max-w-[480px] flex flex-col justify-between drop-shadow-lg">
+        <h2 className="text-4xl font-bold text-[#479F76] mb-4 mt-4">
+          Indonesia <span className="text-[#E89229]">Youth</span>{" "}
           Sustainabiliity <span className="text-[#E89229]">Forum</span>
         </h2>
         <p className="text-sm text-gray-700 leading-relaxed mb-6">
@@ -106,25 +108,22 @@ export const IYSFSection = () => {
           kolaborasi bagi generasi muda untuk menciptakan dampak nyata dalam
           pembangunan berkelanjutan.
         </p>
-        <button className="bg-[#E89229] hover:bg-[#F5FBF7] hover:text-[#E89229] transition text-[#FFFFFF] px-6 py-2 rounded-full text-sm font-semibold border border-[#E89229]">
+        <button
+          onClick={() => navigate("/advocacy-center/iysf")}
+          className="bg-[#E89229] hover:bg-[#F5FBF7] hover:text-[#E89229] transition text-[#FFFFFF] px-6 py-2 rounded-full text-sm font-semibold border border-[#E89229]"
+        >
           Lihat Detail
         </button>
       </div>
 
       {/* SCROLLABLE CARD WRAPPER */}
-      <div className="w-full rounded-[40px] overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory">
-        <div className="flex gap-5 px-6 py-8 w-fit scroll-ml-6">
-          {CallForFellows.map((forum, index) => (
-            <AlumniCenterCard
-              key={index}
-              companyImage={forum.companyImage}
-              companyName={forum.companyName}
-              jobPosition={forum.jobPosition}
-              tags={forum.tags}
-              duration={forum.duration}
-              place={forum.place}
-              applyingDate={forum.applyingDate}
-              dateWhenMakeInformation={forum.dateWhenMakeInformation}
+      <div className="w-full rounded-[40px] overflow-x-auto scroll-smooth snap-x snap-mandatory">
+        <div className="flex gap-5 px-6 py-8 w-fit">
+          {AdvocacyCentreData.map((iysf) => (
+            <AlumniCenterCardIYSF
+              key={iysf.id}
+              iysf={iysf}
+              disableButton={false}
             />
           ))}
         </div>

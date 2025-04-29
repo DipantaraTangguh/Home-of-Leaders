@@ -1,9 +1,4 @@
-import {
-  CallForFellowsSection,
-  BondingActivitiesSection,
-  IYSFSection,
-} from "../components/Fragments/AlumniCenterSection";
-
+import { CallForFellowsSection, BondingActivitiesSection, IYSFSection } from "../components/Fragments/AlumniCenterSection";
 import Navbar from "../components/Layouts/Navbar";
 import { Footer } from "../components/Layouts/Footer";
 
@@ -12,9 +7,9 @@ function AlumniCenterPage() {
     <>
       <Navbar></Navbar>
       {/* FIXED */}
-      <main className=" container mx-auto px-6 py-10">
+      <main className="container mx-auto py-6 px-15">
         {/* TITLE */}
-        <h1 className="text-3xl font-bold mb-12 text-gray-800">
+        <h1 className="text-3xl font-bold mb-12 text-[#0D4690]">
           Alumni Center
         </h1>
 
