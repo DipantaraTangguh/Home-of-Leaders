@@ -5,13 +5,15 @@ import LandingPage from "./pages/LandingPage";
 import AlumniCenterPage from "./pages/AlumniCenterPage";
 import AdvocacyCenterPage from "./pages/AdvocacyCenterPage";
 import ResearchCenterPublikasiPage from "./pages/ResearchCenterPublikasiPage";
-import SuratRekomendasi from "./pages/SuratRekomendasiPage";
+import RecomendationLetterPage from "./pages/recomendationLetterPage";
 import AlumniDetail from "./components/Fragments/AlumniDetail";
 import EmailVerificationPage from "./pages/EmailVerificationPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
-import ResearchDetailPublikasi from "./components/Fragments/ResearchDetailPublikasi";
+import ResearchCenterDetailPublikasi from "./components/Fragments/ResearchCenterDetailPublikasi";
 import ResearchCenterProsidingPage from "./pages/ResearchCenterProsidingPage";
+import ResearchCenterDetailProsiding from "./components/Fragments/ResearchCenterDetailProsiding";
 import ResearchCenterMyresearchPage from "./pages/ResearchCenterMyResearchPage";
+import ResearchCenterDetailMyResearch from "./components/Fragments/ResearchCenterDetailMyResearch";
 
 function App() {
   return (
@@ -32,17 +34,28 @@ function App() {
           />
           <Route
             path="/research-center/publikasi/:slug"
-            element={<ResearchDetailPublikasi />}
+            element={<ResearchCenterDetailPublikasi />}
           />
           <Route
             path="/research-center/prosiding"
             element={<ResearchCenterProsidingPage />}
           />
           <Route
+            path="/research-center/prosiding/:slug"
+            element={<ResearchCenterDetailProsiding />}
+          />
+          <Route
             path="/research-center/my-research"
             element={<ResearchCenterMyresearchPage />}
           />
-          <Route path="/surat-rekomendasi" element={<SuratRekomendasi />} />
+          <Route
+            path="/research-center/my-research/:slug"
+            element={<ResearchCenterDetailMyResearch />}
+          />
+          <Route
+            path="/surat-rekomendasi"
+            element={<RecomendationLetterPage />}
+          />
           <Route path="/forgot-password" element={<EmailVerificationPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route path="/alumni/:slug" element={<AlumniDetail />} />

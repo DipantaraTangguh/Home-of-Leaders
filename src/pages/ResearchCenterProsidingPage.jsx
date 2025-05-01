@@ -104,7 +104,9 @@ const ResearchCenterProsidingPage = () => {
                 </div>
 
                 <button
-                  onClick={() => navigate(``)}
+                  onClick={() =>
+                    navigate(`/research-center/prosiding/${item.slug}`)
+                  }
                   className="self-end border border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-50 transition cursor-pointer"
                 >
                   Lihat Detail
