@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaEnvelope } from "react-icons/fa";
+import { Mail } from "lucide-react";
 import { RightIlustration } from "../components/Elements/RightIlustration";
 import { useNavigate } from "react-router-dom";
 
@@ -51,7 +51,7 @@ function EmailVerificationPage() {
             </label>
             <div className="flex items-center border rounded px-3 py-2 bg-gray-100">
               <span className="text-gray-500">
-                <FaEnvelope />
+                <Mail size="20" />
               </span>
               <input
                 type="email"

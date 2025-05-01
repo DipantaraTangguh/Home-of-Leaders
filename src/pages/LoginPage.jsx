@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { FaEye, FaEyeSlash, FaEnvelope, FaLock } from "react-icons/fa";
+import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import { RightIlustration } from "../components/Elements/RightIlustration";
 
 const LoginPage = () => {
@@ -64,7 +64,7 @@ const LoginPage = () => {
             </label>
             <div className="flex items-center border rounded px-3 py-2 bg-gray-100">
               <span className="text-gray-500">
-                <FaEnvelope />
+                <Mail size="20" />
               </span>
               <input
                 type="email"
@@ -84,7 +84,7 @@ const LoginPage = () => {
             <div className="relative flex items-center border rounded-md px-3 py-2 bg-gray-100">
               {/* key Icon */}
               <span className="text-gray-500 absolute left-3">
-                <FaLock />
+                <Lock size="20" />
               </span>
 
               {/* Input Password */}
@@ -101,7 +101,7 @@ const LoginPage = () => {
                 className="absolute right-3 text-gray-500 focus:outline-none"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                {showPassword ? <EyeOff size="20" /> : <Eye size="20" />}
               </button>
             </div>
           </div>

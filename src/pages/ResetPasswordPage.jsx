@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaEye, FaEyeSlash, FaCheckCircle, FaLock } from "react-icons/fa";
+import { Lock, Eye, EyeClosed, CircleCheckBig } from "lucide-react";
 import { RightIlustration } from "../components/Elements/RightIlustration";
 import { HolBcfLogo } from "../components/Elements/HolBcfLogo";
 
@@ -35,7 +35,7 @@ function ResetPasswordPage() {
             <div className="relative flex items-center border rounded-md px-3 py-2 bg-gray-100">
               {/* key Icon */}
               <span className="text-gray-500 absolute left-3">
-                <FaLock />
+                <Lock size="20" />
               </span>
 
               {/* Input Password */}
@@ -52,14 +52,14 @@ function ResetPasswordPage() {
                 className="absolute right-3 text-gray-500 focus:outline-none"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                {showPassword ? <EyeClosed size="20" /> : <Eye size="20" />}
               </button>
             </div>
 
             {/* Checking Password Strength */}
             <div className="text-sm md:text-base mt-2">
               <p className="flex items-center gap-2 text-sm">
-                <FaCheckCircle
+                <CircleCheckBig size="20"
                   className={`${
                     isCapital ? " text-green-600" : "text-gray-400"
                   }`}
@@ -67,13 +67,13 @@ function ResetPasswordPage() {
                 Password harus mengandung kapital
               </p>
               <p className="flex items-center gap-2 text-sm">
-                <FaCheckCircle
+                <CircleCheckBig size="20"
                   className={`${isNumber ? "text-green-600" : "text-gray-400"}`}
                 />
                 Password harus mengandung angka
               </p>
               <p className="flex items-center gap-2 text-sm">
-                <FaCheckCircle
+                <CircleCheckBig size="20"
                   className={`${isLength ? "text-green-600" : "text-gray-400"}`}
                 />
                 Password terdiri dari 8–15 huruf
@@ -89,7 +89,7 @@ function ResetPasswordPage() {
             <div className="relative flex items-center border rounded-md px-3 py-2 bg-gray-100">
               {/* key Icon */}
               <span className="text-gray-500 absolute left-3">
-                <FaLock />
+                <Lock size="20" />
               </span>
 
               {/* Input Password */}
@@ -106,14 +106,14 @@ function ResetPasswordPage() {
                 className="absolute right-3 text-gray-500 focus:outline-none"
                 onClick={() => setShowConfirm(!showConfirm)}
               >
-                {showConfirm ? <FaEyeSlash /> : <FaEye />}
+                {showConfirm ? <EyeClosed size="20" /> : <Eye size="20" />}
               </button>
             </div>
 
             {/* Checking Confirmed Password */}
             <div className="text-sm md:text-base mt-2">
               <p className="flex items-center gap-2 text-sm">
-                <FaCheckCircle
+                <CircleCheckBig size="20"
                   className={`${isMatch ? "text-green-600" : "text-gray-400"}`}
                 />
 
