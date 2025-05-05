@@ -57,7 +57,7 @@ const RecommendationSection = () => {
             </div>
             <div className="flex justify-center">
               <img
-                src="/images/recommendation-letter/proses-pengajuan.png"
+                src="/images/recommendation-letter/proses-pengajuan-2.png"
                 alt="image"
                 className="md:py-25 w-300"
               />

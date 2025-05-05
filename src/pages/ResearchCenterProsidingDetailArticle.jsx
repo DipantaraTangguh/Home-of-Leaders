@@ -7,19 +7,24 @@ import {
   ExternalLink,
   ArrowLeft,
 } from "lucide-react";
-import Navbar from "../Layouts/Navbar";
 import { Link } from "react-router-dom";
-import myresearchData from "../../assets/data/myresearchData";
-import { Footer } from "../Layouts/Footer";
+import Navbar from "../components/Layouts/Navbar";
+import prosidingData from "../assets/data/prosidingData";
+import { Footer } from "../components/Layouts/Footer";
 
-const ResearchCenterDetailMyResearch = () => {
-  const { slug } = useParams();
+const ResearchCenterProsidingDetailArticle = () => {
+  const { articleSlug } = useParams(); // slug artikel
   const navigate = useNavigate();
 
-  // Cari data berdasarkan slug dari myresearchData
-  const research = myresearchData.find((item) => item.slug === slug);
+  // pertama cari prosiding mana yang punya artikel ini:
+  const { articles } = prosidingData.find((p) =>
+    p.articles.some((a) => a.slug === articleSlug)
+  );
 
-  if (!research) {
+  // lalu cari detail artikelnya
+  const article = articles.find((a) => a.slug === articleSlug);
+
+  if (!article) {
     return (
       <div className="container mx-auto p-6 text-center">
         <p className="text-red-600">Publikasi tidak ditemukan.</p>
@@ -38,7 +43,7 @@ const ResearchCenterDetailMyResearch = () => {
       <Navbar />
       <section className="container mx-auto py-6 px-15 pb-20">
         <Link
-          to="/research-center/my-research"
+          onClick={() => navigate(-1)}
           className="text-2xl font-bold text-blue-800 flex items-center mb-8"
         >
           <span className="mr-1">
@@ -54,8 +59,8 @@ const ResearchCenterDetailMyResearch = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="flex-shrink-0 text-center">
             <img
-              src={research.image}
-              alt={research.title}
+              src={article.image}
+              alt={article.title}
               className="w-64 rounded-lg shadow-lg mx-auto"
             />
 
@@ -66,30 +71,30 @@ const ResearchCenterDetailMyResearch = () => {
             <div className="mt-6 text-left">
               <span className="block font-medium mb-1">Link Dokumen</span>
               <a
-                href={research.documentLink}
+                href={article.documentLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline flex items-center"
               >
                 <ExternalLink size={16} className="mr-1" />{" "}
-                {research.documentLink}
+                {article.documentLink}
               </a>
             </div>
           </div>
 
           <div className="flex-1 space-y-6">
             <h1 className="text-3xl font-bold text-gray-900">
-              {research.title}
+              {article.title}
             </h1>
 
             <div className="flex items-center gap-6 text-gray-600">
               <div className="flex items-center">
                 <Eye size={18} className="mr-1" />
-                <span>{research.views?.toLocaleString() || 200}</span>
+                <span>{article.views?.toLocaleString() || 200}</span>
               </div>
               <div className="flex items-center">
                 <Download size={18} className="mr-1" />
-                <span>{research.downloads?.toLocaleString() || 300}</span>
+                <span>{article.downloads?.toLocaleString() || 300}</span>
               </div>
             </div>
 
@@ -99,11 +104,11 @@ const ResearchCenterDetailMyResearch = () => {
                 <span className="font-semibold text-xl mb-2">Penulis</span>
                 <div className="flex items-center text-lg">
                   <img
-                    src={research.avatar}
-                    alt={research.author}
+                    src={article.avatar}
+                    alt={article.author}
                     className="w-8 h-8 rounded-full mr-2"
                   />
-                  <span>{research.author}</span>
+                  <span>{article.author}</span>
                 </div>
               </div>
 
@@ -111,7 +116,7 @@ const ResearchCenterDetailMyResearch = () => {
               <div className="flex flex-col items-start md:items-center border-r border-l">
                 <span className="font-semibold text-xl md:mb-3">Program</span>
                 <span className="bg-purple-100 text-purple-800 px-5 py-1 rounded-full text-md">
-                  {research.program || "-"}
+                  {article.program || "-"}
                 </span>
               </div>
 
@@ -122,26 +127,26 @@ const ResearchCenterDetailMyResearch = () => {
                 </span>
                 <div className="flex items-center text-lg">
                   <CalendarDays size={18} className="mr-2 text-gray-600" />
-                  <span>{research.date}</span>
+                  <span>{article.date}</span>
                 </div>
               </div>
             </div>
 
-            {research.abstract && (
+            {article.abstract && (
               <div className="space-y-2">
                 <h2 className="text-xl font-semibold text-gray-800">Abstrak</h2>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  {research.abstract}
+                  {article.abstract}
                 </p>
                 <hr className="border-gray-300" />
               </div>
             )}
 
-            {research.citations && (
+            {article.citations && (
               <div className="space-y-2">
                 <h2 className="text-xl font-semibold text-gray-800">Sitasi</h2>
                 <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                  {research.citations.map((c, idx) => (
+                  {article.citations.map((c, idx) => (
                     <li key={idx}>{c}</li>
                   ))}
                 </ul>
@@ -149,13 +154,13 @@ const ResearchCenterDetailMyResearch = () => {
               </div>
             )}
 
-            {research.citationLink && (
+            {article.citationLink && (
               <div className="space-y-2">
                 <h2 className="text-xl font-semibold text-gray-800">
                   Link Sitasi
                 </h2>
                 <ul className="text-blue-600 space-y-1">
-                  {research.citationLink.map((link, idx) => (
+                  {article.citationLink.map((link, idx) => (
                     <li key={idx}>
                       <a
                         href={link}
@@ -179,4 +184,4 @@ const ResearchCenterDetailMyResearch = () => {
   );
 };
 
-export default ResearchCenterDetailMyResearch;
+export default ResearchCenterProsidingDetailArticle;

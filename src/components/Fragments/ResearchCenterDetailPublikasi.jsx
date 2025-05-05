@@ -10,6 +10,7 @@ import {
 import publikasiData from "../../assets/data/publikasiData";
 import Navbar from "../Layouts/Navbar";
 import { Link } from "react-router-dom";
+import { Footer } from "../Layouts/Footer";
 
 const ResearchDetailPage = () => {
   const { slug } = useParams();
@@ -35,7 +36,7 @@ const ResearchDetailPage = () => {
   return (
     <>
       <Navbar />
-      <section className="container mx-auto py-6 px-15">
+      <section className="container mx-auto py-6 px-15 pb-20">
         <Link
           to="/research-center/publikasi"
           className="text-2xl font-bold text-blue-800 flex items-center mb-8"
@@ -129,7 +130,7 @@ const ResearchDetailPage = () => {
             {research.abstract && (
               <div className="space-y-2">
                 <h2 className="text-xl font-semibold text-gray-800">Abstrak</h2>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-justify">
                   {research.abstract}
                 </p>
                 <hr className="border-gray-300" />
@@ -173,6 +174,7 @@ const ResearchDetailPage = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

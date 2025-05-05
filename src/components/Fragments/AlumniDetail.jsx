@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Layouts/Navbar";
 import { Link, useParams } from "react-router-dom";
 import alumniData from "../../assets/data/alumniData";
+import { Footer } from "../Layouts/Footer";
 
 const AlumniDetail = () => {
   const { slug } = useParams();
@@ -22,7 +23,7 @@ const AlumniDetail = () => {
     <>
       <Navbar />
 
-      <div className="container mx-auto px-6 md:px-15 py-10">
+      <div className="container mx-auto px-6 md:px-15 py-10 pb-20">
         <div className="mb-8">
           <Link
             to="/landing-page"
@@ -84,6 +85,7 @@ const AlumniDetail = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

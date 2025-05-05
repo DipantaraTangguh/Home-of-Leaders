@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CalendarDays, Plus, X, Search } from "lucide-react";
 import Navbar from "../components/Layouts/Navbar";
+import { Footer } from "../components/Layouts/Footer";
 import prosidingData from "../assets/data/prosidingData";
 
 const ResearchCenterProsidingPage = () => {
@@ -35,7 +36,7 @@ const ResearchCenterProsidingPage = () => {
   return (
     <section>
       <Navbar />
-      <div className="py-6 px-15 container mx-auto">
+      <div className="py-6 px-15 container mx-auto pb-20">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-bold text-blue-900">Prosiding</h1>
@@ -211,6 +212,7 @@ const ResearchCenterProsidingPage = () => {
           </div>
         )}
       </div>
+      <Footer />
     </section>
   );
 };

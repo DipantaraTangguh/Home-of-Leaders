@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { CalendarDays, Plus, X, Search } from "lucide-react";
 import Navbar from "../components/Layouts/Navbar";
 import publikasiData from "../assets/data/publikasiData";
+import { Footer } from "../components/Layouts/Footer";
 
 const PublikasiListWithModal = () => {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ const PublikasiListWithModal = () => {
   return (
     <section>
       <Navbar />
-      <div className="py-6 px-15 container mx-auto">
+      <div className="py-6 px-15 container mx-auto pb-20">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-bold text-blue-900">Publikasi</h1>
@@ -216,6 +217,7 @@ const PublikasiListWithModal = () => {
           </div>
         )}
       </div>
+      <Footer></Footer>
     </section>
   );
 };

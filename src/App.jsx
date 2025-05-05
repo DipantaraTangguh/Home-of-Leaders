@@ -14,6 +14,7 @@ import ResearchCenterProsidingPage from "./pages/ResearchCenterProsidingPage";
 import ResearchCenterDetailProsiding from "./components/Fragments/ResearchCenterDetailProsiding";
 import ResearchCenterMyresearchPage from "./pages/ResearchCenterMyResearchPage";
 import ResearchCenterDetailMyResearch from "./components/Fragments/ResearchCenterDetailMyResearch";
+import ResearchCenterProsidingDetailArticle from "./pages/ResearchCenterProsidingDetailArticle";
 import CffDetailPage from "./pages/CffDetailPage";
 import BaDetailPage from "./pages/BaDetailPage";
 
@@ -45,6 +46,10 @@ function App() {
           <Route
             path="/research-center/prosiding/:slug"
             element={<ResearchCenterDetailProsiding />}
+          />
+          <Route
+            path="/research-center/prosiding/artikel/:articleSlug"
+            element={<ResearchCenterProsidingDetailArticle />}
           />
           <Route
             path="/research-center/my-research"
