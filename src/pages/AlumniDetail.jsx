@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../Layouts/Navbar";
+import Navbar from "../components/Layouts/Navbar";
 import { Link, useParams } from "react-router-dom";
-import alumniData from "../../assets/data/alumniData";
-import { Footer } from "../Layouts/Footer";
+import alumniData from "../assets/data/alumniData";
+import { Footer } from "../components/Layouts/Footer";
 
 const AlumniDetail = () => {
   const { slug } = useParams();

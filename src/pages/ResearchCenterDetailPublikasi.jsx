@@ -7,10 +7,10 @@ import {
   ExternalLink,
   ArrowLeft,
 } from "lucide-react";
-import publikasiData from "../../assets/data/publikasiData";
-import Navbar from "../Layouts/Navbar";
+import publikasiData from "../assets/data/publikasiData";
+import Navbar from "../components/Layouts/Navbar";
 import { Link } from "react-router-dom";
-import { Footer } from "../Layouts/Footer";
+import { Footer } from "../components/Layouts/Footer";
 
 const ResearchDetailPage = () => {
   const { slug } = useParams();

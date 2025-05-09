@@ -11,9 +11,9 @@ import {
   ChevronUp,
   X,
 } from "lucide-react";
-import prosidingData from "../../assets/data/prosidingData";
-import Navbar from "../Layouts/Navbar";
-import { Footer } from "../Layouts/Footer";
+import prosidingData from "../assets/data/prosidingData";
+import Navbar from "../components/Layouts/Navbar";
+import { Footer } from "../components/Layouts/Footer";
 
 const ResearchCenterDetailProsiding = () => {
   const INITIAL_COUNT = 6;

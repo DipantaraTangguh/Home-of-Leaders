@@ -7,10 +7,10 @@ import {
   ExternalLink,
   ArrowLeft,
 } from "lucide-react";
-import Navbar from "../Layouts/Navbar";
+import Navbar from "../components/Layouts/Navbar";
 import { Link } from "react-router-dom";
-import myresearchData from "../../assets/data/myresearchData";
-import { Footer } from "../Layouts/Footer";
+import myresearchData from "../assets/data/myresearchData";
+import { Footer } from "../components/Layouts/Footer";
 
 const ResearchCenterDetailMyResearch = () => {
   const { slug } = useParams();
