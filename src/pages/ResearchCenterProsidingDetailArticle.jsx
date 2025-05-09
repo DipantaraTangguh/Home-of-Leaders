@@ -44,7 +44,7 @@ const ResearchCenterProsidingDetailArticle = () => {
       <section className="container mx-auto py-6 px-15 pb-20">
         <Link
           onClick={() => navigate(-1)}
-          className="text-2xl font-bold text-blue-800 flex items-center mb-8"
+          className="text-2xl font-bold text-[#0D4690] flex items-center mb-8"
         >
           <span className="mr-1">
             <img
@@ -64,7 +64,7 @@ const ResearchCenterProsidingDetailArticle = () => {
               className="w-64 rounded-lg shadow-lg mx-auto"
             />
 
-            <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition">
+            <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-[#0D4690] text-[#0D4690] rounded-full hover:border-[#216EFF] transition">
               <Download size={16} className="mr-2" /> Download
             </button>
 
@@ -74,7 +74,7 @@ const ResearchCenterProsidingDetailArticle = () => {
                 href={article.documentLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline flex items-center"
+                className="text-[#0D4690] hover:underline flex items-center"
               >
                 <ExternalLink size={16} className="mr-1" />{" "}
                 {article.documentLink}
@@ -159,7 +159,7 @@ const ResearchCenterProsidingDetailArticle = () => {
                 <h2 className="text-xl font-semibold text-gray-800">
                   Link Sitasi
                 </h2>
-                <ul className="text-blue-600 space-y-1">
+                <ul className="text-[#0D4690] space-y-1">
                   {article.citationLink.map((link, idx) => (
                     <li key={idx}>
                       <a
