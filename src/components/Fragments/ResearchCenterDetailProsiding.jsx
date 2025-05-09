@@ -62,7 +62,7 @@ const ResearchCenterDetailProsiding = () => {
       <section className="container mx-auto py-6 px-4 lg:px-15 pb-20">
         <Link
           to="/research-center/prosiding"
-          className="text-2xl font-bold text-blue-800 flex items-center mb-8"
+          className="text-2xl font-bold text-[#0D4690] flex items-center mb-8"
         >
           <img
             src="/images/icon/Back-Button.png"
@@ -80,7 +80,7 @@ const ResearchCenterDetailProsiding = () => {
               alt={research.title}
               className="w-64 rounded-lg shadow-lg mx-auto"
             />
-            <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition">
+            <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-[#0D4690] text-[#0D4690] rounded-full hover:border-[#216EFF] transition">
               <DownloadIcon size={16} className="mr-2" /> Download
             </button>
             <div className="mt-6 text-left">
@@ -89,7 +89,7 @@ const ResearchCenterDetailProsiding = () => {
                 href={research.documentLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline flex items-center"
+                className="text-[#0D4690] hover:underline flex items-center"
               >
                 <ExternalLink size={16} className="mr-1" />
                 {research.documentLink}
@@ -117,7 +117,7 @@ const ResearchCenterDetailProsiding = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 py-4 text-sm text-gray-700">
               {/* Author */}
               <div className="flex flex-col items-start">
-                <span className="font-semibold text-xl mb-2">Prosiding</span>
+                <span className="font-semibold text-xl mb-2">Uploader</span>
                 <div className="flex items-center text-lg">
                   <img
                     src={research.avatar}
@@ -177,7 +177,7 @@ const ResearchCenterDetailProsiding = () => {
                     className="flex items-center bg-gray-100 hover:bg-gray-200 transition-colors rounded-2xl py-2 px-4 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   >
                     <span className="p-2 bg-white rounded-full shadow flex-shrink-0">
-                      <FileText className="w-5 h-5 text-indigo-600" />
+                      <FileText className="w-5 h-5 text-[#0D4690]" />
                     </span>
                     <span className="ml-3 text-sm font-medium text-gray-800 whitespace-nowrap">
                       {art.title}
@@ -189,7 +189,7 @@ const ResearchCenterDetailProsiding = () => {
                 <div className="mt-6 text-center">
                   <button
                     onClick={handleSeeMore}
-                    className="inline-flex items-center text-indigo-600 hover:text-indigo-800 focus:outline-none"
+                    className="inline-flex items-center text-[#0D4690] hover:text-[#0D4690] focus:outline-none"
                   >
                     <span className="text-sm font-medium cursor-pointer">
                       See more
@@ -202,7 +202,7 @@ const ResearchCenterDetailProsiding = () => {
                 <div className="mt-6 text-center">
                   <button
                     onClick={handleSeeLess}
-                    className="inline-flex items-center text-indigo-600 hover:text-indigo-800 focus:outline-none"
+                    className="inline-flex items-center text-[#0D4690] hover:text-[#0D4690] focus:outline-none"
                   >
                     <span className="text-sm font-medium cursor-pointer">
                       See less
@@ -230,7 +230,7 @@ const ResearchCenterDetailProsiding = () => {
                 <h2 className="text-xl font-semibold text-gray-800">
                   Link Sitasi
                 </h2>
-                <ul className="text-blue-600 space-y-1">
+                <ul className="text-[#0D4690] space-y-1">
                   {research.citationLink.map((link, idx) => (
                     <li key={idx}>
                       <a
@@ -289,11 +289,15 @@ const ResearchCenterDetailProsiding = () => {
                 <X size={20} className="cursor-pointer" />
               </button>
               <h3 className="text-lg font-semibold mb-4">{modalTitle}</h3>
-              <ul className="list-inside list-disc space-y-2 text-gray-700">
-                {modalList.map((member, idx) => (
-                  <li key={idx}>{member}</li>
-                ))}
-              </ul>
+
+              {/* Scrollable List Container */}
+              <div className="w-full max-h-64 overflow-y-auto">
+                <ul className="list-inside list-disc space-y-2 text-gray-700">
+                  {modalList.map((member, idx) => (
+                    <li key={idx}>{member}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         )}

@@ -39,7 +39,7 @@ const PublikasiListWithModal = () => {
       <div className="py-6 px-15 container mx-auto pb-20">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-bold text-blue-900">Publikasi</h1>
+          <h1 className="text-2xl font-bold text-[#0D4690]">Publikasi</h1>
         </div>
 
         {/* Total Research */}
@@ -63,7 +63,7 @@ const PublikasiListWithModal = () => {
 
           <button
             onClick={handleOpen}
-            className="flex items-center h-11 bg-blue-800 text-white rounded-full px-5 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="flex items-center h-11 bg-[#0D4690] text-white rounded-full px-5 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-300"
           >
             <Plus size={18} /> Add
           </button>
@@ -113,7 +113,7 @@ const PublikasiListWithModal = () => {
                   onClick={() =>
                     navigate(`/research-center/publikasi/${item.slug}`)
                   }
-                  className="self-end border border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-50 transition cursor-pointer"
+                  className="self-end border border-[#0D4690] text-[#0D4690] px-4 py-2 rounded-full hover:bg-[#0D4690] hover:text-[#FFFFFF] transition cursor-pointer"
                 >
                   Lihat Detail
                 </button>
@@ -127,7 +127,7 @@ const PublikasiListWithModal = () => {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <div className="bg-white w-full max-w-3xl mx-4 rounded-xl overflow-hidden shadow-lg">
               <div className="flex justify-between items-center p-4 border-b">
-                <h2 className="text-xl font-semibold text-blue-900">
+                <h2 className="text-xl font-semibold text-[#0D4690]">
                   Add Research
                 </h2>
                 <button onClick={handleClose} className="cursor-pointer">
@@ -207,7 +207,7 @@ const PublikasiListWithModal = () => {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold disabled:opacity-50"
+                  className="w-full bg-[#0D4690] text-white py-3 rounded-lg font-semibold disabled:opacity-50"
                   disabled={!formData.title}
                 >
                   Publikasi

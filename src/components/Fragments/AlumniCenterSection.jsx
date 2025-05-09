@@ -35,7 +35,6 @@ export const CallForFellowsSection = () => {
             <AlumniCenterCardCFF
               key={fellows.id}
               fellows={fellows}
-              dateWhenMakeInformation={fellows.dateWhenMakeInformation}
               disableButton={false}
             />
           ))}
@@ -59,7 +58,6 @@ export const BondingActivitiesSection = () => {
             <AlumniCenterCardBA
               key={bonding.id}
               bonding={bonding}
-              dateWhenMakeInformation={bonding.dateWhenMakeInformation}
               disableButton={false}
             />
           ))}

@@ -39,7 +39,7 @@ const ResearchCenterProsidingPage = () => {
       <div className="py-6 px-15 container mx-auto pb-20">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
-          <h1 className="text-2xl font-bold text-blue-900">Prosiding</h1>
+          <h1 className="text-2xl font-bold text-[#0D4690]">Prosiding</h1>
         </div>
 
         {/* Total Research */}
@@ -63,7 +63,7 @@ const ResearchCenterProsidingPage = () => {
 
           <button
             onClick={handleOpen}
-            className="flex items-center h-11 bg-blue-800 text-white rounded-full px-5 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="flex items-center h-11 bg-[#0D4690] text-white rounded-full px-5 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-300"
           >
             <Plus size={18} /> Add
           </button>
@@ -108,7 +108,7 @@ const ResearchCenterProsidingPage = () => {
                   onClick={() =>
                     navigate(`/research-center/prosiding/${item.slug}`)
                   }
-                  className="self-end border border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-50 transition cursor-pointer"
+                  className="self-end border border-[#0D4690] text-[#0D4690] px-4 py-2 rounded-full hover:bg-[#0D4690] hover:text-[#FFFFFF] transition cursor-pointer"
                 >
                   Lihat Detail
                 </button>
@@ -202,7 +202,7 @@ const ResearchCenterProsidingPage = () => {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold disabled:opacity-50"
+                  className="w-full bg-[#0D4690] text-white py-3 rounded-lg font-semibold disabled:opacity-50"
                   disabled={!formData.title}
                 >
                   Publikasi
