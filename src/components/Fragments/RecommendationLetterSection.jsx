@@ -1,7 +1,50 @@
 import React, { useState } from "react";
 import { Calendar, ChevronDown } from "lucide-react";
 
-export default function RLSubmitForm() {
+export function RLHeaderBanner() {
+  return (
+    <div className="bg-sky-50 rounded-[60px] pt-12 pb-20 px-6 text-center h-100">
+      <h2 className="text-3xl font-bold mb-4 text-blue-900">
+        Surat Rekomendasi
+      </h2>
+      <p className="mx-auto leading-relaxed px-5">
+        Surat rekomendasi bisa jadi 'tiket' menuju kesuksesan. Surat ini bisa
+        membantu kamu{" "}
+        <span className="font-semibold text-orange-400">
+          membuktikan kemampuan dan potensi diri
+        </span>
+        , terutama saat melamar pekerjaan atau beasiswa.{" "}
+        <span className="font-semibold text-orange-400">Batas maksimal</span>{" "}
+        pengajuan surat rekomendasi adalah{" "}
+        <span className="font-semibold text-orange-400">seminggu</span> sebelum
+        surat rekomendasi itu dibutuhkan.
+      </p>
+    </div>
+  );
+}
+
+export function RLTimelineCard() {
+  return (
+    <div className="relative px-4 sm:px-6 lg:px-8 md:-mt-40">
+      <div className="bg-white rounded-[60px] p-8 shadow-xl overflow-hidden relative ">
+        <div>
+          <h2 className="font-bold text-blue-900 text-2xl mt-10 ml-10">
+            Proses Pengajuan Surat Rekomendasi
+          </h2>
+        </div>
+        <div className="flex justify-center">
+          <img
+            src="/images/recommendation-letter/proses-pengajuan-2.png"
+            alt="image"
+            className="md:py-25 w-300"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function RLSubmitForm() {
   const [formData, setFormData] = useState({
     instansi: "",
     keperluan: "",
@@ -126,5 +169,27 @@ export default function RLSubmitForm() {
         </div>
       </div>
     </form>
+  );
+}
+
+export function RLStatus() {
+  return (
+    <div className="py-20 px-6 mx-auto container">
+      <div className="bg-white rounded-2xl p-8 shadow-[0_10px_25px_rgba(0,0,0,0.1)] ">
+        <h2 className="text-3xl font-bold text-blue-900">
+          Status Pengajuan Surat Rekomendasi
+        </h2>
+        <div className="flex justify-center pt-20 mb-4">
+          <img
+            src="/images/recommendation-letter/status-pengajuan-surat.png"
+            alt=""
+          />
+        </div>
+        <div className="flex flex-col items-center text-gray-400 pb-20 text-lg">
+          <p>Belum ajukan Surat Rekomendasi?</p>
+          <p>Yuk, lakukan sekarang!</p>
+        </div>
+      </div>
+    </div>
   );
 }

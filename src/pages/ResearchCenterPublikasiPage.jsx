@@ -27,7 +27,7 @@ const ResearchCenterPublikasiPage = () => {
       {/* Container */}
       <ResearchCenterContainer>
         {/* Header */}
-        <HeaderTitle title="Publikasi" />
+        <HeaderTitle title={"Publikasi"} />
 
         {/* Total Research */}
         <TotalResearch total={publikasiData.length} />

@@ -1,9 +1,12 @@
 import Navbar from "../components/Layouts/Navbar";
 import { Footer } from "../components/Layouts/Footer";
-import RLHeaderBanner from "../components/Fragments/RLHeaderBanner";
-import RLTimelineCard from "../components/Fragments/RLTimelineCard";
-import RLSubmitForm from "../components/Fragments/RLSubmitForm";
-import RLStatus from "../components/Fragments/RLStatus";
+
+import {
+  RLHeaderBanner,
+  RLTimelineCard,
+  RLSubmitForm,
+  RLStatus,
+} from "../components/Fragments/RecommendationLetterSection";
 
 const RecommendationSection = () => {
   return (

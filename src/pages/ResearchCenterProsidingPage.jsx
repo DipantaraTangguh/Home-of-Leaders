@@ -25,7 +25,9 @@ const ResearchCenterProsidingPage = () => {
       <Navbar />
       <ResearchCenterContainer>
         {/* Header */}
-        <HeaderTitle title="Prosiding" />
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-2xl font-bold text-[#0D4690]">Prosiding</h1>
+        </div>
 
         {/* Total Research */}
         <TotalResearch total={prosidingData.length} />

@@ -1,13 +1,15 @@
 import React from "react";
-import FocusArea from "../components/Fragments/FocusArea";
-import SeminarRecomendation from "../components/Fragments/SeminarRecomendation";
-import CollaborationFlow from "../components/Fragments/CollaborationFlow";
-import AlumniSuccessStory from "../components/Fragments/AlumniSuccessStory";
-import DetailHomeofLeaders from "../components/Fragments/DetailHomeofLeaders";
-import Jumbotron from "../components/Fragments/Jumbotron";
-import ProgramDescription from "../components/Fragments/ProgramDescription";
 import Navbar from "../components/Layouts/Navbar";
 import { Footer } from "../components/Layouts/Footer";
+import {
+  Jumbotron,
+  ProgramDescription,
+  FocusArea,
+  SeminarRecomendation,
+  CollaborationFlow,
+  AlumniSuccessStory,
+  DetailHomeofLeaders,
+} from "../components/Fragments/LandingPageSection";
 
 const LandingPage = () => {
   return (

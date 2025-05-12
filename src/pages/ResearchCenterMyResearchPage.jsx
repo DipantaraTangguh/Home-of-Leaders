@@ -25,7 +25,9 @@ const ResearchCenterMyResearchPage = () => {
       <Navbar />
       <ResearchCenterContainer>
         {/* Header */}
-        <HeaderTitle title="My Research" />
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-2xl font-bold text-[#0D4690]">My Research</h1>
+        </div>
 
         {/* Total Research */}
         <ResearchCenterTotalResearch total={myresearchData.length} />

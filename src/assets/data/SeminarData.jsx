@@ -1,6 +1,3 @@
-import GrayLine from "../Elements/GrayLine";
-import { useState } from "react";
-
 const seminarData = [
   {
     title: "SEMINAR NASIONAL 2023",
@@ -51,81 +48,4 @@ Perlunya anggaran yang memadai, normalisasi drainase, edukasi, serta perubahan p
   },
 ];
 
-const SeminarRecommendation = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % seminarData.length);
-  };
-
-  const handlePrev = () => {
-    setActiveIndex(
-      (prev) => (prev - 1 + seminarData.length) % seminarData.length
-    );
-  };
-
-  return (
-    <section id="seminar-recomendation">
-      <div className="header container mx-auto p-6">
-        <h1 className="text-2xl font-bold text-[#0a3e91] mb-4">
-          Rekomendasi Lanjutan Seminar 2023
-        </h1>
-        <GrayLine extraClasses="flex w-1/2" />
-      </div>
-      <div className="bg-[#e9f2ff] py-10">
-        <div className="container mx-auto p-6">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mt-6">
-            <div className="max-w-4xl">
-              <h2 className="text-2xl font-bold mb-4">
-                {seminarData[activeIndex].title}
-              </h2>
-              <div className="description text-justify">
-                <p className="text-gray-700 mb-6 whitespace-pre-line min-h-70">
-                  {seminarData[activeIndex].description}
-                </p>
-              </div>
-
-              <div className="flex gap-4">
-                <button className="bg-blue-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-800 cursor-pointer">
-                  Lihat Detail
-                </button>
-                <button className="border border-blue-700 text-blue-700 px-5 py-2 rounded-lg font-semibold hover:bg-blue-100 cursor-pointer">
-                  💾 Download
-                </button>
-              </div>
-            </div>
-
-            <div className="relative">
-              <img
-                src={seminarData[activeIndex].image}
-                alt="Seminar Cover"
-                className="rounded-2xl shadow-xl w-[300px] lg:w-[340px]"
-              />
-            </div>
-          </div>
-
-          <div className="flex justify-center items-center gap-3 mt-8 ">
-            <button
-              onClick={handlePrev}
-              className="bg-blue-700 text-white px-2 py-2 rounded-full hover:bg-blue-800 cursor-pointer"
-            >
-              <span>
-                <img src="/images/icon/arrow-left.png" alt="" />
-              </span>
-            </button>
-            <button
-              onClick={handleNext}
-              className="bg-blue-700 text-white px-2 py-2 rounded-full hover:bg-blue-800 cursor-pointer"
-            >
-              <span>
-                <img src="/images/icon/arrow-right.png" alt="" />
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default SeminarRecommendation;
+export default seminarData;
