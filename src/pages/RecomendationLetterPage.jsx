@@ -5,7 +5,8 @@ import {
   RLHeaderBanner,
   RLTimelineCard,
   RLSubmitForm,
-  RLStatus,
+  RLStatusNull,
+  RLStatusContent,
 } from "../components/Fragments/RecommendationLetterSection";
 
 const RecommendationSection = () => {
@@ -22,7 +23,7 @@ const RecommendationSection = () => {
       <RLSubmitForm />
 
       {/* Recommendation Letter Status */}
-      <RLStatus />
+      <RLStatusContent />
 
       <Footer />
     </>

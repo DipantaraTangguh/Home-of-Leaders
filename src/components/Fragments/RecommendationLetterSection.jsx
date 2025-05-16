@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Calendar, ChevronDown } from "lucide-react";
+import { Calendar, ChevronDown, Download } from "lucide-react";
+import recommendationLetterStatusData from "../../assets/data/recomendationLetterStatusData";
 
 export function RLHeaderBanner() {
   return (
     <div className="bg-sky-50 rounded-[60px] pt-12 pb-20 px-6 text-center h-100">
-      <h2 className="text-3xl font-bold mb-4 text-blue-900">
+      <h2 className="text-3xl font-bold mb-4 text-[#0D4690]">
         Surat Rekomendasi
       </h2>
       <p className="mx-auto leading-relaxed px-5">
@@ -28,7 +29,7 @@ export function RLTimelineCard() {
     <div className="relative px-4 sm:px-6 lg:px-8 md:-mt-40">
       <div className="bg-white rounded-[60px] p-8 shadow-xl overflow-hidden relative ">
         <div>
-          <h2 className="font-bold text-blue-900 text-2xl mt-10 ml-10">
+          <h2 className="font-bold text-[#0D4690] text-2xl mt-10 ml-10">
             Proses Pengajuan Surat Rekomendasi
           </h2>
         </div>
@@ -68,7 +69,7 @@ export function RLSubmitForm() {
       {/* Title */}
       <div className="container mx-auto p-6">
         <div className="pb-7">
-          <h2 className="text-3xl font-semibold text-blue-900 pb-3">
+          <h2 className="text-3xl font-bold text-[#0D4690] pb-3">
             Form Pengajuan Surat Rekomendasi
           </h2>
           <p className="text-sm text-orange-400 mt-1">
@@ -162,7 +163,7 @@ export function RLSubmitForm() {
         <div className="text-right">
           <button
             type="submit"
-            className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-full hover:bg-blue-700 transition disabled:opacity-50"
+            className="bg-[#0D4690] text-white font-semibold px-6 py-2 cursor-pointer rounded-full hover:bg-blue-700 transition disabled:opacity-50"
           >
             Kirim
           </button>
@@ -172,11 +173,11 @@ export function RLSubmitForm() {
   );
 }
 
-export function RLStatus() {
+export function RLStatusNull() {
   return (
     <div className="py-20 px-6 mx-auto container">
       <div className="bg-white rounded-2xl p-8 shadow-[0_10px_25px_rgba(0,0,0,0.1)] ">
-        <h2 className="text-3xl font-bold text-blue-900">
+        <h2 className="text-3xl font-bold text-[#0D4690]">
           Status Pengajuan Surat Rekomendasi
         </h2>
         <div className="flex justify-center pt-20 mb-4">
@@ -189,6 +190,74 @@ export function RLStatus() {
           <p>Belum ajukan Surat Rekomendasi?</p>
           <p>Yuk, lakukan sekarang!</p>
         </div>
+      </div>
+    </div>
+  );
+}
+
+export function RLStatusContent() {
+  const statusStyles = {
+    Approved: "text-green-600 bg-green-100",
+    Checking: "text-yellow-600 bg-yellow-100",
+    Rejected: "text-red-600 bg-red-100",
+  };
+
+  return (
+    <div className="my-20 pb-20 px-6 mx-auto container rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.1)]">
+      <h2 className="text-3xl font-bold text-blue-900 py-10">
+        Status Pengajuan Surat Rekomendasi
+      </h2>
+      <div className="overflow-x-auto">
+        <table className="min-w-full table-auto">
+          <thead>
+            <tr className="border-b border-[#ADB5BD] text-[#ADB5BD] text-left text-sm ">
+              <th className="px-4 py-5 w-12">No</th>
+              <th className="px-4 py-5">Tujuan Instansi</th>
+              <th className="px-4 py-5">Keperluan</th>
+              <th className="px-4 py-5">Tanggal Pengajuan</th>
+              <th className="px-4 py-5">Status</th>
+              <th className="px-4 py-5 w-32">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            {recommendationLetterStatusData.map((item) => (
+              <tr key={item.id} className="border-b border-[#ADB5BD] ">
+                <td className="px-4 py-8 text-sm text-gray-600">{item.id}.</td>
+                <td className="px-4 py-3 text-sm text-gray-800">
+                  {item.instansi}
+                </td>
+                <td className="px-4 py-3 text-sm text-gray-800">
+                  {item.keperluan}
+                </td>
+                <td className="px-4 py-3 text-sm text-gray-800">
+                  {item.tanggal}
+                </td>
+                <td className="px-4 py-3">
+                  <span
+                    className={`inline-block text-center min-w-24 py-1 text-sm font-medium rounded-full ${
+                      statusStyles[item.status]
+                    }`}
+                  >
+                    {item.status}
+                  </span>
+                </td>
+                <td className="px-4 py-3">
+                  <button
+                    className={`flex items-center justify-center w-full py-2 px-2 text-sm font-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+                      item.status === "Approved"
+                        ? "bg-[#E89229] text-white hover:bg-orange-600 cursor-pointer"
+                        : "bg-[#ADB5BD] text-white cursor-not-allowed"
+                    }`}
+                    disabled={item.status !== "Approved"}
+                  >
+                    <Download className="w-4 h-4 mr-1" />
+                    Download
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

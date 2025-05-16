@@ -17,6 +17,8 @@ import ResearchCenterDetailMyResearch from "./pages/ResearchCenterDetailMyResear
 import ResearchCenterProsidingDetailArticle from "./pages/ResearchCenterProsidingDetailArticle";
 import CffDetailPage from "./pages/CffDetailPage";
 import BaDetailPage from "./pages/BaDetailPage";
+import ProfileDataAlumniPage from "./pages/ProfileDataAlumniPage";
+import ProfileKegiatankuPage from "./pages/ProfileKegiatankuPage";
 
 function App() {
   return (
@@ -98,6 +100,12 @@ function App() {
           <Route path="/callforfellows/detail" element={<CffDetailPage />} />
 
           <Route path="/bondingactivities/detail" element={<BaDetailPage />} />
+
+          {/* Profile Data Alumni */}
+          <Route path="/data-alumni" element={<ProfileDataAlumniPage />} />
+
+          {/* Profile Kegiatanku */}
+          <Route path="/kegiatanku" element={<ProfileKegiatankuPage />} />
         </Routes>
       </BrowserRouter>
     </div>

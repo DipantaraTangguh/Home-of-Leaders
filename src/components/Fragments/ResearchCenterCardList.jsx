@@ -58,7 +58,7 @@ export const ResearchCard = ({
 
         <button
           onClick={() => navigate(`${detailPathPrefix}/${item.slug}`)}
-          className="self-end border border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-50 transition cursor-pointer"
+          className="self-end border-2 border-[#0D4690] font-semibold text-[#0D4690] px-4 py-2 rounded-full hover:bg-blue-50 transition cursor-pointer"
         >
           Lihat Detail
         </button>

@@ -1,3 +1,5 @@
+import { Download } from "lucide-react";
+
 export function Jumbotron() {
   return (
     <section id="jumbotron">
@@ -28,7 +30,7 @@ export function ProgramDescription() {
           {/* Section Deskripsi */}
           <div className="space-y-6">
             <div>
-              <h2 className="text-blue-800 text-2xl font-bold mb-2">
+              <h2 className="text-[#0D4690] text-2xl font-bold mb-2">
                 Deskripsi Program
               </h2>
               <hr className="border-t border-gray-300 mb-4" />
@@ -79,7 +81,7 @@ export function FocusArea() {
 
   return (
     <section id="FocusArea" className="container mx-auto p-6">
-      <h2 className="text-2xl font-bold text-blue-800 mb-4">Bidang Fokus</h2>
+      <h2 className="text-2xl font-bold text-[#0D4690] mb-4">Bidang Fokus</h2>
       <GrayLine extraClasses="mb-4" />
 
       <div className="flex flex-col md:flex-row gap-4">
@@ -89,10 +91,10 @@ export function FocusArea() {
             <button
               key={key}
               onClick={() => setActiveCenter(key)}
-              className={`min-w-[200px] whitespace-nowrap p-4 rounded-xl text-lg font-bold text-center shadow-md transition-all duration-300  ${
+              className={`min-w-[200px] whitespace-nowrap cursor-pointer p-4 rounded-xl text-lg font-bold text-center shadow-md transition-all duration-300  ${
                 activeCenter === key
-                  ? "bg-blue-100 text-blue-800"
-                  : "bg-white text-blue-800 hover:bg-blue-50"
+                  ? "bg-blue-100 text-[#0D4690]"
+                  : "bg-white text-[#0D4690] hover:bg-blue-50"
               }`}
             >
               {centers[key].title}
@@ -102,7 +104,7 @@ export function FocusArea() {
 
         {/* Content Area */}
         <div className="bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.25)] p-6 flex-1 text-gray-600 text-lg ">
-          <h3 className="text-2xl font-bold text-blue-800 mb-4">
+          <h3 className="text-2xl font-bold text-[#0D4690] mb-4">
             {centers[activeCenter].title}
           </h3>
           {centers[activeCenter].content}
@@ -149,11 +151,12 @@ export function SeminarRecomendation() {
               </div>
 
               <div className="flex gap-4">
-                <button className="bg-blue-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-800 cursor-pointer">
+                <button className="bg-[#0D4690] text-white px-5 py-2 rounded-3xl font-semibold hover:bg-blue-800 cursor-pointer ">
                   Lihat Detail
                 </button>
-                <button className="border border-blue-700 text-blue-700 px-5 py-2 rounded-lg font-semibold hover:bg-blue-100 cursor-pointer">
-                  💾 Download
+                <button className="border border-[#0D4690] text-[#0D4690] px-5 py-2 rounded-3xl font-semibold hover:bg-blue-100 cursor-pointer flex items-center justify-center">
+                  <Download className="w-5 h-5 mr-1" />
+                  Download
                 </button>
               </div>
             </div>
@@ -170,7 +173,7 @@ export function SeminarRecomendation() {
           <div className="flex justify-center items-center gap-3 mt-8 ">
             <button
               onClick={handlePrev}
-              className="bg-blue-700 text-white px-2 py-2 rounded-full hover:bg-blue-800 cursor-pointer"
+              className="bg-[#0D4690] text-white px-2 py-2 rounded-full hover:bg-blue-800 cursor-pointer"
             >
               <span>
                 <img src="/images/icon/arrow-left.png" alt="" />
@@ -178,7 +181,7 @@ export function SeminarRecomendation() {
             </button>
             <button
               onClick={handleNext}
-              className="bg-blue-700 text-white px-2 py-2 rounded-full hover:bg-blue-800 cursor-pointer"
+              className="bg-[#0D4690] text-white px-2 py-2 rounded-full hover:bg-blue-800 cursor-pointer"
             >
               <span>
                 <img src="/images/icon/arrow-right.png" alt="" />
@@ -252,7 +255,7 @@ export function AlumniSuccessStory() {
               </p>
               <button
                 onClick={() => navigate(`/alumni/${selectedAlumni.slug}`)}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm flex items-center cursor-pointer"
+                className="bg-[#E89229] hover:bg-orange-500 text-white px-4 py-2 rounded-3xl text-sm flex items-center cursor-pointer"
               >
                 Baca Selengkapnya
                 <span className="ml-1">
@@ -271,9 +274,9 @@ export function AlumniSuccessStory() {
             {alumniData.map((alumni, index) => (
               <div
                 key={index}
-                className={`cursor-pointer rounded-2xl p-2 border-2 transition ${
+                className={`cursor-pointer rounded-2xl p-2 border-4 transition ${
                   selectedAlumni.name === alumni.name
-                    ? "border-orange-400"
+                    ? "border-[#DB8A27]"
                     : "border-transparent"
                 }`}
                 onClick={() => setSelectedAlumni(alumni)}
