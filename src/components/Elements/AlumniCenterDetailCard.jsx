@@ -1,8 +1,17 @@
 import { useState } from "react";
-import { Forward, AlarmClock, MapPin, CalendarDays } from "lucide-react";
+import {
+  Forward,
+  AlarmClock,
+  MapPin,
+  CalendarDays,
+  FileCheck,
+} from "lucide-react";
 
 // CALL FOR FELLOWS DETAILS SCROLLABLE VERTICAL
-export const CFFScrollableCardDetails = ({ callForFellows }) => {
+export const CFFScrollableCardDetails = ({
+  callForFellows,
+  hiddenApplyButton = false,
+}) => {
   // STATE VARIABLES
   const [copied, setCopied] = useState(false);
 
@@ -30,18 +39,29 @@ export const CFFScrollableCardDetails = ({ callForFellows }) => {
             alt={callForFellows.companyName}
             className="w-full sm:w-[150px] h-[150px] object-cover rounded-[20px]"
           />
-          <div className="flex flex-col gap-2 items-center">
-            <button
-              onClick={() => window.open(callForFellows.applyingLink, "_blank")}
-              className="bg-[#0D4690] text-white px-4 py-2 rounded-full hover:bg-[#216EFFB2] transition font-bold text-sm w-[215px]"
-            >
-              Link Pendaftaran
+          {hiddenApplyButton ? (
+            <button className="bg-[#ADB5BD] text-white cursor-not-allowed px-4 py-2 rounded-full font-bold text-sm w-[215px]">
+              Sudah Mendaftar
             </button>
-            <button onClick={handleCopy} className="text-[#0D4690] flex items-center font-bold text-sm hover:underline w-[215px]">
-              <Forward className="mr-1" />
-              {copied ? "Link Tersalin" : "Bagikan Link Pendaftaran"}
-            </button>
-          </div>
+          ) : (
+            <div className="flex flex-col gap-2 items-center">
+              <button
+                onClick={() =>
+                  window.open(callForFellows.applyingLink, "_blank")
+                }
+                className="bg-[#0D4690] text-white px-4 py-2 rounded-full hover:bg-[#216EFFB2] transition font-bold text-sm w-[215px]"
+              >
+                Link Pendaftaran
+              </button>
+              <button
+                onClick={handleCopy}
+                className="text-[#0D4690] flex items-center font-bold text-sm hover:underline w-[215px]"
+              >
+                <Forward className="mr-1" />
+                {copied ? "Link Tersalin" : "Bagikan Link Pendaftaran"}
+              </button>
+            </div>
+          )}
         </div>
 
         {/* JOB POSITION & COMPANY INFO */}
@@ -60,7 +80,7 @@ export const CFFScrollableCardDetails = ({ callForFellows }) => {
           {callForFellows.tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-orange-100 text-orange-500 px-3 py-1 rounded-full"
+              className="bg-orange-100 text-[#E89229] px-3 py-1 rounded-full"
             >
               {tag.placement} {tag.categorize}
             </span>
@@ -119,7 +139,12 @@ export const CFFScrollableCardDetails = ({ callForFellows }) => {
 };
 
 // BONDING ACTIVITIES DETAILS SCROLLABLE VERTICAL
-export const BAScrollableCardDetails = ({ bondingActivities }) => {
+export const BAScrollableCardDetails = ({
+  bondingActivities,
+  buttonOption,
+  disableButtonOption = false,
+  apllyingNowHandleClick,
+}) => {
   return (
     <div>
       <div className="flex flex-col gap-5 mb-10">
@@ -143,17 +168,39 @@ export const BAScrollableCardDetails = ({ bondingActivities }) => {
             <p text-gray-600>Bakrie Center Foundation</p>
           </div>
 
-          <button className="bg-[#0D4690] text-white px-4 py-2 rounded-full hover:bg-[#216EFFB2] transition font-bold text-sm">
-            Daftar Sekarang
+          <button
+            disabled={disableButtonOption}
+            // BUTTON TRIGGER FOR APPLYING NOW POPUP
+            onClick={apllyingNowHandleClick}
+            className={`flex items-center justify-center gap-2 px-4 py-2 rounded-full transition font-bold text-sm ${
+              disableButtonOption || bondingActivities.currentEvent === "Closed"
+                ? "bg-[#ADB5BD] text-white cursor-not-allowed"
+                : "bg-[#0D4690] text-white hover:bg-[#216EFFB2] cursor-pointer"
+            }`}
+          >
+            {buttonOption === "Presensi" ? (
+              <FileCheck className="font-bold" size={18} />
+            ) : null}{" "}
+            {buttonOption}
           </button>
         </div>
 
         {/* TAGS */}
         <div className="flex gap-2 flex-wrap text-sm font-medium">
-          <span className="bg-[#DDF5EA] text-[#34A853] px-3 py-1 rounded-full">
-            On Going
+          <span
+            className={`px-3 py-1 rounded-full ${
+              bondingActivities.currentEvent === "Sudah Daftar"
+                ? "bg-[#FFF3CD] text-[#FFC107]"
+                : bondingActivities.currentEvent === "Belum Lolos"
+                ? "bg-[#F8D7DA] text-[#DC3545]"
+                : bondingActivities.currentEvent === "Closed" 
+                ? "bg-[#F8D7DA] text-[#DC3545]" 
+                : "bg-[#DDF5EA] text-[#34A853]"
+            }`}
+          >
+            {bondingActivities.currentEvent}
           </span>
-          <span className="bg-orange-100 text-orange-500 px-3 py-1 rounded-full">
+          <span className="bg-orange-100 text-[#E89229] px-3 py-1 rounded-full">
             Offline
           </span>
         </div>
@@ -213,7 +260,12 @@ export const BAScrollableCardDetails = ({ bondingActivities }) => {
 };
 
 // IYSF DETAILS SCROLLABLE VERTICAL
-export const IYSFScrollableCardDetails = ({ advocacyCentre }) => {
+export const IYSFScrollableCardDetails = ({
+  advocacyCentre,
+  buttonOption,
+  disableButtonOption = false,
+  applyingNowHandleClick,
+}) => {
   return (
     <div>
       <div className="flex flex-col gap-5 mb-10">
@@ -224,8 +276,21 @@ export const IYSFScrollableCardDetails = ({ advocacyCentre }) => {
             alt="IYSF-Event"
             className="w-full sm:w-[150px] h-[150px] object-cover rounded-[20px]"
           />
-          <button className="bg-[#0D4690] text-white px-4 py-2 rounded-full hover:bg-[#216EFFB2] transition font-bold text-sm">
-            Daftar Sekarang
+          <button
+            disabled={disableButtonOption}
+            // BUTTON TRIGGER FOR APPLYING NOW POPUP
+            onClick={applyingNowHandleClick}
+            className={`flex items-center justify-center gap-2 px-4 py-2 rounded-full transition font-bold text-sm 
+              ${
+                disableButtonOption || advocacyCentre.currentEvent === "Closed"
+                  ? "bg-[#ADB5BD] text-white cursor-not-allowed"
+                  : "bg-[#0D4690] text-white hover:bg-[#216EFFB2] cursor-pointer"
+              }`}
+          >
+            {buttonOption === "Presensi" ? (
+              <FileCheck className="font-bold" size={18} />
+            ) : null}{" "}
+            {buttonOption}
           </button>
         </div>
 
@@ -239,13 +304,19 @@ export const IYSFScrollableCardDetails = ({ advocacyCentre }) => {
 
         {/* TAGS */}
         <div className="flex gap-2 flex-wrap text-sm font-medium">
-          <span className="bg-[#479F76] text-[#F5FBF7] px-2 py-1 rounded-full">
-            On Going
+          <span
+            className={`${
+              advocacyCentre.currentEvent === "On-Going"
+                ? "bg-[#DDF5EA] text-[#34A853]"
+                : "bg-[#F8D7DA] text-[#DC3545]"
+            } px-3 py-1 rounded-full`}
+          >
+            {advocacyCentre.currentEvent}
           </span>
-          <span className="bg-orange-100 text-orange-500 px-3 py-1 rounded-full">
+          <span className="bg-orange-100 text-[#E89229] px-3 py-1 rounded-full">
             {advocacyCentre.durationEvent}
           </span>
-          <span className="bg-orange-100 text-orange-500 px-3 py-1 rounded-full">
+          <span className="bg-orange-100 text-[#E89229] px-3 py-1 rounded-full">
             {advocacyCentre.eventDate}
           </span>
         </div>

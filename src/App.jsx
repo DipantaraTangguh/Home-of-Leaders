@@ -18,7 +18,7 @@ import ResearchCenterProsidingDetailArticle from "./pages/ResearchCenterProsidin
 import CffDetailPage from "./pages/CffDetailPage";
 import BaDetailPage from "./pages/BaDetailPage";
 import ProfileDataAlumniPage from "./pages/ProfileDataAlumniPage";
-import ProfileKegiatankuPage from "./pages/ProfileKegiatankuPage";
+import ProfileActivityPage from "./pages/ProfileActivityPage";
 
 function App() {
   return (
@@ -105,7 +105,7 @@ function App() {
           <Route path="/data-alumni" element={<ProfileDataAlumniPage />} />
 
           {/* Profile Kegiatanku */}
-          <Route path="/kegiatanku" element={<ProfileKegiatankuPage />} />
+          <Route path="/kegiatanku" element={<ProfileActivityPage />} />
         </Routes>
       </BrowserRouter>
     </div>

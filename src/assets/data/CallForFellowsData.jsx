@@ -1,10 +1,12 @@
 export const CallForFellowsData = [
   {
     id: 1,
-    companyImage: "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
+    type: "Call for Fellows",
+    companyImage:
+      "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
     companyName: "PT. Bank Jago Indonesia",
     jobPosition: "It Support",
-    tags: [ { categorize: "Internship" }, { placement: "WFO" }],
+    tags: [{ categorize: "Internship" }, { placement: "WFO" }],
     duration: "3 Bulan",
     place: "Kota Jakarta Selatan",
     applyingDate: "12 Desember 2025",
@@ -39,10 +41,12 @@ export const CallForFellowsData = [
   },
   {
     id: 2,
-    companyImage: "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
+    type: "Call for Fellows",
+    companyImage:
+      "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
     companyName: "PT. Bank BRI Indonesia",
     jobPosition: "Supply Chain",
-    tags: [ { categorize: "Beasiswa" }, { placement: "Hybrid" }],
+    tags: [{ categorize: "Beasiswa" }, { placement: "Hybrid" }],
     duration: "3 Bulan",
     place: "Kota Bandung",
     applyingDate: "12 Desember 2025",
@@ -77,10 +81,12 @@ export const CallForFellowsData = [
   },
   {
     id: 3,
-    companyImage: "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
+    type: "Call for Fellows",
+    companyImage:
+      "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
     companyName: "PT. Bank Mandiri Indonesia",
     jobPosition: "Data Analist",
-    tags: [ { categorize: "Internship" }, { placement: "WFO" }],
+    tags: [{ categorize: "Internship" }, { placement: "WFO" }],
     duration: "4 Bulan",
     place: "Kota Semarang",
     applyingDate: "12 Desember 2025",
@@ -115,10 +121,12 @@ export const CallForFellowsData = [
   },
   {
     id: 4,
-    companyImage: "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
+    type: "Call for Fellows",
+    companyImage:
+      "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
     companyName: "PT. Tokopedia Indonesia",
     jobPosition: "Software Engineer",
-    tags: [ { categorize: "Beasiswa" }, { placement: "WFO" }],
+    tags: [{ categorize: "Beasiswa" }, { placement: "WFO" }],
     duration: "3 Bulan",
     place: "Kota Jakarta Selatan",
     applyingDate: "12 Desember 2025",
@@ -151,12 +159,14 @@ export const CallForFellowsData = [
       "Safira Guna Azzahra (0812-3456-7890)",
     ],
   },
-  { 
+  {
     id: 5,
-    companyImage: "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
+    type: "Call for Fellows",
+    companyImage:
+      "https://dummyimage.com/600x600//FFFFFF.jpg&text=Call+For+Fellows",
     companyName: "PT. Bank Saku Australia",
     jobPosition: "Project Manager",
-    tags: [ { categorize: "Internship" }, { placement: "WFH" }],
+    tags: [{ categorize: "Internship" }, { placement: "WFH" }],
     duration: "8 Bulan",
     place: "Adelaide",
     applyingDate: "12 Desember 2025",

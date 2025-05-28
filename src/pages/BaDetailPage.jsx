@@ -25,7 +25,7 @@ const BaDetailPage = () => {
     <>
       <Navbar />
       {/* FIXED */}
-      <main className="container mx-auto px-15 py-6">
+      <main className="container mx-auto px-15 py-6 my-15">
         {/* TITLE PAGE */}
         <h1 className="text-3xl font-bold mb-6 text-[#0D4690]">Bonding Activities</h1>
 

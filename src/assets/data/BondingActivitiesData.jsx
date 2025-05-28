@@ -1,6 +1,7 @@
 export const BondingActivitiesData = [
   {
     id: 1,
+    type: "Bonding Activities",
     eventImage: [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+1",
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+2",
@@ -9,6 +10,7 @@ export const BondingActivitiesData = [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+5",
     ],
     eventName: "Xiaomi PopUp Run",
+    currentEvent: "On-Going",
     applyingDeadline: "12 Oktober 2025",
     eventDuration: "1 Hari",
     place: "Kota Jakarta Selatan",
@@ -35,6 +37,7 @@ export const BondingActivitiesData = [
   },
   {
     id: 2,
+    type: "Bonding Activities",
     eventImage: [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+1",
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+2",
@@ -45,6 +48,7 @@ export const BondingActivitiesData = [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+7",
     ],
     eventName: "Xiaomi Running Point",
+    currentEvent: "On-Going",
     applyingDeadline: "12 Oktober 2025",
     eventDuration: "2 Hari",
     place: "Kota Jakarta Selatan",
@@ -72,12 +76,14 @@ export const BondingActivitiesData = [
   },
   {
     id: 3,
+    type: "Bonding Activities",
     eventImage: [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+1",
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+2",
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+3",
     ],
     eventName: "Porseni Bakrie",
+    currentEvent: "Closed",
     applyingDeadline: "12 Oktober 2025",
     eventDuration: "1 Hari",
     place: "Kota Bandung",
@@ -105,6 +111,7 @@ export const BondingActivitiesData = [
   },
   {
     id: 4,
+    type: "Bonding Activities",
     eventImage: [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+1",
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+2",
@@ -112,6 +119,7 @@ export const BondingActivitiesData = [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+4",
     ],
     eventName: "Bakrie Sehat",
+    currentEvent: "On-Going",
     applyingDeadline: "12 Oktober 2025",
     eventDuration: "1 Hari",
     place: "Kota Jakarta",
@@ -139,6 +147,7 @@ export const BondingActivitiesData = [
   },
   {
     id: 5,
+    type: "Bonding Activities",
     eventImage: [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+1",
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+2",
@@ -147,6 +156,7 @@ export const BondingActivitiesData = [
       "https://dummyimage.com/600x600//fff.jpg&text=Bonding+Activities+5",
     ],
     eventName: "Xiaomi PopUp Run",
+    currentEvent: "Closed",
     applyingDeadline: "12 Oktober 2025",
     eventDuration: "1 Hari",
     place: "Kota Badung",
