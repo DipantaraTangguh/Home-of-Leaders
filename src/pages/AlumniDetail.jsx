@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../components/Layouts/Navbar";
 import { Link, useParams } from "react-router-dom";
 import alumniData from "../assets/data/alumniData";
