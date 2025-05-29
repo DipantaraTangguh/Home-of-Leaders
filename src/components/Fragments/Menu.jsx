@@ -87,13 +87,13 @@ const Menu = ({ navigate, closeMenu }) => {
                 <div
                   onMouseEnter={advDropdownEnter}
                   onMouseLeave={advDropdownLeave}
-                  className="absolute top-full left-0 mt-1 w-48 bg-white shadow-lg rounded-lg transition duration-150 z-20"
+                  className="absolute top-full left-0 mt-1 w-70 p-5 bg-white border border-gray-100 shadow-sm rounded-tr-3xl rounded-br-3xl rounded-bl-3xl transition duration-150 z-20 "
                 >
                   {advDropdown.map((dd) => (
                     <button
                       key={dd.label}
                       onClick={() => handleClick(dd.path)}
-                      className="w-full text-left px-4 py-4 hover:bg-gray-100 cursor-pointer rounded-md"
+                      className="w-full text-left px-4 py-4 hover:bg-gray-100 hover:text-[#0d4690] cursor-pointer rounded-tr-3xl rounded-br-3xl rounded-bl-3xl hover:font-medium"
                     >
                       {dd.label}
                     </button>
@@ -108,7 +108,7 @@ const Menu = ({ navigate, closeMenu }) => {
           return (
             <div
               key={menu.label}
-              className="relative inline-block"
+              className="relative inline-block "
               onMouseEnter={resEnter}
               onMouseLeave={resLeave}
             >
@@ -124,13 +124,13 @@ const Menu = ({ navigate, closeMenu }) => {
                 <div
                   onMouseEnter={resDropdownEnter}
                   onMouseLeave={resDropdownLeave}
-                  className="absolute top-full left-0 mt-1 w-48 bg-white shadow-lg rounded-lg transition duration-150 z-20"
+                  className="absolute top-full left-0 mt-1 w-70 p-5 bg-white border border-gray-100 shadow-sm rounded-tr-3xl rounded-br-3xl rounded-bl-3xl transition duration-150 z-20"
                 >
                   {resDropdown.map((dd) => (
                     <button
                       key={dd.label}
                       onClick={() => handleClick(dd.path)}
-                      className="w-full text-left px-4 py-4 hover:bg-gray-100 cursor-pointer rounded-md"
+                      className="w-full text-left px-4 py-4 hover:bg-gray-100 hover:text-[#0d4690] cursor-pointer rounded-tr-3xl rounded-br-3xl rounded-bl-3xl hover:font-medium"
                     >
                       {dd.label}
                     </button>

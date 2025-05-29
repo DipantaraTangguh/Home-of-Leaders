@@ -17,7 +17,7 @@ export default function SearchInput({ addOnClick }) {
 
       <button
         onClick={addOnClick}
-        className="flex items-center h-11 bg-[#0D4690] text-white rounded-full px-5 cursor-pointer focus:outline-none "
+        className="flex items-center h-11 bg-[#0D4690] hover:bg-blue-800 text-white rounded-full px-5 cursor-pointer focus:outline-none "
       >
         <Plus size={18} className="mr-2" /> Add
       </button>

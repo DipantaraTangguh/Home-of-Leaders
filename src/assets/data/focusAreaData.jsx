@@ -2,30 +2,36 @@ const centers = {
   alumni: {
     title: "Alumni Center",
     content: (
-      <ul className="list-disc pl-5">
+      <ul className="list-disc pl-5 ">
         <li>
           Berfokus untuk pembaharuan data alumni melalui link{" "}
           <a
             href="https://bit.ly/UpdatePendataanAlumniBCF"
-            className="text-blue-600 font-semibold"
+            className="text-[#0d4690] font-semibold"
           >
             bit.ly/UpdatePendataanAlumniBCF
           </a>{" "}
-          untuk <strong>mempermudah pemetaan alumni</strong> dalam kegiatan BCF
+          untuk <strong>mempermudah pemetaan alumni</strong> dalam kaitannya
+          dengan <strong>perlibatan dan pemberdayaan</strong> alumni dalam
+          kegiatan BCF
         </li>
         <li>
-          <strong>Pencatatan milestone alumni</strong> untuk keterlibatan dan
-          pencapaian
+          <strong>Pencatatan milestone alumni</strong> untuk memberikan
+          rekognisi kepada <strong>keterlibatan dan pencapaian alumni</strong>,
+          baik di dalam maupun di luar kegiatan BCF
         </li>
         <li>
-          <strong>Gathering Nasional dan Leaders Townhall</strong> tiap tahun
+          Kegiatan <strong>bonding</strong> antar alumni melalui{" "}
+          <strong>Gathering Nasional dan Leaders Townhall</strong> yang rutin
+          diadakan setiap tahun
         </li>
         <li>
-          Leadership and <strong>Sustainability Training</strong>
+          Peningkatan kapasitas alumni di berbagai bidang melalui{" "}
+          <strong>Leadership and Sustainability Training</strong>
         </li>
         <li>
-          <strong>#CallforFellows</strong> untuk sharing informasi peluang
-          alumni
+          <strong>Sharing informasi peluang alumni</strong> dalam rubrik{" "}
+          <strong>#CallforFellows</strong>
         </li>
       </ul>
     ),

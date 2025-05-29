@@ -5,7 +5,7 @@ const MenuItem = ({ item, path, activePath, onClick, extraClasses = "" }) => {
     <button
       onClick={onClick}
       className={`
-        relative text-gray-700 font-medium hover:text-blue-600
+        relative text-gray-700 font-medium hover:text-blue-700
         ${isActive ? "text-[#0D4690] font-semibold " : ""}
         ${extraClasses}`}
     >

@@ -71,8 +71,8 @@ const ResearchCenterDetailProsiding = () => {
               alt={research.title}
               className="w-64 rounded-lg shadow-lg mx-auto"
             />
-            <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-[#0D4690] text-[#0D4690] rounded-full hover:border-[#216EFF] transition">
-              <DownloadIcon size={16} className="mr-2" /> Download
+            <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-[#0D4690] text-[#0D4690] cursor-pointer font-semibold rounded-full hover:border-[#216EFF] transition">
+              <DownloadIcon size={20} className="mr-2" /> Download
             </button>
             <div className="mt-6 text-left">
               <span className="block font-medium mb-1">Link Dokumen</span>

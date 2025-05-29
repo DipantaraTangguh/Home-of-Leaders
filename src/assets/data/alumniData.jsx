@@ -19,8 +19,7 @@ const alumniData = [
       "Setiap kali aku berdiri di hadapan mereka, aku selalu mengatakan, “Aku dulu seperti kalian. Bermimpi besar dan berani mengambil langkah kecil untuk mewujudkannya. Jangan pernah menyerah.”",
       "Program ini telah membantu ribuan anak meraih mimpinya, mengubah masa depan mereka, keluarganya, bahkan komunitasnya. Dan semua ini dimulai dari sebuah beasiswa yang diberikan oleh mereka yang percaya pada potensi anak bangsa.",
     ],
-    quote:
-      "Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan.",
+    quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
   {
     slug: "fiqhin-alhan-munfiqo",
@@ -41,8 +40,7 @@ const alumniData = [
       "Setiap kali aku berdiri di hadapan mereka, aku selalu mengatakan, “Aku dulu seperti kalian. Bermimpi besar dan berani mengambil langkah kecil untuk mewujudkannya. Jangan pernah menyerah.”",
       "Program ini telah membantu ribuan anak meraih mimpinya, mengubah masa depan mereka, keluarganya, bahkan komunitasnya. Dan semua ini dimulai dari sebuah beasiswa yang diberikan oleh mereka yang percaya pada potensi anak bangsa.",
     ],
-    quote:
-      "Masa depan dibangun dari mereka yang berani bermimpi besar, belajar tanpa henti, dan berkontribusi tanpa pamrih. Setiap langkah kecil membawa dampak besar untuk kemajuan bersama.",
+    quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
   {
     slug: "safira-guna-azzahra",
@@ -63,8 +61,7 @@ const alumniData = [
       "Setiap kali aku berdiri di hadapan mereka, aku selalu mengatakan, “Aku dulu seperti kalian. Bermimpi besar dan berani mengambil langkah kecil untuk mewujudkannya. Jangan pernah menyerah.”",
       "Program ini telah membantu ribuan anak meraih mimpinya, mengubah masa depan mereka, keluarganya, bahkan komunitasnya. Dan semua ini dimulai dari sebuah beasiswa yang diberikan oleh mereka yang percaya pada potensi anak bangsa.",
     ],
-    quote:
-      "Masa depan dibangun dari mereka yang berani bermimpi besar, belajar tanpa henti, dan berkontribusi tanpa pamrih. Setiap langkah kecil membawa dampak besar untuk kemajuan bersama.",
+    quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
   {
     slug: "fauzan-akbar-abhirama",
@@ -85,8 +82,7 @@ const alumniData = [
       "Setiap kali aku berdiri di hadapan mereka, aku selalu mengatakan, “Aku dulu seperti kalian. Bermimpi besar dan berani mengambil langkah kecil untuk mewujudkannya. Jangan pernah menyerah.”",
       "Program ini telah membantu ribuan anak meraih mimpinya, mengubah masa depan mereka, keluarganya, bahkan komunitasnya. Dan semua ini dimulai dari sebuah beasiswa yang diberikan oleh mereka yang percaya pada potensi anak bangsa.",
     ],
-    quote:
-      "Masa depan dibangun dari mereka yang berani bermimpi besar, belajar tanpa henti, dan berkontribusi tanpa pamrih. Setiap langkah kecil membawa dampak besar untuk kemajuan bersama.",
+    quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
   {
     slug: "freda-desfita-artanti",
@@ -107,8 +103,7 @@ const alumniData = [
       "Setiap kali aku berdiri di hadapan mereka, aku selalu mengatakan, “Aku dulu seperti kalian. Bermimpi besar dan berani mengambil langkah kecil untuk mewujudkannya. Jangan pernah menyerah.”",
       "Program ini telah membantu ribuan anak meraih mimpinya, mengubah masa depan mereka, keluarganya, bahkan komunitasnya. Dan semua ini dimulai dari sebuah beasiswa yang diberikan oleh mereka yang percaya pada potensi anak bangsa.",
     ],
-    quote:
-      "Masa depan dibangun dari mereka yang berani bermimpi besar, belajar tanpa henti, dan berkontribusi tanpa pamrih. Setiap langkah kecil membawa dampak besar untuk kemajuan bersama.",
+    quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
   {
     slug: "rista-bella-wahyuningsih",
@@ -129,8 +124,7 @@ const alumniData = [
       "Setiap kali aku berdiri di hadapan mereka, aku selalu mengatakan, “Aku dulu seperti kalian. Bermimpi besar dan berani mengambil langkah kecil untuk mewujudkannya. Jangan pernah menyerah.”",
       "Program ini telah membantu ribuan anak meraih mimpinya, mengubah masa depan mereka, keluarganya, bahkan komunitasnya. Dan semua ini dimulai dari sebuah beasiswa yang diberikan oleh mereka yang percaya pada potensi anak bangsa.",
     ],
-    quote:
-      "Masa depan dibangun dari mereka yang berani bermimpi besar, belajar tanpa henti, dan berkontribusi tanpa pamrih. Setiap langkah kecil membawa dampak besar untuk kemajuan bersama.",
+    quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
   {
     slug: "burhanuddin-malik",
@@ -151,8 +145,7 @@ const alumniData = [
       "Setiap kali aku berdiri di hadapan mereka, aku selalu mengatakan, “Aku dulu seperti kalian. Bermimpi besar dan berani mengambil langkah kecil untuk mewujudkannya. Jangan pernah menyerah.”",
       "Program ini telah membantu ribuan anak meraih mimpinya, mengubah masa depan mereka, keluarganya, bahkan komunitasnya. Dan semua ini dimulai dari sebuah beasiswa yang diberikan oleh mereka yang percaya pada potensi anak bangsa.",
     ],
-    quote:
-      "Masa depan dibangun dari mereka yang berani bermimpi besar, belajar tanpa henti, dan berkontribusi tanpa pamrih. Setiap langkah kecil membawa dampak besar untuk kemajuan bersama.",
+    quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
   {
     slug: "faizal-rizki-khoily",
@@ -173,8 +166,7 @@ const alumniData = [
       "Setiap kali aku berdiri di hadapan mereka, aku selalu mengatakan, “Aku dulu seperti kalian. Bermimpi besar dan berani mengambil langkah kecil untuk mewujudkannya. Jangan pernah menyerah.”",
       "Program ini telah membantu ribuan anak meraih mimpinya, mengubah masa depan mereka, keluarganya, bahkan komunitasnya. Dan semua ini dimulai dari sebuah beasiswa yang diberikan oleh mereka yang percaya pada potensi anak bangsa.",
     ],
-    quote:
-      "Masa depan dibangun dari mereka yang berani bermimpi besar, belajar tanpa henti, dan berkontribusi tanpa pamrih. Setiap langkah kecil membawa dampak besar untuk kemajuan bersama.",
+    quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
 ];
 

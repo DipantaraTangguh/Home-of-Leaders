@@ -28,8 +28,8 @@ export function ResearchCenterDetailMain({ research }) {
         />
 
         {/* Download Button */}
-        <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-[#0D4690] text-[#0D4690] rounded-full hover:border-[#216EFF] transition">
-          <Download size={16} className="mr-2" /> Download
+        <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-[#0D4690] text-[#0D4690] font-semibold cursor-pointer rounded-full hover:border-[#216EFF] transition">
+          <Download size={20} className="mr-2" /> Download
         </button>
 
         {/* Link Button */}

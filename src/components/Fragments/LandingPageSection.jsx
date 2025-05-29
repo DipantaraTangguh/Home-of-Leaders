@@ -47,8 +47,8 @@ export function ProgramDescription() {
 
             {/* Visi dan Misi */}
             <div className="text-lg">
-              <div className="bg-orange-50 border-l-4 border-orange-400 px-4 py-7 rounded-xl w-full">
-                <h3 className="text-orange-600 font-bold text-lg mb-2">Visi</h3>
+              <div className="bg-orange-50 border-l-4 border-[#E89229] px-4 py-7 rounded-xl w-full">
+                <h3 className="text-[#E89229] font-bold text-lg mb-2">Visi</h3>
                 <p>
                   Terciptanya alumni BCF yang berdaya melalui kolaborasi
                   penanganan isu kesehatan, pendidikan, dan lingkungan secara
@@ -56,8 +56,8 @@ export function ProgramDescription() {
                 </p>
               </div>
 
-              <div className="bg-orange-50 border-l-4 border-orange-400 px-4 py-7 rounded-xl w-full my-5">
-                <h3 className="text-orange-600 font-bold text-lg mb-2">Misi</h3>
+              <div className="bg-orange-50 border-l-4 border-[#E89229] px-4 py-7 rounded-xl w-full my-5">
+                <h3 className="text-[#E89229] font-bold text-lg mb-2">Misi</h3>
                 <p>
                   Peningkatan kontribusi dan solidaritas alumni BCF dalam
                   pembinaan kapasitas penggiat sosial dan pengembangan
@@ -103,7 +103,7 @@ export function FocusArea() {
         </div>
 
         {/* Content Area */}
-        <div className="bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.25)] p-6 flex-1 text-gray-600 text-lg ">
+        <div className="bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.25)] p-6 flex-1 text-[#6C757D] text-lg ">
           <h3 className="text-2xl font-bold text-[#0D4690] mb-4">
             {centers[activeCenter].title}
           </h3>
@@ -238,14 +238,16 @@ export function AlumniSuccessStory() {
             <img
               src={selectedAlumni.image}
               alt={selectedAlumni.name}
-              className="rounded-xl w-48 h-auto object-cover self-end"
+              className="rounded-xl w-48 h-auto object-cover"
             />
             <div>
-              <h3 className="text-3xl font-semibold">{selectedAlumni.name}</h3>
-              <p className="text-sm text-gray-600 mb-2">
-                {selectedAlumni.title}
+              <h3 className="text-3xl font-semibold mb-2">
+                {selectedAlumni.name}
+              </h3>
+              <p className="text-lg text-gray-600 mb-2">
+                {selectedAlumni.title} |
                 {selectedAlumni.badge && (
-                  <span className="bg-cyan-100 text-cyan-800 px-2 py-0.5 rounded-full text-xs">
+                  <span className="bg-[#CFF4FC] text-[#0AA2C0] px-2 py-0.5 rounded-full ">
                     {selectedAlumni.badge}
                   </span>
                 )}
@@ -255,7 +257,7 @@ export function AlumniSuccessStory() {
               </p>
               <button
                 onClick={() => navigate(`/alumni/${selectedAlumni.slug}`)}
-                className="bg-[#E89229] hover:bg-orange-500 text-white px-4 py-2 rounded-3xl text-sm flex items-center cursor-pointer"
+                className="bg-[#E89229] hover:bg-orange-500 transition text-white px-4 py-2 rounded-3xl text-sm flex items-center cursor-pointer"
               >
                 Baca Selengkapnya
                 <span className="ml-1">
@@ -270,27 +272,25 @@ export function AlumniSuccessStory() {
           </div>
 
           {/* Bagian kanan  */}
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center">
             {alumniData.map((alumni, index) => (
               <div
                 key={index}
-                className={`cursor-pointer rounded-2xl p-2 border-4 transition ${
+                className={`cursor-pointer rounded-2xl p-2 border-4 transition hover:bg-[#0d4690]/10 ${
                   selectedAlumni.name === alumni.name
-                    ? "border-[#DB8A27]"
+                    ? "border-[#E89229]"
                     : "border-transparent"
                 }`}
                 onClick={() => setSelectedAlumni(alumni)}
               >
-                <div className="flex flex-col items-center text-center">
+                <div className="flex flex-col items-center text-center ">
                   <img
                     src={alumni.image}
                     alt={alumni.name}
                     className="w-16 h-16 mb-2 object-cover object-top"
                   />
-                  <p className="text-sm font-semibold text-gray-800">
-                    {alumni.name}
-                  </p>
-                  <p className="text-xs text-gray-500">{alumni.title}</p>
+                  <p className="text-md font-semibold mb-1">{alumni.name}</p>
+                  <p className="text-sm text-gray-500">{alumni.title}</p>
                 </div>
               </div>
             ))}

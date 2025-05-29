@@ -3,7 +3,10 @@ import { useState } from "react";
 import { Footer } from "../components/Layouts/Footer";
 import { AdvocacyCentreData } from "../assets/data/AdvocacyCentreData";
 import { CircleArrowOutUpRight } from "lucide-react";
-import { IYSFScrollableDetail, IYSFScrollableList } from "../components/Fragments/AlumniCenterDetailSection";
+import {
+  IYSFScrollableDetail,
+  IYSFScrollableList,
+} from "../components/Fragments/AlumniCenterDetailSection";
 
 const AdvocacyCenter = () => {
   // STATE VARIABLES
@@ -12,7 +15,7 @@ const AdvocacyCenter = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="overflow-x-hidden">
         {/* BANNER IMAGE */}
         <div className="relative w-screen h-[400px] sm:h-[500px] md:h-[600px] lg:h-[400px]">
           {/* BANNER */}

@@ -36,7 +36,7 @@ const Navbar = () => {
 
       {/* Menu Mobile (muncul saat isOpen = true) */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-lg p-4 transition-all duration-300">
+        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-lg p-4 transition-all duration-300 z-100">
           <Menu navigate={navigate} />
         </div>
       )}

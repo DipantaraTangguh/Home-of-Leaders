@@ -4,20 +4,20 @@ import recommendationLetterStatusData from "../../assets/data/recomendationLette
 
 export function RLHeaderBanner() {
   return (
-    <div className="bg-sky-50 rounded-[60px] pt-12 pb-20 px-6 text-center h-100">
+    <div className="bg-sky-50 rounded-[60px] pt-12 pb-20 px-6 text-center h-130">
       <h2 className="text-3xl font-bold mb-4 text-[#0D4690]">
         Surat Rekomendasi
       </h2>
-      <p className="mx-auto leading-relaxed px-5">
+      <p className="mx-auto leading-relaxed px-5 max-w-250">
         Surat rekomendasi bisa jadi 'tiket' menuju kesuksesan. Surat ini bisa
         membantu kamu{" "}
-        <span className="font-semibold text-orange-400">
+        <span className="font-semibold text-[#E89229]">
           membuktikan kemampuan dan potensi diri
         </span>
         , terutama saat melamar pekerjaan atau beasiswa.{" "}
-        <span className="font-semibold text-orange-400">Batas maksimal</span>{" "}
+        <span className="font-semibold text-[#E89229]">Batas maksimal</span>{" "}
         pengajuan surat rekomendasi adalah{" "}
-        <span className="font-semibold text-orange-400">seminggu</span> sebelum
+        <span className="font-semibold text-[#E89229]">seminggu</span> sebelum
         surat rekomendasi itu dibutuhkan.
       </p>
     </div>
@@ -26,7 +26,7 @@ export function RLHeaderBanner() {
 
 export function RLTimelineCard() {
   return (
-    <div className="relative px-4 sm:px-6 lg:px-8 md:-mt-40">
+    <div className="relative px-4 sm:px-6 lg:px-8 md:-mt-70">
       <div className="bg-white rounded-[60px] p-8 shadow-xl overflow-hidden relative ">
         <div>
           <h2 className="font-bold text-[#0D4690] text-2xl mt-10 ml-10">
@@ -72,7 +72,7 @@ export function RLSubmitForm() {
           <h2 className="text-3xl font-bold text-[#0D4690] pb-3">
             Form Pengajuan Surat Rekomendasi
           </h2>
-          <p className="text-sm text-orange-400 mt-1">
+          <p className="text-sm text-[#E89229] mt-1">
             Pastikan data diri Anda sudah terupdate ya! Data yang akurat akan
             sangat membantu kami dalam proses evaluasi dan seleksi. Jangan ragu
             untuk mengedit profil Anda jika ada perubahan.
@@ -163,7 +163,7 @@ export function RLSubmitForm() {
         <div className="text-right">
           <button
             type="submit"
-            className="bg-[#0D4690] text-white font-semibold px-6 py-2 cursor-pointer rounded-full hover:bg-blue-700 transition disabled:opacity-50"
+            className="bg-[#0D4690] text-white font-semibold px-6 py-2 cursor-pointer rounded-full hover:bg-blue-800 transition disabled:opacity-50"
           >
             Kirim
           </button>
@@ -243,9 +243,9 @@ export function RLStatusContent() {
                 </td>
                 <td className="px-4 py-3">
                   <button
-                    className={`flex items-center justify-center w-full py-2 px-2 text-sm font-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+                    className={`flex items-center justify-center w-full py-2 px-2 text-sm font-medium rounded-xl ${
                       item.status === "Approved"
-                        ? "bg-[#E89229] text-white hover:bg-orange-600 cursor-pointer"
+                        ? "border-2 border-[#E89229] bg-[#E89229] text-white hover:bg-white hover:text-[#E89229] cursor-pointer transition"
                         : "bg-[#ADB5BD] text-white cursor-not-allowed"
                     }`}
                     disabled={item.status !== "Approved"}

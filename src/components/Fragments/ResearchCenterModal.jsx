@@ -93,7 +93,7 @@ const ResearchCenterModal = ({
           {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold disabled:opacity-50"
+            className="w-full bg-[#0D4690] cursor-pointer text-white py-3 rounded-lg font-semibold disabled:opacity-50"
             disabled={!formData.title}
           >
             Publikasi
