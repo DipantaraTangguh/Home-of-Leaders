@@ -1,7 +1,19 @@
+import { useState } from "react";
 import { ArrowLeft } from "lucide-react";
-import { AlumniCenterCardBA, AlumniCenterCardCFF, AlumniCenterCardIYSF } from "../Elements/AlumniCenterCard";
-import { BAScrollableCardDetails, CFFScrollableCardDetails, IYSFScrollableCardDetails } from "../Elements/AlumniCenterDetailCard";
+import {
+  AlumniCenterCardBA,
+  AlumniCenterCardCFF,
+  AlumniCenterCardIYSF,
+} from "../Elements/AlumniCenterCard";
+import {
+  BAScrollableCardDetails,
+  CFFScrollableCardDetails,
+  IYSFScrollableCardDetails,
+} from "../Elements/AlumniCenterDetailCard";
 import { useNavigate } from "react-router-dom";
+import { NoProgramSelected } from "../Elements/NoProgramSelected";
+import { AppliedNowPopUp } from "../Elements/AppliedNowPopUp";
+import { SuccessAppliedPopUp } from "../Elements/SuccessAplliedPopUp";
 
 // CFF SCROLLABLE DETAILS AND SCROLLABLE CARD
 export const CFFScrollableList = ({ filteredFellows, setSelectedId }) => {
@@ -48,18 +60,23 @@ export const CFFScrollableDetail = ({ callForFellows, selectedId }) => {
 
       {/* SCROLLABLE CARD DETAILS */}
       <div
-        className="overflow-y-auto px-5 p-2"
+        className="overflow-y-auto px-5 py-2"
         style={{ maxHeight: "calc(80vh - 3.5rem)" }}
       >
-        {callForFellows.map(
-          (fellows) =>
-            fellows.id === selectedId && (
-              <CFFScrollableCardDetails
-                key={fellows.id}
-                callForFellows={fellows}
-              />
-            )
-        )}
+        {(() => {
+          const selectedFellows = callForFellows.find(
+            (fellows) => fellows.id === selectedId
+          );
+
+          return selectedFellows ? (
+            <CFFScrollableCardDetails
+              key={selectedFellows.id}
+              callForFellows={selectedFellows}
+            />
+          ) : (
+            <NoProgramSelected />
+          );
+        })()}
       </div>
     </div>
   );
@@ -94,6 +111,33 @@ export const BAScrollableDetail = ({ bondingActivities, selectedId }) => {
   // NAVIGATING THROUGH SCREEN
   const navigate = useNavigate();
 
+  // SHOWING POPUP APPLYING BUTTON
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [showSuccessPopUp, setShowSuccessPupUp] = useState(false);
+
+  const handleApplied = () => {
+    const selectedEvent = bondingActivities.find((item) => item.id === selectedId);
+    
+    if (selectedEvent.currentEvent !== "Closed") {
+      setShowPopUp(true);
+    }
+  };
+
+  const handleClose = () => {
+    setShowPopUp(false);
+  };
+
+  const handleConfirm = () => {
+    setShowPopUp(false);
+    setTimeout(() => {
+      setShowSuccessPupUp(true);
+    }, 300);
+  };
+
+  const handleCloseSuccessPopup = () => {
+    setShowSuccessPupUp(false);
+  };
+
   return (
     // SCROLLABLE DETAILS
     <div className="w-full lg:w-full p-6 border border-[#DEE2E6] rounded-[20px] bg-white max-h-[80vh] overflow-hidden ">
@@ -113,16 +157,35 @@ export const BAScrollableDetail = ({ bondingActivities, selectedId }) => {
         className="overflow-y-auto px-5 py-2"
         style={{ maxHeight: "calc(80vh - 3.5rem)" }}
       >
-        {bondingActivities.map(
-          (bonding) =>
-            bonding.id === selectedId && (
-              <BAScrollableCardDetails
-                key={bonding.id}
-                bondingActivities={bonding}
-              />
-            )
-        )}
+        {(() => {
+          const selectedBonding = bondingActivities.find(
+            (bonding) => bonding.id === selectedId
+          );
+
+          return selectedBonding ? (
+            <BAScrollableCardDetails
+              key={selectedBonding.id}
+              bondingActivities={selectedBonding}
+              buttonOption="Daftar Sekarang"
+              apllyingNowHandleClick={() => handleApplied()}
+            />
+          ) : (
+            <NoProgramSelected />
+          );
+        })()}
       </div>
+
+      {/* SHOWING POPUP APPLIED NOW BUTTON */}
+      <AppliedNowPopUp
+        isOpen={showPopUp}
+        onClose={handleClose}
+        onConfirm={handleConfirm}
+      />
+
+      <SuccessAppliedPopUp
+        isOpen={showSuccessPopUp}
+        onClose={handleCloseSuccessPopup}
+      />
     </div>
   );
 };
@@ -153,6 +216,33 @@ export const IYSFScrollableList = ({ advocacyCentre, setSelectedId }) => {
 };
 
 export const IYSFScrollableDetail = ({ advocacyCentre, selectedId }) => {
+  // SHOWING POPUP APPLYING BUTTON
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [showSuccessPopUp, setShowSuccessPupUp] = useState(false);
+
+  const handleApplied = () => {
+    const selectedEvent = advocacyCentre.find((item) => item.id === selectedId);
+
+    if (selectedEvent.currentEvent !== "Closed") {
+      setShowPopUp(true);
+    }
+  };
+
+  const handleClose = () => {
+    setShowPopUp(false);
+  };
+
+  const handleConfirm = () => {
+    setShowPopUp(false);
+    setTimeout(() => {
+      setShowSuccessPupUp(true);
+    }, 300);
+  };
+
+  const handleCloseSuccessPopup = () => {
+    setShowSuccessPupUp(false);
+  };
+
   return (
     // SCROLLABLE DETAILS
     <div className="w-full lg:w-full p-6 border border-[#DEE2E6] rounded-[20px] bg-white max-h-[80vh] overflow-hidden ">
@@ -166,13 +256,35 @@ export const IYSFScrollableDetail = ({ advocacyCentre, selectedId }) => {
         className="overflow-y-auto px-5 py-2"
         style={{ maxHeight: "calc(80vh - 3.5rem)" }}
       >
-        {advocacyCentre.map(
-          (iysf) =>
-            iysf.id === selectedId && (
-              <IYSFScrollableCardDetails key={iysf.id} advocacyCentre={iysf} />
-            )
-        )}
+        {(() => {
+          const selectedAdvocacy = advocacyCentre.find(
+            (advocacy) => advocacy.id === selectedId
+          );
+
+          return selectedAdvocacy ? (
+            <IYSFScrollableCardDetails
+              key={selectedAdvocacy.id}
+              advocacyCentre={selectedAdvocacy}
+              buttonOption="Daftar Sekarang"
+              applyingNowHandleClick={() => handleApplied()}
+            />
+          ) : (
+            <NoProgramSelected />
+          );
+        })()}
       </div>
+
+      {/* SHOWING POPUP APPLUED NOW BUTTON */}
+      <AppliedNowPopUp
+        isOpen={showPopUp}
+        onClose={handleClose}
+        onConfirm={handleConfirm}
+      />
+
+      <SuccessAppliedPopUp
+        isOpen={showSuccessPopUp}
+        onClose={handleCloseSuccessPopup}
+      />
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import Navbar from "../components/Layouts/Navbar";
 import { Footer } from "../components/Layouts/Footer";
 import myresearchData from "../assets/data/myresearchData";
-import HeaderTitle from "../components/Elements/HeaderTitle";
 import ResearchCenterTotalResearch from "../components/Elements/ResearchCenterTotalResearch";
 import ResearchCenterSearchInput from "../components/Fragments/ResearchCenterSearchInput";
 import ResearchCenterCardList from "../components/Fragments/ResearchCenterCardList";

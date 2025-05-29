@@ -17,10 +17,10 @@ import ResearchCenterProsidingDetailArticle from "./pages/ResearchCenterProsidin
 import CffDetailPage from "./pages/CffDetailPage";
 import BaDetailPage from "./pages/BaDetailPage";
 import ProfileDataAlumniPage from "./pages/ProfileDataAlumniPage";
-import ProfileKegiatankuPage from "./pages/ProfileKegiatankuPage";
 import ProfileSettingsPage from "./pages/ProfileSettingsPage";
 import ProfileNotifikasiPage from "./pages/ProfileNotifikasiPage";
 import { NotificationsProvider } from "./contexts/NotificationContext";
+import ProfileActivityPage from "./pages/ProfileActivityPage";
 
 function App() {
   return (
@@ -114,7 +114,7 @@ function App() {
             <Route path="/data-alumni" element={<ProfileDataAlumniPage />} />
 
             {/* Profile Kegiatanku */}
-            <Route path="/kegiatanku" element={<ProfileKegiatankuPage />} />
+            <Route path="/kegiatanku" element={<ProfileActivityPage />} />
 
             {/* Profile Settings */}
             <Route path="/settings" element={<ProfileSettingsPage />} />

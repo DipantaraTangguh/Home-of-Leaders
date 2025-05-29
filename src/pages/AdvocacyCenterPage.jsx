@@ -57,7 +57,7 @@ const AdvocacyCenter = () => {
         </div>
 
         {/* CONTENT SECTION */}
-        <div className="container mx-auto px-15 py-6">
+        <div className="container mx-auto px-15 py-6 mt-5 mb-20">
           <div className="flex flex-col lg:flex-row gap-6">
             {/* SCROLLABLE LIST LEFT */}
             <IYSFScrollableList

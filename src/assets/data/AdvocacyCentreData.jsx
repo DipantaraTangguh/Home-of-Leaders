@@ -1,8 +1,11 @@
 export const AdvocacyCentreData = [
   {
     id: 1,
-    eventLogo: "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
+    type: "IYSF",
+    eventLogo:
+      "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
     jobPosition: "Event Support",
+    currentEvent: "On-Going",
     place: "Kota Jakarta Selatan",
     categorizeEvent: "Offline",
     applyingDeadline: "20 Oktober 2025",
@@ -38,8 +41,11 @@ export const AdvocacyCentreData = [
   },
   {
     id: 2,
-    eventLogo: "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
+    type: "IYSF",
+    eventLogo:
+      "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
     jobPosition: "Event Photoggraph",
+    currentEvent: "On-Going",
     place: "Kota Jakarta Selatan",
     categorizeEvent: "Offline",
     applyingDeadline: "20 Oktober 2025",
@@ -75,8 +81,11 @@ export const AdvocacyCentreData = [
   },
   {
     id: 3,
-    eventLogo: "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
+    type: "IYSF",
+    eventLogo:
+      "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
     jobPosition: "Project Manager",
+    currentEvent: "Closed",
     place: "Kota Jakarta Selatan",
     categorizeEvent: "Online",
     applyingDeadline: "20 Oktober 2025",
@@ -112,8 +121,11 @@ export const AdvocacyCentreData = [
   },
   {
     id: 4,
-    eventLogo: "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
+    type: "IYSF",
+    eventLogo:
+      "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
     jobPosition: "Lead Event Production",
+    currentEvent: "On-Going",
     place: "Kota Jakarta Selatan",
     categorizeEvent: "Online",
     applyingDeadline: "20 Oktober 2025",
@@ -149,8 +161,11 @@ export const AdvocacyCentreData = [
   },
   {
     id: 5,
-    eventLogo: "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
+    type: "IYSF",
+    eventLogo:
+      "https://dummyimage.com/600x600//fff.jpg&text=Indonesia+Youth+Sutsainability+Forum",
     jobPosition: "Divisi Akomodasi & Transportasi",
+    currentEvent: "Closed",
     place: "Kota Jakarta Selatan",
     categorizeEvent: "Online",
     applyingDeadline: "20 Oktober 2025",
