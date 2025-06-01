@@ -218,6 +218,13 @@ export function CollaborationFlow() {
 import alumniData from "../../assets/data/alumniData";
 import { useNavigate } from "react-router-dom";
 
+const badgeStyles = {
+  BGF: "bg-[#CFF4FC] text-[#0AA2C0]",
+  CLP: "bg-[#E2D9F3] text-[#59359A]",
+  LEAD: "bg-[#FAEBE2] text-[#DB8A27]",
+  DEFAULT: "bg-gray-200 text-gray-700",
+};
+
 export function AlumniSuccessStory() {
   const [selectedAlumni, setSelectedAlumni] = useState(alumniData[0]);
   const navigate = useNavigate();
@@ -231,7 +238,7 @@ export function AlumniSuccessStory() {
         <GrayLine extraClasses="flex w-1/2" />
       </div>
 
-      <div className="background bg-[#e9f2ff] min-h-[400px] py-20 flex items-center">
+      <div className="background bg-[#F2F3F6] min-h-[400px] py-20 flex items-center">
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           {/* Bagian kiri */}
           <div className="flex items-stretch gap-6">
@@ -245,9 +252,14 @@ export function AlumniSuccessStory() {
                 {selectedAlumni.name}
               </h3>
               <p className="text-lg text-gray-600 mb-2">
-                {selectedAlumni.title} |
+                {selectedAlumni.title} |{" "}
                 {selectedAlumni.badge && (
-                  <span className="bg-[#CFF4FC] text-[#0AA2C0] px-2 py-0.5 rounded-full ">
+                  <span
+                    className={`px-6 py-0.5 rounded-full ${
+                      badgeStyles[selectedAlumni.badge] || badgeStyles.DEFAULT
+                    }
+                    `}
+                  >
                     {selectedAlumni.badge}
                   </span>
                 )}

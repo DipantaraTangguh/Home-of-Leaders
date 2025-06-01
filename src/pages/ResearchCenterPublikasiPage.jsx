@@ -6,7 +6,7 @@ import TotalResearch from "../components/Elements/ResearchCenterTotalResearch";
 import ResearchCenterSearchInput from "../components/Fragments/ResearchCenterSearchInput";
 import ResearchCenterCardList from "../components/Fragments/ResearchCenterCardList";
 import ResearchCenterModal from "../components/Fragments/ResearchCenterModal";
-import ResearchCenterContainer from "../components/Layouts/ResearchCenterContainer";
+import Container from "../components/Layouts/Container";
 import useResearchCenterModal from "../hooks/useResearchCenterModal";
 
 const ResearchCenterPublikasiPage = () => {
@@ -25,7 +25,7 @@ const ResearchCenterPublikasiPage = () => {
       {/* Navbar */}
       <Navbar />
       {/* Container */}
-      <ResearchCenterContainer>
+      <Container>
         {/* Header */}
         <HeaderTitle title={"Publikasi"} />
 
@@ -50,7 +50,7 @@ const ResearchCenterPublikasiPage = () => {
           onChange={handleChange}
           onFileChange={handleFileChange}
         />
-      </ResearchCenterContainer>
+      </Container>
       <Footer />
     </main>
   );

@@ -1,6 +1,6 @@
 import Navbar from "../components/Layouts/Navbar";
 import profileData from "../assets/data/ProfileAlumniData";
-import ResearchCenterContainer from "../components/Layouts/ResearchCenterContainer";
+import Container from "../components/Layouts/Container";
 import {
   ProfileSelfDataForm,
   ProfileHeader,
@@ -14,7 +14,7 @@ export default function ProfileDataAlumniPage() {
   return (
     <main>
       <Navbar />
-      <ResearchCenterContainer>
+      <Container>
         <h2 className="text-[#0D4690] text-3xl font-bold mb-2 pb-10 pt-5">
           Data Alumni
         </h2>
@@ -32,7 +32,7 @@ export default function ProfileDataAlumniPage() {
         <ProfilePlacementDataForm />
         <ProfileProfessionalExperience />
         <ProfileInvolvementAchievement />
-      </ResearchCenterContainer>
+      </Container>
       <Footer />
     </main>
   );

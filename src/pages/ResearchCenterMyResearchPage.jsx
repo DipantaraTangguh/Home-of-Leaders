@@ -5,7 +5,7 @@ import ResearchCenterTotalResearch from "../components/Elements/ResearchCenterTo
 import ResearchCenterSearchInput from "../components/Fragments/ResearchCenterSearchInput";
 import ResearchCenterCardList from "../components/Fragments/ResearchCenterCardList";
 import ResearchCenterModal from "../components/Fragments/ResearchCenterModal";
-import ResearchCenterContainer from "../components/Layouts/ResearchCenterContainer";
+import Container from "../components/Layouts/Container";
 import useResearchCenterModal from "../hooks/useResearchCenterModal";
 
 const ResearchCenterMyResearchPage = () => {
@@ -22,7 +22,7 @@ const ResearchCenterMyResearchPage = () => {
   return (
     <section>
       <Navbar />
-      <ResearchCenterContainer>
+      <Container>
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-bold text-[#0D4690]">My Research</h1>
@@ -50,7 +50,7 @@ const ResearchCenterMyResearchPage = () => {
           onChange={handleChange}
           onFileChange={handleFileChange}
         />
-      </ResearchCenterContainer>
+      </Container>
       <Footer />
     </section>
   );
