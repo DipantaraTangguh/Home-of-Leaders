@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Lock, Eye, EyeClosed, CircleCheckBig } from "lucide-react";
-import { RightIlustration } from "../components/Elements/RightIlustration";
-import { HolBcfLogo } from "../components/Elements/HolBcfLogo";
+import { RightIlustration } from "../../components/Elements/RightIlustration";
+import { HolBcfLogo } from "../../components/Elements/HolBcfLogo";
 
 function ResetPasswordPage() {
   const [password, setPassword] = useState("");

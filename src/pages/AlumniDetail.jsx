@@ -1,11 +1,11 @@
 import Navbar from "../components/Layouts/Navbar";
 import { Link, useParams } from "react-router-dom";
-import alumniData from "../assets/data/alumniData";
+import { AlumniInformationsData } from "../assets/data/AlumniInformationsData";
 import { Footer } from "../components/Layouts/Footer";
 
 const AlumniDetail = () => {
   const { slug } = useParams();
-  const alum = alumniData.find((a) => a.slug === slug);
+  const alum = AlumniInformationsData.find((a) => a.slug === slug);
 
   if (!alum) {
     return (

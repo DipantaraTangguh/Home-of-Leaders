@@ -264,7 +264,7 @@ export const IYSFScrollableCardDetails = ({
   advocacyCentre,
   buttonOption,
   disableButtonOption = false,
-  applyingNowHandleClick,
+  apllyingNowHandleClick,
 }) => {
   return (
     <div>
@@ -279,7 +279,7 @@ export const IYSFScrollableCardDetails = ({
           <button
             disabled={disableButtonOption}
             // BUTTON TRIGGER FOR APPLYING NOW POPUP
-            onClick={applyingNowHandleClick}
+            onClick={apllyingNowHandleClick}
             className={`flex items-center justify-center gap-2 px-4 py-2 rounded-full transition font-bold text-sm 
               ${
                 disableButtonOption || advocacyCentre.currentEvent === "Closed"

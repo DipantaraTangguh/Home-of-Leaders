@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Mail } from "lucide-react";
-import { RightIlustration } from "../components/Elements/RightIlustration";
+import { RightIlustration } from "../../components/Elements/RightIlustration";
 import { useNavigate } from "react-router-dom";
 
 function EmailVerificationPage() {

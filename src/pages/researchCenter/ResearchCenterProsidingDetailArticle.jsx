@@ -8,16 +8,16 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Layouts/Navbar";
-import prosidingData from "../assets/data/prosidingData";
-import { Footer } from "../components/Layouts/Footer";
+import Navbar from "../../components/Layouts/Navbar";
+import { ProsidingDetailData } from "../../assets/data/ProsidingDetailData";
+import { Footer } from "../../components/Layouts/Footer";
 
 const ResearchCenterProsidingDetailArticle = () => {
   const { articleSlug } = useParams(); // slug artikel
   const navigate = useNavigate();
 
   // pertama cari prosiding mana yang punya artikel ini:
-  const { articles } = prosidingData.find((p) =>
+  const { articles } = ProsidingDetailData.find((p) =>
     p.articles.some((a) => a.slug === articleSlug)
   );
 

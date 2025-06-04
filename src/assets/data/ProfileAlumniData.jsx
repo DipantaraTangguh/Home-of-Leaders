@@ -1,4 +1,4 @@
-const profileData = [
+export const ProfileAlumniData = [
   {
     name: "Fiqhin Alhan Munfiqo",
     program: "CLP",
@@ -8,5 +8,3 @@ const profileData = [
   },
   // Bisa ditambah data profile lain jika dibutuhkan
 ];
-
-export default profileData;

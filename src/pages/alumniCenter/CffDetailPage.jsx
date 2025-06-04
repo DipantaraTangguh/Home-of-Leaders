@@ -1,9 +1,9 @@
-import Navbar from "../components/Layouts/Navbar";
+import Navbar from "../../components/Layouts/Navbar";
 import { useState, useEffect } from "react";
-import { Footer } from "../components/Layouts/Footer";
-import { CallForFellowsData } from "../assets/data/CallForFellowsData";
-import { SearchBar } from "../components/Elements/SearchBar";
-import { CFFScrollableDetail, CFFScrollableList } from "../components/Fragments/AlumniCenterDetailSection";
+import { Footer } from "../../components/Layouts/Footer";
+import { CallForFellowsData } from "../../assets/data/CallForFellowsData";
+import { SearchBar } from "../../components/Elements/SearchBar";
+import { CFFScrollableDetail, CFFScrollableList } from "../../components/Fragments/AlumniCenterDetailSection";
 
 const CffDetailPage = () => {
   // STATE VARIABLES

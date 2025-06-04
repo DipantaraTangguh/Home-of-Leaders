@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/Layouts/Navbar";
+import Navbar from "../../components/Layouts/Navbar";
 import { cloneElement } from "react";
-import { Footer } from "../components/Layouts/Footer";
+import { Footer } from "../../components/Layouts/Footer";
 import { useNavigate } from "react-router-dom";
-import { useNotifications } from "../contexts/NotificationContext";
+import { useNotifications } from "../../contexts/NotificationContext";
 
 export default function ProfileNotifikasiPage() {
   const { notifications, markAllAsRead } = useNotifications();

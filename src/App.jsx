@@ -1,26 +1,43 @@
+// LIBLARY
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginPage from "./pages/LoginPage";
-import LandingPage from "./pages/LandingPage";
-import AlumniCenterPage from "./pages/AlumniCenterPage";
-import AdvocacyCenterPage from "./pages/AdvocacyCenterPage";
-import ResearchCenterPublikasiPage from "./pages/ResearchCenterPublikasiPage";
-import RecomendationLetterPage from "./pages/recomendationLetterPage";
-import AlumniDetail from "./pages/AlumniDetail";
-import EmailVerificationPage from "./pages/EmailVerificationPage";
-import ResetPasswordPage from "./pages/ResetPasswordPage";
-import ResearchCenterDetailPublikasi from "./pages/ResearchCenterDetailPublikasi";
-import ResearchCenterProsidingPage from "./pages/ResearchCenterProsidingPage";
-import ResearchCenterDetailProsiding from "./pages/ResearchCenterDetailProsiding";
-import ResearchCenterMyresearchPage from "./pages/ResearchCenterMyResearchPage";
-import ResearchCenterDetailMyResearch from "./pages/ResearchCenterDetailMyResearch";
-import ResearchCenterProsidingDetailArticle from "./pages/ResearchCenterProsidingDetailArticle";
-import CffDetailPage from "./pages/CffDetailPage";
-import BaDetailPage from "./pages/BaDetailPage";
-import ProfileDataAlumniPage from "./pages/ProfileDataAlumniPage";
-import ProfileSettingsPage from "./pages/ProfileSettingsPage";
-import ProfileNotifikasiPage from "./pages/ProfileNotifikasiPage";
+
+// HOOKS
 import { NotificationsProvider } from "./contexts/NotificationContext";
-import ProfileActivityPage from "./pages/ProfileActivityPage";
+
+// RECOMENDATION LETTER
+import RecomendationLetterPage from "./pages/recomendationLetter/RecomendationLetterPage";
+
+// ADVOCACY CENTER
+import AdvocacyCenterPage from "./pages/advocacyCenter/AdvocacyCenterPage";
+
+// HOMEPAGE/LANDING PAGE
+import LandingPage from "./pages/LandingPage";
+import AlumniDetail from "./pages/AlumniDetail";
+
+// AUTH
+import LoginPage from "./pages/auth/LoginPage";
+import EmailVerificationPage from "./pages/auth/EmailVerificationPage";
+import ResetPasswordPage from "./pages/auth/ResetPasswordPage";
+
+// ALUMNI CENTER
+import AlumniCenterPage from "./pages/alumniCenter/AlumniCenterPage";
+import CffDetailPage from "./pages/alumniCenter/CffDetailPage";
+import BaDetailPage from "./pages/alumniCenter/BaDetailPage";
+
+// PROFILE
+import ProfileSettingsPage from "./pages/profile/ProfileSettingsPage";
+import ProfileNotifikasiPage from "./pages/profile/ProfileNotifikasiPage";
+import ProfileDataAlumniPage from "./pages/profile/ProfileDataAlumniPage";
+import ProfileActivityPage from "./pages/profile/ProfileActivityPage";
+
+// RESEARCH CENTER
+import ResearchCenterPublikasiPage from "./pages/researchCenter/ResearchCenterPublikasiPage";
+import ResearchCenterDetailPublikasi from "./pages/researchCenter/ResearchCenterDetailPublikasi";
+import ResearchCenterProsidingPage from "./pages/researchCenter/ResearchCenterProsidingPage";
+import ResearchCenterDetailProsiding from "./pages/researchCenter/ResearchCenterDetailProsiding";
+import ResearchCenterMyresearchPage from "./pages/researchCenter/ResearchCenterMyResearchPage";
+import ResearchCenterDetailMyResearch from "./pages/researchCenter/ResearchCenterDetailMyResearch";
+import ResearchCenterProsidingDetailArticle from "./pages/researchCenter/ResearchCenterProsidingDetailArticle";
 
 function App() {
   return (
@@ -28,99 +45,104 @@ function App() {
       <NotificationsProvider>
         <BrowserRouter>
           <Routes>
-            {/* Login Page */}
-            <Route path="/" element={<LoginPage />} />
+            {/* LOGIN PAGE */}
+            <Route path="/login" element={<LoginPage />} />
 
-            {/* Landing Page */}
-            <Route path="/landing-page" element={<LandingPage />} />
+            {/* LANDING PAGE/HOMEPAGE */}
+            <Route path="/" element={<LandingPage />} />
 
-            {/* Alumni Center Page */}
+            {/* ALUMNI CENTER PAGE */}
             <Route path="/alumni-center" element={<AlumniCenterPage />} />
 
-            {/* Advocacy Center IYSF */}
+            {/* ADVOCACY CENTER IYSF PAGE */}
             <Route
               path="/advocacy-center/iysf"
               element={<AdvocacyCenterPage />}
             />
 
-            {/* Research Center Publikasi Page */}
+            {/* RESEARCH CENTER PUBLICATION PAGE*/}
             <Route
-              path="/research-center/publikasi"
+              path="/research-center/publication"
               element={<ResearchCenterPublikasiPage />}
             />
 
-            {/* Research Center Detail Publikasi Page */}
+            {/* RESEARCH CENTER DETAIL PUBLICATION PAGE */}
             <Route
-              path="/research-center/publikasi/:slug"
+              path="/research-center/publication/:slug"
               element={<ResearchCenterDetailPublikasi />}
             />
 
-            {/* Research Center Prosiding Page */}
+            {/* RESEARCH CENTER PROSIDING PAGE */}
             <Route
               path="/research-center/prosiding"
               element={<ResearchCenterProsidingPage />}
             />
 
-            {/* Research Center Detail Prosiding Page */}
+            {/* RESEARCH CENTER PROSIDING DETAIL PAGE */}
             <Route
               path="/research-center/prosiding/:slug"
               element={<ResearchCenterDetailProsiding />}
             />
 
-            {/* Research Center Detail Artikel Prosiding Page */}
+            {/* RESEARCH CENTER PROSIDING DETAIL ARTICLE PAGE */}
             <Route
-              path="/research-center/prosiding/artikel/:articleSlug"
+              path="/research-center/prosiding/article/:articleSlug"
               element={<ResearchCenterProsidingDetailArticle />}
             />
 
-            {/* Research Center My Research Page */}
+            {/* RESEARCH CENTER MY RESEARCH PAGE */}
             <Route
               path="/research-center/my-research"
               element={<ResearchCenterMyresearchPage />}
             />
 
-            {/* Research Center Detail My Research Page */}
+            {/* RESEARCH CENTER MY RESEARCH DETAILS */}
             <Route
               path="/research-center/my-research/:slug"
               element={<ResearchCenterDetailMyResearch />}
             />
 
-            {/* Surat Rekomendasi Page */}
+            {/* RECOMENDATION LETTER PAGE */}
             <Route
-              path="/surat-rekomendasi"
+              path="/recomendation-letter"
               element={<RecomendationLetterPage />}
             />
 
-            {/* Email Verification Page */}
+            {/* EMAIL VERRIFICATION PAGE */}
             <Route
               path="/forgot-password"
               element={<EmailVerificationPage />}
             />
 
-            {/* Reset Password Page */}
+            {/* RESET PASSOWRD PAGE */}
             <Route path="/reset-password" element={<ResetPasswordPage />} />
 
-            {/* Alumni Detail Page */}
+            {/* HOMEPAGE ALUMNI DETAIL */}
             <Route path="/alumni/:slug" element={<AlumniDetail />} />
 
-            <Route path="/callforfellows/detail" element={<CffDetailPage />} />
-
+            {/* ALUMNI CENTER CALL FOR FELLOWS DETAIL PAGE */}
             <Route
-              path="/bondingactivities/detail"
+              path="/alumni-center/call-for-fellows/"
+              element={<CffDetailPage />}
+            />
+
+            {/* ALUMNI CENTER BONDING ACTIVITIES DETAIL PAGE */}
+            <Route
+              path="/alumni-center/bonding-activities/"
               element={<BaDetailPage />}
             />
 
-            {/* Profile Data Alumni */}
-            <Route path="/data-alumni" element={<ProfileDataAlumniPage />} />
+            {/* PROFILE DROPDOWN ALUMNI DATA PAGE */}
+            <Route path="/alumni-data" element={<ProfileDataAlumniPage />} />
 
-            {/* Profile Kegiatanku */}
-            <Route path="/kegiatanku" element={<ProfileActivityPage />} />
+            {/* PROFILE DROPDOWN MY ACTIVITY PAGE */}
+            <Route path="/my-activity" element={<ProfileActivityPage />} />
 
-            {/* Profile Settings */}
+            {/* PROFILE DROPDOWN SETTINGS */}
             <Route path="/settings" element={<ProfileSettingsPage />} />
 
-            {/* Profile Notifikasi Page */}
-            <Route path="/notifikasi" element={<ProfileNotifikasiPage />} />
+            {/* PROFILE DROPDOWN NOTIFICATIONS PAGE */}
+            <Route path="/notifications" element={<ProfileNotifikasiPage />} />
           </Routes>
         </BrowserRouter>
       </NotificationsProvider>

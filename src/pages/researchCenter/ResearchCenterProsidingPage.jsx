@@ -1,13 +1,12 @@
-import Navbar from "../components/Layouts/Navbar";
-import { Footer } from "../components/Layouts/Footer";
-import prosidingData from "../assets/data/prosidingData";
-import HeaderTitle from "../components/Elements/HeaderTitle";
-import TotalResearch from "../components/Elements/ResearchCenterTotalResearch";
-import ResearchCenterSearchInput from "../components/Fragments/ResearchCenterSearchInput";
-import ResearchCenterCardList from "../components/Fragments/ResearchCenterCardList";
-import ResearchCenterModal from "../components/Fragments/ResearchCenterModal";
-import Container from "../components/Layouts/Container";
-import useResearchCenterModal from "../hooks/useResearchCenterModal";
+import Navbar from "../../components/Layouts/Navbar";
+import { Footer } from "../../components/Layouts/Footer";
+import { ProsidingDetailData } from "../../assets/data/ProsidingDetailData";
+import TotalResearch from "../../components/Elements/ResearchCenterTotalResearch";
+import ResearchCenterSearchInput from "../../components/Fragments/ResearchCenterSearchInput";
+import ResearchCenterCardList from "../../components/Fragments/ResearchCenterCardList";
+import ResearchCenterModal from "../../components/Fragments/ResearchCenterModal";
+import Container from "../../components/Layouts/Container";
+import useResearchCenterModal from "../../hooks/useResearchCenterModal";
 
 const ResearchCenterProsidingPage = () => {
   const {
@@ -30,14 +29,14 @@ const ResearchCenterProsidingPage = () => {
         </div>
 
         {/* Total Research */}
-        <TotalResearch total={prosidingData.length} />
+        <TotalResearch total={ProsidingDetailData.length} />
 
         {/* Search & Add */}
         <ResearchCenterSearchInput addOnClick={handleOpen} />
 
         {/* List Prosiding Card */}
         <ResearchCenterCardList
-          data={prosidingData}
+          data={ProsidingDetailData}
           detailPathPrefix="/research-center/prosiding"
         />
 

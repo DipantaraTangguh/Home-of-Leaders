@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { AlumniCenterCardCFF, AlumniCenterCardBA, AlumniCenterCardIYSF } from "../Elements/AlumniCenterCard";
 import { CallForFellowsData } from "../../assets/data/CallForFellowsData";
 import { BondingActivitiesData } from "../../assets/data/BondingActivitiesData";
@@ -23,7 +23,7 @@ export const CallForFellowsSection = () => {
           mereka. Temukan peluang untuk memaksimalkan potensi dirimu di
           #CallForFellows!
         </p>
-        <button onClick={() => navigate("/callforfellows/detail")}className="bg-[#E89229] hover:bg-[#feeadc] hover:text-[#E89229] transition text-[#FFFFFF] px-6 py-2 rounded-full text-sm font-semibold border border-[#E89229]">
+        <button onClick={() => navigate("/alumni-center/call-for-fellows/")}className="bg-[#E89229] hover:bg-[#feeadc] hover:text-[#E89229] transition text-[#FFFFFF] px-6 py-2 rounded-full text-sm font-semibold border border-[#E89229]">
           Lihat Detail
         </button>
       </div>
@@ -77,7 +77,7 @@ export const BondingActivitiesSection = () => {
           memperkuat koneksi sekaligus menciptakan kolaborasi yang bermanfaat
           antar alumni.
         </p>
-        <button onClick={() => navigate("/bondingactivities/detail")} className="bg-[#0D4690] hover:bg-[#216EFFB2] transition text-white px-6 py-2 rounded-full text-sm font-semibold">
+        <button onClick={() => navigate("/alumni-center/bonding-activities")} className="bg-[#0D4690] hover:bg-[#216EFFB2] transition text-white px-6 py-2 rounded-full text-sm font-semibold">
           Lihat Detail
         </button>
       </div>
