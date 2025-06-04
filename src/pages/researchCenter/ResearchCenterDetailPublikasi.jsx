@@ -1,19 +1,19 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import Navbar from "../components/Layouts/Navbar";
-import { Footer } from "../components/Layouts/Footer";
+import Navbar from "../../components/Layouts/Navbar";
+import { Footer } from "../../components/Layouts/Footer";
 import {
   ResearchCenterDetailBackButton,
   ResearchCenterDetailMain,
-} from "../components/Fragments/ResearchCenterDetailSection";
-import publikasiData from "../assets/data/publikasiData";
+} from "../../components/Fragments/ResearchCenterDetailSection";
+import { PublicationsDetailData } from "../../assets/data/PublicationsDetailData"
 
 const ResearchCenterDetailPublikasi = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
 
   // Cari data berdasarkan slug dari publikasi data
-  const research = publikasiData.find((item) => item.slug === slug);
+  const research = PublicationsDetailData.find((item) => item.slug === slug);
 
   if (!research) {
     return (
@@ -33,7 +33,7 @@ const ResearchCenterDetailPublikasi = () => {
     <>
       <Navbar />
       <section className="container mx-auto py-6 px-15 pb-20">
-        <ResearchCenterDetailBackButton link={"/research-center/publikasi"} />
+        <ResearchCenterDetailBackButton link={"/research-center/publication"} />
 
         <ResearchCenterDetailMain research={research} />
       </section>

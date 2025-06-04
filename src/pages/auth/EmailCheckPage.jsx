@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { HolBcfLogo } from "../components/Elements/HolBcfLogo";
-import { RightIlustration } from "../components/Elements/RightIlustration";
+import { HolBcfLogo } from "../../components/Elements/HolBcfLogo";
+import { RightIlustration } from "../../components/Elements/RightIlustration";
 
 function EmailVerificationPage() {
   // State Variables

@@ -12,8 +12,7 @@ import {
 } from "../Elements/AlumniCenterDetailCard";
 import { useNavigate } from "react-router-dom";
 import { NoProgramSelected } from "../Elements/NoProgramSelected";
-import { AppliedNowPopUp } from "../Elements/AppliedNowPopUp";
-import { SuccessAppliedPopUp } from "../Elements/SuccessAplliedPopUp";
+import { AppliedNowPopUp, SuccessAppliedPopUp } from "../Elements/ApplyProgramPopUp";
 
 // CFF SCROLLABLE DETAILS AND SCROLLABLE CARD
 export const CFFScrollableList = ({ filteredFellows, setSelectedId }) => {
@@ -266,7 +265,7 @@ export const IYSFScrollableDetail = ({ advocacyCentre, selectedId }) => {
               key={selectedAdvocacy.id}
               advocacyCentre={selectedAdvocacy}
               buttonOption="Daftar Sekarang"
-              applyingNowHandleClick={() => handleApplied()}
+              apllyingNowHandleClick={() => handleApplied()}
             />
           ) : (
             <NoProgramSelected />

@@ -1,4 +1,4 @@
-const myresearchData = [
+export const MyResearchData = [
   {
     id: 1,
     slug: "my-research-1",
@@ -69,5 +69,3 @@ const myresearchData = [
     ],
   },
 ];
-
-export default myresearchData;

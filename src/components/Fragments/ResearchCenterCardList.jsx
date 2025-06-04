@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export const ResearchCard = ({
   item,
-  detailPathPrefix = "/research-center/publikasi",
+  detailPathPrefix = "/research-center/publication",
   showStatus = false,
   getStatusStyles = null,
 }) => {

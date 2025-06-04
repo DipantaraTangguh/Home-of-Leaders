@@ -1,13 +1,13 @@
-import Navbar from "../components/Layouts/Navbar";
-import publikasiData from "../assets/data/publikasiData";
-import { Footer } from "../components/Layouts/Footer";
-import HeaderTitle from "../components/Elements/HeaderTitle";
-import TotalResearch from "../components/Elements/ResearchCenterTotalResearch";
-import ResearchCenterSearchInput from "../components/Fragments/ResearchCenterSearchInput";
-import ResearchCenterCardList from "../components/Fragments/ResearchCenterCardList";
-import ResearchCenterModal from "../components/Fragments/ResearchCenterModal";
-import Container from "../components/Layouts/Container";
-import useResearchCenterModal from "../hooks/useResearchCenterModal";
+import Navbar from "../../components/Layouts/Navbar";
+import { PublicationsDetailData } from "../../assets/data/PublicationsDetailData"
+import { Footer } from "../../components/Layouts/Footer";
+import { HeaderTitle } from "../../components/Elements/HeaderTitle";
+import TotalResearch from "../../components/Elements/ResearchCenterTotalResearch";
+import ResearchCenterSearchInput from "../../components/Fragments/ResearchCenterSearchInput";
+import ResearchCenterCardList from "../../components/Fragments/ResearchCenterCardList";
+import ResearchCenterModal from "../../components/Fragments/ResearchCenterModal";
+import Container from "../../components/Layouts/Container";
+import useResearchCenterModal from "../../hooks/useResearchCenterModal";
 
 const ResearchCenterPublikasiPage = () => {
   const {
@@ -30,15 +30,15 @@ const ResearchCenterPublikasiPage = () => {
         <HeaderTitle title={"Publikasi"} />
 
         {/* Total Research */}
-        <TotalResearch total={publikasiData.length} />
+        <TotalResearch total={PublicationsDetailData.length} />
 
         {/* Search & Add */}
         <ResearchCenterSearchInput addOnClick={handleOpen} />
 
         {/* List Publication Card  */}
         <ResearchCenterCardList
-          data={publikasiData}
-          detailPathPrefix="/research-center/publikasi"
+          data={PublicationsDetailData}
+          detailPathPrefix="/research-center/publication"
         />
 
         {/* Modal */}

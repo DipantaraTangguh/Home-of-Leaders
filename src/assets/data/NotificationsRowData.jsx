@@ -1,6 +1,6 @@
 import { BookOpen, Users } from "lucide-react";
 
-export const notificationsData = [
+export const NotificationsRowData = [
   {
     id: 1,
     title: "Surat Rekomendasi",
@@ -9,7 +9,7 @@ export const notificationsData = [
     time: "05 September 2024, 12:09",
     unread: true,
     icon: <BookOpen />,
-    link: "/surat-rekomendasi",
+    link: "/recomendation-letter",
   },
   {
     id: 2,

@@ -1,6 +1,6 @@
-import Navbar from "../components/Layouts/Navbar";
-import { Footer } from "../components/Layouts/Footer";
-import Container from "../components/Layouts/Container";
+import Navbar from "../../components/Layouts/Navbar";
+import { Footer } from "../../components/Layouts/Footer";
+import Container from "../../components/Layouts/Container";
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 

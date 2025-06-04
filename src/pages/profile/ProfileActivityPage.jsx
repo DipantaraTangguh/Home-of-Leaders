@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Navbar from "../components/Layouts/Navbar";
-import { Footer } from "../components/Layouts/Footer";
-import { ActiveActivityData } from "../assets/data/ActiveActivityData";
-import { ApplicationStatusData } from "../assets/data/ApplicationStatusData";
-import { ActiveActivitySection, ApplicationStatusSection } from "../components/Fragments/ProfileActivitySection";
+import Navbar from "../../components/Layouts/Navbar";
+import { Footer } from "../../components/Layouts/Footer";
+import { ActiveActivityData } from "../../assets/data/ActiveActivityData";
+import { ApplicationStatusData } from "../../assets/data/ApplicationStatusData";
+import { ActiveActivitySection, ApplicationStatusSection } from "../../components/Fragments/ProfileActivitySection";
 
 const ProfileActivityPage = () => {
   // STATE VARIABLES

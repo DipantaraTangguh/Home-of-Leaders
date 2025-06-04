@@ -12,8 +12,7 @@ import {
 } from "../Elements/AlumniCenterDetailCard";
 import { SearchBar } from "../Elements/SearchBar";
 import { NoProgramSelected } from "../Elements/NoProgramSelected";
-import { PresencePopUp} from "../Elements/PresencePopUp"; 
-import { SuccessPresencePopUp } from "../Elements/SuccessPresencePopUp"
+import { PresencePopUp, SuccessPresencePopUp} from "../Elements/PresenceProgramPopUp"; 
 
 export const ActiveActivitySection = ({
   ActiveActivityData,
@@ -139,7 +138,7 @@ export const ActiveActivitySection = ({
         <div className="w-full lg:w-full p-6 border border-[#DEE2E6] rounded-[20px] bg-white max-h-[80vh] overflow-hidden ">
           <div
             className="overflow-y-auto px-5 py-2"
-            style={{ maxHeight: "calc(80vh - 3.5rem)" }}
+            style={{ maxHeight: "calc(80vh - 3.5rem)"}}
           >
             {selectedActivity ? (
               renderingDetailsType(selectedActivity)

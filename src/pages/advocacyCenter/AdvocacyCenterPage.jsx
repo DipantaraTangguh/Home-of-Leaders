@@ -1,12 +1,12 @@
-import Navbar from "../components/Layouts/Navbar";
+import Navbar from "../../components/Layouts/Navbar";
 import { useState } from "react";
-import { Footer } from "../components/Layouts/Footer";
-import { AdvocacyCentreData } from "../assets/data/AdvocacyCentreData";
+import { Footer } from "../../components/Layouts/Footer";
+import { AdvocacyCentreData } from "../../assets/data/AdvocacyCentreData";
 import { CircleArrowOutUpRight } from "lucide-react";
 import {
   IYSFScrollableDetail,
   IYSFScrollableList,
-} from "../components/Fragments/AlumniCenterDetailSection";
+} from "../../components/Fragments/AlumniCenterDetailSection";
 
 const AdvocacyCenter = () => {
   // STATE VARIABLES
