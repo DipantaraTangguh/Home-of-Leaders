@@ -120,7 +120,7 @@ function App() {
             <Route path="/settings" element={<ProfileSettingsPage />} />
 
             {/* Profile Notifikasi Page */}
-            <Route path="/notifikasi" element={<ProfileNotifikasiPage />} />
+            <Route path="/notifications" element={<ProfileNotifikasiPage />} />
           </Routes>
         </BrowserRouter>
       </NotificationsProvider>

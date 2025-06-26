@@ -89,7 +89,7 @@ const ProfilePicture = () => {
               <div className="relative">
                 <button
                   className="p-1 rounded-full hover:bg-gray-100 hover:text-[#0d4690] cursor-pointer"
-                  onClick={() => navigate("/notifikasi")}
+                  onClick={() => navigate("/notifications")}
                 >
                   <Bell />
                 </button>

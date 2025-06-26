@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import MenuItem from "../Elements/MenuItem";
 
@@ -7,41 +6,47 @@ const Menu = ({ navigate, closeMenu }) => {
   const location = useLocation();
   const currentPath = location.pathname || "/landing-page";
 
-  // State & refs untuk kontrol hover delay masing-masing dropdown
+  // Determine active states
+  const isAlumniActive =
+    currentPath.startsWith("/alumni-center") ||
+    currentPath.startsWith("/callforfellows") ||
+    currentPath.startsWith("/bondingactivities");
+  const isAdvActive =
+    currentPath === "/advocacy-center" ||
+    currentPath.startsWith("/advocacy-center/");
+  const isResActive =
+    currentPath === "/research-center" ||
+    currentPath.startsWith("/research-center/");
+
+  // State & refs for hover delays
   const [advHover, setAdvHover] = useState(false);
   const advTimer = useRef(null);
   const [resHover, setResHover] = useState(false);
   const resTimer = useRef(null);
 
-  // Daftar menu utama
+  // Menu definitions
   const menuItems = [
     { label: "Beranda", path: "/landing-page" },
     { label: "Alumni Center", path: "/alumni-center" },
-    { label: "Advocacy Center", path: "/advocacy-center" },
-    { label: "Research Center", path: "/research-center" },
+    { label: "Advocacy Center", path: "/advocacy-center", hasDropdown: true },
+    { label: "Research Center", path: "/research-center", hasDropdown: true },
     { label: "Surat Rekomendasi", path: "/surat-rekomendasi" },
   ];
 
-  // Sub‑menu untuk Advocacy Center
   const advDropdown = [{ label: "IYSF", path: "/advocacy-center/iysf" }];
-  // Sub‑menu untuk Research Center
   const resDropdown = [
     { label: "Publikasi", path: "/research-center/publikasi" },
     { label: "Prosiding", path: "/research-center/prosiding" },
     { label: "My Research", path: "/research-center/my-research" },
   ];
 
-  // Cek active path untuk masing-masing
-  const isAdvActive = currentPath.startsWith("/advocacy-center");
-  const isResActive = currentPath.startsWith("/research-center");
-
-  // Navigasi & tutup menu mobile
+  // Navigation handler
   const handleClick = (path) => {
     navigate(path);
     if (closeMenu) closeMenu();
   };
 
-  // Helper untuk hover delay dropdown Advocacy
+  // Hover helpers
   const advEnter = () => {
     clearTimeout(advTimer.current);
     setAdvHover(true);
@@ -52,7 +57,6 @@ const Menu = ({ navigate, closeMenu }) => {
   const advDropdownEnter = () => clearTimeout(advTimer.current);
   const advDropdownLeave = () => setAdvHover(false);
 
-  // Helper untuk hover delay dropdown Research
   const resEnter = () => {
     clearTimeout(resTimer.current);
     setResHover(true);
@@ -66,8 +70,22 @@ const Menu = ({ navigate, closeMenu }) => {
   return (
     <div className="space-y-4 md:space-y-0 md:space-x-8 flex items-center">
       {menuItems.map((menu) => {
-        // Advocacy Center dengan dropdown sendiri
-        if (menu.label === "Advocacy Center") {
+        // Alumni Center
+        if (menu.label === "Alumni Center") {
+          return (
+            <MenuItem
+              key={menu.label}
+              item={menu.label}
+              path="/alumni-center"
+              activePath={isAlumniActive ? "/alumni-center" : currentPath}
+              onClick={() => handleClick(menu.path)}
+              extraClasses="block md:inline-block cursor-pointer px-4 py-2"
+            />
+          );
+        }
+
+        // Advocacy Center with dropdown
+        if (menu.hasDropdown && menu.label === "Advocacy Center") {
           return (
             <div
               key={menu.label}
@@ -77,7 +95,7 @@ const Menu = ({ navigate, closeMenu }) => {
             >
               <MenuItem
                 item={menu.label}
-                path="/advocacy-center"
+                path={menu.path}
                 activePath={isAdvActive ? "/advocacy-center" : currentPath}
                 onClick={() => {}}
                 extraClasses="block md:inline-block cursor-default px-4 py-2"
@@ -87,7 +105,7 @@ const Menu = ({ navigate, closeMenu }) => {
                 <div
                   onMouseEnter={advDropdownEnter}
                   onMouseLeave={advDropdownLeave}
-                  className="absolute top-full left-0 mt-1 w-70 p-5 bg-white border border-gray-100 shadow-sm rounded-tr-3xl rounded-br-3xl rounded-bl-3xl transition duration-150 z-20 "
+                  className="absolute top-full left-0 mt-1 w-70 p-5 bg-white border border-gray-100 shadow-sm rounded-tr-3xl rounded-br-3xl rounded-bl-3xl transition duration-150 z-20"
                 >
                   {advDropdown.map((dd) => (
                     <button
@@ -103,18 +121,19 @@ const Menu = ({ navigate, closeMenu }) => {
             </div>
           );
         }
-        // Research Center dengan dropdown sendiri
-        if (menu.label === "Research Center") {
+
+        // Research Center with dropdown
+        if (menu.hasDropdown && menu.label === "Research Center") {
           return (
             <div
               key={menu.label}
-              className="relative inline-block "
+              className="relative inline-block"
               onMouseEnter={resEnter}
               onMouseLeave={resLeave}
             >
               <MenuItem
                 item={menu.label}
-                path="/research-center"
+                path={menu.path}
                 activePath={isResActive ? "/research-center" : currentPath}
                 onClick={() => {}}
                 extraClasses="block md:inline-block cursor-default px-4 py-2"
@@ -141,7 +160,7 @@ const Menu = ({ navigate, closeMenu }) => {
           );
         }
 
-        // Menu biasa lainnya
+        // Default clickable items
         return (
           <MenuItem
             key={menu.label}
@@ -154,7 +173,7 @@ const Menu = ({ navigate, closeMenu }) => {
         );
       })}
 
-      {/* Profile untuk mobile */}
+      {/* Profile for mobile */}
       <MenuItem
         item="Profile"
         path="/profile"

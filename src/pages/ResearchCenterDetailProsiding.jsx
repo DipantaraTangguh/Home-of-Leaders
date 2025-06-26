@@ -272,12 +272,12 @@ const ResearchCenterDetailProsiding = () => {
         {/* Modal Overlay */}
         {showTeamModal && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 relative">
+            <div className="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-12 relative">
               <button
                 onClick={closeTeamModal}
-                className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+                className="absolute top-5 right-7 text-gray-500 hover:text-gray-800"
               >
-                <X size={20} className="cursor-pointer" />
+                <X size={30} className="cursor-pointer" />
               </button>
               <h3 className="text-lg font-semibold mb-4">{modalTitle}</h3>
 
