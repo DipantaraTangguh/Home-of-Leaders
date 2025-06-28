@@ -73,7 +73,7 @@ export function ProgramDescription() {
 }
 
 import React, { useState } from "react";
-import GrayLine from "../Elements/GrayLine";
+import { GrayLine } from "../Elements/GrayLine";
 import centers from "../../assets/data/focusAreaData";
 
 export function FocusArea() {
@@ -114,18 +114,18 @@ export function FocusArea() {
   );
 }
 
-import seminarData from "../../assets/data/SeminarData";
+import { SeminarDetailData } from "../../assets/data/SeminarDetailData";
 
 export function SeminarRecomendation() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % seminarData.length);
+    setActiveIndex((prev) => (prev + 1) % SeminarDetailData.length);
   };
 
   const handlePrev = () => {
     setActiveIndex(
-      (prev) => (prev - 1 + seminarData.length) % seminarData.length
+      (prev) => (prev - 1 + SeminarDetailData.length) % SeminarDetailData.length
     );
   };
 
@@ -142,11 +142,11 @@ export function SeminarRecomendation() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mt-6">
             <div className="max-w-4xl">
               <h2 className="text-2xl font-bold mb-4">
-                {seminarData[activeIndex].title}
+                {SeminarDetailData[activeIndex].title}
               </h2>
               <div className="description text-justify">
                 <p className="text-gray-700 mb-6 whitespace-pre-line min-h-70">
-                  {seminarData[activeIndex].description}
+                  {SeminarDetailData[activeIndex].description}
                 </p>
               </div>
 
@@ -163,7 +163,7 @@ export function SeminarRecomendation() {
 
             <div className="relative">
               <img
-                src={seminarData[activeIndex].image}
+                src={SeminarDetailData[activeIndex].image}
                 alt="Seminar Cover"
                 className="rounded-2xl shadow-xl w-[300px] lg:w-[340px]"
               />
@@ -215,7 +215,7 @@ export function CollaborationFlow() {
   );
 }
 
-import alumniData from "../../assets/data/alumniData";
+import { AlumniInformationsData } from "../../assets/data/AlumniInformationsData"
 import { useNavigate } from "react-router-dom";
 
 const badgeStyles = {
@@ -226,7 +226,7 @@ const badgeStyles = {
 };
 
 export function AlumniSuccessStory() {
-  const [selectedAlumni, setSelectedAlumni] = useState(alumniData[0]);
+  const [selectedAlumni, setSelectedAlumni] = useState(AlumniInformationsData[0]);
   const navigate = useNavigate();
 
   return (
@@ -285,7 +285,7 @@ export function AlumniSuccessStory() {
 
           {/* Bagian kanan  */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center">
-            {alumniData.map((alumni, index) => (
+            {AlumniInformationsData.map((alumni, index) => (
               <div
                 key={index}
                 className={`cursor-pointer rounded-2xl p-2 border-4 transition hover:bg-[#0d4690]/10 ${

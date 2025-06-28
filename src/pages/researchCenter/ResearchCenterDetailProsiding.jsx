@@ -11,10 +11,10 @@ import {
   ChevronUp,
   X,
 } from "lucide-react";
-import prosidingData from "../assets/data/prosidingData";
-import Navbar from "../components/Layouts/Navbar";
-import { Footer } from "../components/Layouts/Footer";
-import { ResearchCenterDetailBackButton } from "../components/Fragments/ResearchCenterDetailSection";
+import { ProsidingDetailData } from "../../assets/data/ProsidingDetailData";
+import Navbar from "../../components/Layouts/Navbar";
+import { Footer } from "../../components/Layouts/Footer";
+import { ResearchCenterDetailBackButton } from "../../components/Fragments/ResearchCenterDetailSection";
 
 const ResearchCenterDetailProsiding = () => {
   const INITIAL_COUNT = 6;
@@ -24,7 +24,7 @@ const ResearchCenterDetailProsiding = () => {
   const [showTeamModal, setShowTeamModal] = useState(false);
   const [modalType, setModalType] = useState(null); // 'penyusun' or 'penulis'
 
-  const research = prosidingData.find((item) => item.slug === slug);
+  const research = ProsidingDetailData.find((item) => item.slug === slug);
   if (!research) {
     return (
       <div className="container mx-auto p-6 text-center">

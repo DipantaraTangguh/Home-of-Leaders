@@ -1,5 +1,5 @@
-import Navbar from "../components/Layouts/Navbar";
-import { Footer } from "../components/Layouts/Footer";
+import Navbar from "../../components/Layouts/Navbar";
+import { Footer } from "../../components/Layouts/Footer";
 
 import {
   RLHeaderBanner,
@@ -7,7 +7,7 @@ import {
   RLSubmitForm,
   RLStatusNull,
   RLStatusContent,
-} from "../components/Fragments/RecommendationLetterSection";
+} from "../../components/Fragments/RecommendationLetterSection";
 
 const RecommendationSection = () => {
   return (

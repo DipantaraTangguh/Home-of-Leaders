@@ -1,12 +1,12 @@
-import Navbar from "../components/Layouts/Navbar";
-import { Footer } from "../components/Layouts/Footer";
-import myresearchData from "../assets/data/myresearchData";
-import ResearchCenterTotalResearch from "../components/Elements/ResearchCenterTotalResearch";
-import ResearchCenterSearchInput from "../components/Fragments/ResearchCenterSearchInput";
-import ResearchCenterCardList from "../components/Fragments/ResearchCenterCardList";
-import ResearchCenterModal from "../components/Fragments/ResearchCenterModal";
-import Container from "../components/Layouts/Container";
-import useResearchCenterModal from "../hooks/useResearchCenterModal";
+import Navbar from "../../components/Layouts/Navbar";
+import { Footer } from "../../components/Layouts/Footer";
+import { MyResearchData } from "../../assets/data/MyResearchData";
+import ResearchCenterTotalResearch from "../../components/Elements/ResearchCenterTotalResearch";
+import ResearchCenterSearchInput from "../../components/Fragments/ResearchCenterSearchInput";
+import ResearchCenterCardList from "../../components/Fragments/ResearchCenterCardList";
+import ResearchCenterModal from "../../components/Fragments/ResearchCenterModal";
+import Container from "../../components/Layouts/Container";
+import useResearchCenterModal from "../../hooks/useResearchCenterModal";
 
 const ResearchCenterMyResearchPage = () => {
   const {
@@ -29,14 +29,14 @@ const ResearchCenterMyResearchPage = () => {
         </div>
 
         {/* Total Research */}
-        <ResearchCenterTotalResearch total={myresearchData.length} />
+        <ResearchCenterTotalResearch total={MyResearchData.length} />
 
         {/* Search & Add */}
         <ResearchCenterSearchInput addOnClick={handleOpen} />
 
         {/* Daftar Kartu Publikasi */}
         <ResearchCenterCardList
-          data={myresearchData}
+          data={MyResearchData}
           detailPathPrefix="/research-center/my-research"
           showStatus
         />

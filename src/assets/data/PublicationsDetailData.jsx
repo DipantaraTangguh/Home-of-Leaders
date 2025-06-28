@@ -1,4 +1,4 @@
-const publikasiData = [
+export const PublicationsDetailData = [
   {
     id: 1,
     slug: "accelerating-the-achievement-of-national-sustainable-development-goals",
@@ -65,5 +65,3 @@ const publikasiData = [
     ],
   },
 ];
-
-export default publikasiData;

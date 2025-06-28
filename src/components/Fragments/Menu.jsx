@@ -26,7 +26,7 @@ const Menu = ({ navigate, closeMenu }) => {
 
   // Menu definitions
   const menuItems = [
-    { label: "Beranda", path: "/landing-page" },
+    { label: "Beranda", path: "/" },
     { label: "Alumni Center", path: "/alumni-center" },
     { label: "Advocacy Center", path: "/advocacy-center", hasDropdown: true },
     { label: "Research Center", path: "/research-center", hasDropdown: true },
@@ -35,7 +35,7 @@ const Menu = ({ navigate, closeMenu }) => {
 
   const advDropdown = [{ label: "IYSF", path: "/advocacy-center/iysf" }];
   const resDropdown = [
-    { label: "Publikasi", path: "/research-center/publikasi" },
+    { label: "Publikasi", path: "/research-center/publication" },
     { label: "Prosiding", path: "/research-center/prosiding" },
     { label: "My Research", path: "/research-center/my-research" },
   ];

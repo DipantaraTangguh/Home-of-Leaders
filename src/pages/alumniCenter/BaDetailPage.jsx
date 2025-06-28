@@ -1,9 +1,9 @@
-import Navbar from "../components/Layouts/Navbar";
+import Navbar from "../../components/Layouts/Navbar";
 import { useState, useEffect } from "react";
-import { Footer } from "../components/Layouts/Footer";
-import { BondingActivitiesData } from "../assets/data/BondingActivitiesData";
-import { SearchBar } from "../components/Elements/SearchBar";
-import { BAScrollableDetail, BAScrollableList } from "../components/Fragments/AlumniCenterDetailSection";
+import { Footer } from "../../components/Layouts/Footer";
+import { BondingActivitiesData } from "../../assets/data/BondingActivitiesData";
+import { SearchBar } from "../../components/Elements/SearchBar";
+import { BAScrollableDetail, BAScrollableList } from "../../components/Fragments/AlumniCenterDetailSection";
 
 const BaDetailPage = () => {
   // STATE VARIABLES

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Calendar, ChevronDown, Download } from "lucide-react";
-import recommendationLetterStatusData from "../../assets/data/recomendationLetterStatusData";
+import { RecommendationLetterStatusData } from "../../assets/data/recomendationLetterStatusData";
 
 export function RLHeaderBanner() {
   return (
@@ -220,7 +220,7 @@ export function RLStatusContent() {
             </tr>
           </thead>
           <tbody>
-            {recommendationLetterStatusData.map((item) => (
+            {RecommendationLetterStatusData.map((item) => (
               <tr key={item.id} className="border-b border-[#ADB5BD] ">
                 <td className="px-4 py-8 text-sm text-gray-600">{item.id}.</td>
                 <td className="px-4 py-3 text-sm text-gray-800">

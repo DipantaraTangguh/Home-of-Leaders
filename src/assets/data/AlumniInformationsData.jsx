@@ -1,4 +1,4 @@
-const alumniData = [
+export const AlumniInformationsData = [
   {
     slug: "rahmat-pribadi",
     active: true,
@@ -169,5 +169,3 @@ const alumniData = [
     quote: `"Membangun bangsa berarti membangun manusia. Dengan membekali mereka dengan wawasan, keterampilan, dan nilai-nilai kepemimpinan, kita menciptakan generasi yang siap menghadapi tantangan dan membawa perubahan."`,
   },
 ];
-
-export default alumniData;

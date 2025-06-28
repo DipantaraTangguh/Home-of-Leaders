@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Bell } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useNotifications } from "../../contexts/NotificationContext";
@@ -43,8 +43,8 @@ const ProfilePicture = () => {
 
   // define your routes
   const routes = {
-    "Data Alumni": "/data-alumni",
-    Kegiatanku: "/kegiatanku",
+    "Data Alumni": "/alumni-data",
+    Kegiatanku: "/my-activity",
     Pengaturan: "/settings",
     Keluar: "/",
   };

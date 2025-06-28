@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useState } from "react";
-import { notificationsData } from "../assets/data/notificationsData";
+import { NotificationsRowData } from "../assets/data/NotificationsRowData"
 
 const NotificationsContext = createContext();
 
 export function NotificationsProvider({ children }) {
-  const [notifications, setNotifications] = useState(notificationsData);
+  const [notifications, setNotifications] = useState(NotificationsRowData);
 
   const markAllAsRead = () => {
     setNotifications((arr) => arr.map((n) => ({ ...n, unread: false })));

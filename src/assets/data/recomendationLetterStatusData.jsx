@@ -1,4 +1,4 @@
-const recommendationLetterStatusData = [
+export const RecommendationLetterStatusData = [
   {
     id: 1,
     instansi: "PT Bank Rakyat Indonesia (Persero) Tbk.",
@@ -34,6 +34,4 @@ const recommendationLetterStatusData = [
     tanggal: "23 Des 2024",
     status: "Rejected",
   },
-];
-
-export default recommendationLetterStatusData;
+]

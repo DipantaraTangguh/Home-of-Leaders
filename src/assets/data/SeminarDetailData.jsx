@@ -1,4 +1,4 @@
-const seminarData = [
+export const SeminarDetailData = [
   {
     title: "SEMINAR NASIONAL 2023",
     description:
@@ -48,4 +48,3 @@ Perlunya anggaran yang memadai, normalisasi drainase, edukasi, serta perubahan p
   },
 ];
 
-export default seminarData;

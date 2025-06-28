@@ -1,4 +1,4 @@
-const prosidingData = [
+export const ProsidingDetailData = [
   {
     id: 1,
     slug: "paper-konferensi-bcf-2025",
@@ -361,5 +361,3 @@ const prosidingData = [
     ],
   },
 ];
-
-export default prosidingData;

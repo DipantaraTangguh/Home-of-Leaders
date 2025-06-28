@@ -33,7 +33,11 @@ export const CallForFellowsData = [
       "Peserta mendapatkan sertifikat dari Bakrie Center Foundation",
       "Mendapatkan pengalaman kerja",
     ],
+<<<<<<< HEAD
     applyingLink: "https://www.linkedin.com/company/pt-bank-jago-tbk/jobs/",
+=======
+    applyingLink: "https://jobstreet.com",
+>>>>>>> 16943dd43e1f81a53218f765479d2db4912d855a
     contactInfo: [
       "Rahmad Dorojathun (0812-3456-7890)",
       "Safira Guna Azzahra (0812-3456-7890)",

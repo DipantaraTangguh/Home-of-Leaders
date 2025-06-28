@@ -1,19 +1,19 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import Navbar from "../components/Layouts/Navbar";
-import myresearchData from "../assets/data/myresearchData";
-import { Footer } from "../components/Layouts/Footer";
+import Navbar from "../../components/Layouts/Navbar";
+import { MyResearchData } from "../../assets/data/MyResearchData";
+import { Footer } from "../../components/Layouts/Footer";
 import {
   ResearchCenterDetailBackButton,
   ResearchCenterDetailMain,
-} from "../components/Fragments/ResearchCenterDetailSection";
+} from "../../components/Fragments/ResearchCenterDetailSection";
 
 const ResearchCenterDetailMyResearch = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
 
   // Cari data berdasarkan slug dari myresearchData
-  const research = myresearchData.find((item) => item.slug === slug);
+  const research = MyResearchData.find((item) => item.slug === slug);
 
   if (!research) {
     return (

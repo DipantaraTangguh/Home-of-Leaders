@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
-import { RightIlustration } from "../components/Elements/RightIlustration";
+import { RightIlustration } from "../../components/Elements/RightIlustration";
 
 const LoginPage = () => {
   // State Variables
@@ -128,7 +128,7 @@ const LoginPage = () => {
             }`}
             disabled={!email.length > 0 && !password.length > 0}
             onClick={() => {
-              navigate("/landing-page");
+              navigate("/");
             }}
           >
             Masuk
