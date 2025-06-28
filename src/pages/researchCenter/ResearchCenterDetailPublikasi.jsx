@@ -6,7 +6,7 @@ import {
   ResearchCenterDetailBackButton,
   ResearchCenterDetailMain,
 } from "../../components/Fragments/ResearchCenterDetailSection";
-import { PublicationsDetailData } from "../../assets/data/PublicationsDetailData"
+import { PublicationsDetailData } from "../../assets/data/PublicationsDetailData";
 
 const ResearchCenterDetailPublikasi = () => {
   const { slug } = useParams();
@@ -31,13 +31,13 @@ const ResearchCenterDetailPublikasi = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <section className="container mx-auto py-6 px-15 pb-20">
         <ResearchCenterDetailBackButton link={"/research-center/publication"} />
 
         <ResearchCenterDetailMain research={research} />
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

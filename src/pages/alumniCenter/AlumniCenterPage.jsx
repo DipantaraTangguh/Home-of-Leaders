@@ -9,7 +9,7 @@ import { Footer } from "../../components/Layouts/Footer";
 function AlumniCenterPage() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* FIXED */}
       <main className="container mx-auto py-6 px-15 pb-20">
         {/* TITLE */}
@@ -24,7 +24,7 @@ function AlumniCenterPage() {
 
         <IYSFSection />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

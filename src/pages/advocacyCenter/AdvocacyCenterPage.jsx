@@ -14,7 +14,7 @@ const AdvocacyCenter = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="overflow-x-hidden">
         {/* BANNER IMAGE */}
         <div className="relative w-screen h-[400px] sm:h-[500px] md:h-[600px] lg:h-[400px]">
@@ -73,7 +73,7 @@ const AdvocacyCenter = () => {
           </div>
         </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

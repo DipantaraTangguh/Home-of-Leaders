@@ -26,11 +26,11 @@ const Menu = ({ navigate, closeMenu }) => {
 
   // Menu definitions
   const menuItems = [
-    { label: "Beranda", path: "/" },
+    { label: "Beranda", path: "/landing-page" },
     { label: "Alumni Center", path: "/alumni-center" },
     { label: "Advocacy Center", path: "/advocacy-center", hasDropdown: true },
     { label: "Research Center", path: "/research-center", hasDropdown: true },
-    { label: "Surat Rekomendasi", path: "/surat-rekomendasi" },
+    { label: "Surat Rekomendasi", path: "/recommendation-letter" },
   ];
 
   const advDropdown = [{ label: "IYSF", path: "/advocacy-center/iysf" }];

@@ -23,7 +23,7 @@ export default function ProfileSettingsPage() {
 
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <Container>
         <h2 className="text-3xl font-bold mb-12 mt-5 text-[#0D4690] mx-auto container ">
           Pengaturan
@@ -73,7 +73,7 @@ export default function ProfileSettingsPage() {
         </div>
       </Container>
 
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

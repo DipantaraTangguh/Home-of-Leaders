@@ -59,7 +59,7 @@ const ResearchCenterDetailProsiding = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <section className="container mx-auto py-6 px-4 lg:px-15 pb-20">
         <ResearchCenterDetailBackButton link={"/research-center/prosiding"} />
 
@@ -293,7 +293,7 @@ const ResearchCenterDetailProsiding = () => {
           </div>
         )}
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

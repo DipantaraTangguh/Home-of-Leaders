@@ -13,7 +13,7 @@ import { Footer } from "../../components/Layouts/Footer";
 export default function ProfileDataAlumniPage() {
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <Container>
         <h2 className="text-[#0D4690] text-3xl font-bold mb-2 pb-10 pt-5">
           Data Alumni
@@ -33,7 +33,7 @@ export default function ProfileDataAlumniPage() {
         <ProfileProfessionalExperience />
         <ProfileInvolvementAchievement />
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

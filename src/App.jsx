@@ -39,6 +39,9 @@ import ResearchCenterMyresearchPage from "./pages/researchCenter/ResearchCenterM
 import ResearchCenterDetailMyResearch from "./pages/researchCenter/ResearchCenterDetailMyResearch";
 import ResearchCenterProsidingDetailArticle from "./pages/researchCenter/ResearchCenterProsidingDetailArticle";
 
+// OUTLET/LAYOUT
+import { DashboardLayout } from "./components/Layouts/DashboardLayout";
+
 function App() {
   return (
     <div>
@@ -46,67 +49,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             {/* LOGIN PAGE */}
-            <Route path="/login" element={<LoginPage />} />
-
-            {/* LANDING PAGE/HOMEPAGE */}
-            <Route path="/" element={<LandingPage />} />
-
-            {/* ALUMNI CENTER PAGE */}
-            <Route path="/alumni-center" element={<AlumniCenterPage />} />
-
-            {/* ADVOCACY CENTER IYSF PAGE */}
-            <Route
-              path="/advocacy-center/iysf"
-              element={<AdvocacyCenterPage />}
-            />
-
-            {/* RESEARCH CENTER PUBLICATION PAGE*/}
-            <Route
-              path="/research-center/publication"
-              element={<ResearchCenterPublikasiPage />}
-            />
-
-            {/* RESEARCH CENTER DETAIL PUBLICATION PAGE */}
-            <Route
-              path="/research-center/publication/:slug"
-              element={<ResearchCenterDetailPublikasi />}
-            />
-
-            {/* RESEARCH CENTER PROSIDING PAGE */}
-            <Route
-              path="/research-center/prosiding"
-              element={<ResearchCenterProsidingPage />}
-            />
-
-            {/* RESEARCH CENTER PROSIDING DETAIL PAGE */}
-            <Route
-              path="/research-center/prosiding/:slug"
-              element={<ResearchCenterDetailProsiding />}
-            />
-
-            {/* RESEARCH CENTER PROSIDING DETAIL ARTICLE PAGE */}
-            <Route
-              path="/research-center/prosiding/article/:articleSlug"
-              element={<ResearchCenterProsidingDetailArticle />}
-            />
-
-            {/* RESEARCH CENTER MY RESEARCH PAGE */}
-            <Route
-              path="/research-center/my-research"
-              element={<ResearchCenterMyresearchPage />}
-            />
-
-            {/* RESEARCH CENTER MY RESEARCH DETAILS */}
-            <Route
-              path="/research-center/my-research/:slug"
-              element={<ResearchCenterDetailMyResearch />}
-            />
-
-            {/* RECOMENDATION LETTER PAGE */}
-            <Route
-              path="/recomendation-letter"
-              element={<RecomendationLetterPage />}
-            />
+            <Route path="/" element={<LoginPage />} />
 
             {/* EMAIL VERRIFICATION PAGE */}
             <Route
@@ -117,32 +60,97 @@ function App() {
             {/* RESET PASSOWRD PAGE */}
             <Route path="/reset-password" element={<ResetPasswordPage />} />
 
-            {/* HOMEPAGE ALUMNI DETAIL */}
-            <Route path="/alumni/:slug" element={<AlumniDetail />} />
+            <Route element={<DashboardLayout />}>
+              {/* LANDING PAGE/HOMEPAGE */}
+              <Route path="/landing-page" element={<LandingPage />} />
 
-            {/* ALUMNI CENTER CALL FOR FELLOWS DETAIL PAGE */}
-            <Route
-              path="/alumni-center/call-for-fellows/"
-              element={<CffDetailPage />}
-            />
+              {/* ALUMNI CENTER PAGE */}
+              <Route path="/alumni-center" element={<AlumniCenterPage />} />
 
-            {/* ALUMNI CENTER BONDING ACTIVITIES DETAIL PAGE */}
-            <Route
-              path="/alumni-center/bonding-activities/"
-              element={<BaDetailPage />}
-            />
+              {/* ADVOCACY CENTER IYSF PAGE */}
+              <Route
+                path="/advocacy-center/iysf"
+                element={<AdvocacyCenterPage />}
+              />
 
-            {/* PROFILE DROPDOWN ALUMNI DATA PAGE */}
-            <Route path="/alumni-data" element={<ProfileDataAlumniPage />} />
+              {/* RESEARCH CENTER PUBLICATION PAGE*/}
+              <Route
+                path="/research-center/publication"
+                element={<ResearchCenterPublikasiPage />}
+              />
 
-            {/* PROFILE DROPDOWN MY ACTIVITY PAGE */}
-            <Route path="/my-activity" element={<ProfileActivityPage />} />
+              {/* RESEARCH CENTER DETAIL PUBLICATION PAGE */}
+              <Route
+                path="/research-center/publication/:slug"
+                element={<ResearchCenterDetailPublikasi />}
+              />
 
-            {/* PROFILE DROPDOWN SETTINGS */}
-            <Route path="/settings" element={<ProfileSettingsPage />} />
+              {/* RESEARCH CENTER PROSIDING PAGE */}
+              <Route
+                path="/research-center/prosiding"
+                element={<ResearchCenterProsidingPage />}
+              />
 
-            {/* PROFILE DROPDOWN NOTIFICATIONS PAGE */}
-            <Route path="/notifications" element={<ProfileNotifikasiPage />} />
+              {/* RESEARCH CENTER PROSIDING DETAIL PAGE */}
+              <Route
+                path="/research-center/prosiding/:slug"
+                element={<ResearchCenterDetailProsiding />}
+              />
+
+              {/* RESEARCH CENTER PROSIDING DETAIL ARTICLE PAGE */}
+              <Route
+                path="/research-center/prosiding/article/:articleSlug"
+                element={<ResearchCenterProsidingDetailArticle />}
+              />
+
+              {/* RESEARCH CENTER MY RESEARCH PAGE */}
+              <Route
+                path="/research-center/my-research"
+                element={<ResearchCenterMyresearchPage />}
+              />
+
+              {/* RESEARCH CENTER MY RESEARCH DETAILS */}
+              <Route
+                path="/research-center/my-research/:slug"
+                element={<ResearchCenterDetailMyResearch />}
+              />
+
+              {/* RECOMENDATION LETTER PAGE */}
+              <Route
+                path="/recommendation-letter"
+                element={<RecomendationLetterPage />}
+              />
+
+              {/* HOMEPAGE ALUMNI DETAIL */}
+              <Route path="/alumni/:slug" element={<AlumniDetail />} />
+
+              {/* ALUMNI CENTER CALL FOR FELLOWS DETAIL PAGE */}
+              <Route
+                path="/alumni-center/call-for-fellows/"
+                element={<CffDetailPage />}
+              />
+
+              {/* ALUMNI CENTER BONDING ACTIVITIES DETAIL PAGE */}
+              <Route
+                path="/alumni-center/bonding-activities/"
+                element={<BaDetailPage />}
+              />
+
+              {/* PROFILE DROPDOWN ALUMNI DATA PAGE */}
+              <Route path="/alumni-data" element={<ProfileDataAlumniPage />} />
+
+              {/* PROFILE DROPDOWN MY ACTIVITY PAGE */}
+              <Route path="/my-activity" element={<ProfileActivityPage />} />
+
+              {/* PROFILE DROPDOWN SETTINGS */}
+              <Route path="/settings" element={<ProfileSettingsPage />} />
+
+              {/* PROFILE DROPDOWN NOTIFICATIONS PAGE */}
+              <Route
+                path="/notifications"
+                element={<ProfileNotifikasiPage />}
+              />
+            </Route>
           </Routes>
         </BrowserRouter>
       </NotificationsProvider>

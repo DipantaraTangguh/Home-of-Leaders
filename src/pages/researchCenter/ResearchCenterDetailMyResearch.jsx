@@ -31,13 +31,13 @@ const ResearchCenterDetailMyResearch = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <section className="container mx-auto py-6 px-15 pb-20">
         <ResearchCenterDetailBackButton link={"/research-center/my-research"} />
 
         <ResearchCenterDetailMain research={research} />
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

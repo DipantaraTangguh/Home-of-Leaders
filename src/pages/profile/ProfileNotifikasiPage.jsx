@@ -11,7 +11,7 @@ export default function ProfileNotifikasiPage() {
 
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="container mx-auto mt-10 px-15 pb-15">
         <div className="border rounded-3xl border-gray-300 px-10 pt-4 pb-10">
           <div className="flex items-center justify-between my-4">
@@ -62,7 +62,7 @@ export default function ProfileNotifikasiPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

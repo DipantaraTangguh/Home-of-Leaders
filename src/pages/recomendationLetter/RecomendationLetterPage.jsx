@@ -12,7 +12,7 @@ import {
 const RecommendationSection = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <section className="relative mb-16 container mx-auto p-6">
         {/* Header Banner */}
         <RLHeaderBanner />
@@ -25,7 +25,7 @@ const RecommendationSection = () => {
       {/* Recommendation Letter Status */}
       <RLStatusContent />
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

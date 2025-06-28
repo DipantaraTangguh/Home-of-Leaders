@@ -128,7 +128,7 @@ const LoginPage = () => {
             }`}
             disabled={!email.length > 0 && !password.length > 0}
             onClick={() => {
-              navigate("/");
+              navigate("/landing-page");
             }}
           >
             Masuk

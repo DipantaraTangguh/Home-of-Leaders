@@ -15,7 +15,7 @@ const LandingPage = () => {
   return (
     <>
       {/* Navbar */}
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Jumbotron */}
       <Jumbotron />
@@ -38,7 +38,7 @@ const LandingPage = () => {
       {/* Detail Home of Leaders */}
       <DetailHomeofLeaders />
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

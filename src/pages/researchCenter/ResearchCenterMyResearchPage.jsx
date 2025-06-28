@@ -21,7 +21,7 @@ const ResearchCenterMyResearchPage = () => {
 
   return (
     <section>
-      <Navbar />
+      {/* <Navbar /> */}
       <Container>
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
@@ -51,7 +51,7 @@ const ResearchCenterMyResearchPage = () => {
           onFileChange={handleFileChange}
         />
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </section>
   );
 };

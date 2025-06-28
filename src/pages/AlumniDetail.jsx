@@ -20,7 +20,7 @@ const AlumniDetail = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="container mx-auto px-6 md:px-15 py-10 pb-20">
         <div className="mb-8">
@@ -84,7 +84,7 @@ const AlumniDetail = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

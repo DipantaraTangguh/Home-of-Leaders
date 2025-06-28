@@ -40,7 +40,7 @@ const ResearchCenterProsidingDetailArticle = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <section className="container mx-auto py-6 px-15 pb-20">
         <Link
           onClick={() => navigate(-1)}
@@ -179,7 +179,7 @@ const ResearchCenterProsidingDetailArticle = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
