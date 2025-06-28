@@ -33,7 +33,7 @@ export const CallForFellowsData = [
       "Peserta mendapatkan sertifikat dari Bakrie Center Foundation",
       "Mendapatkan pengalaman kerja",
     ],
-    applyingLink: "https://instagram.com/p.febrianoo_",
+    applyingLink: "https://www.linkedin.com/company/pt-bank-jago-tbk/jobs/",
     contactInfo: [
       "Rahmad Dorojathun (0812-3456-7890)",
       "Safira Guna Azzahra (0812-3456-7890)",
@@ -73,7 +73,7 @@ export const CallForFellowsData = [
       "Peserta mendapatkan sertifikat dari Bakrie Center Foundation",
       "Mendapatkan pengalaman kerja",
     ],
-    applyingLink: "https://jobstreet.com",
+    applyingLink: "https://e-recruitment.bri.co.id/",
     contactInfo: [
       "Rahmad Dorojathun (0812-3456-7890)",
       "Safira Guna Azzahra (0812-3456-7890)",
@@ -113,7 +113,7 @@ export const CallForFellowsData = [
       "Peserta mendapatkan sertifikat dari Bakrie Center Foundation",
       "Mendapatkan pengalaman kerja",
     ],
-    applyingLink: "https://jobstreet.com",
+    applyingLink: "https://www.bankmandiri.co.id/mandiri-career",
     contactInfo: [
       "Rahmad Dorojathun (0812-3456-7890)",
       "Safira Guna Azzahra (0812-3456-7890)",
@@ -153,7 +153,7 @@ export const CallForFellowsData = [
       "Peserta mendapatkan sertifikat dari Bakrie Center Foundation",
       "Mendapatkan pengalaman kerja",
     ],
-    applyingLink: "https://jobstreet.com",
+    applyingLink: "https://www.tokopedia.com/careers/",
     contactInfo: [
       "Rahmad Dorojathun (0812-3456-7890)",
       "Safira Guna Azzahra (0812-3456-7890)",
@@ -193,7 +193,8 @@ export const CallForFellowsData = [
       "Peserta mendapatkan sertifikat dari Bakrie Center Foundation",
       "Mendapatkan pengalaman kerja",
     ],
-    applyingLink: "https://jobstreet.com",
+    applyingLink:
+      "https://www.linkedin.com/company/bank-saqu/jobs?originalSubdomain=id",
     contactInfo: [
       "Rahmad Dorojathun (0812-3456-7890)",
       "Safira Guna Azzahra (0812-3456-7890)",

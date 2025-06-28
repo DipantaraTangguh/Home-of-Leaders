@@ -65,7 +65,7 @@ const ResearchCenterProsidingDetailArticle = () => {
             />
 
             <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-[#0D4690] text-[#0D4690] rounded-full hover:border-[#216EFF] transition">
-              <Download size={16} className="mr-2" /> Download
+              <Eye size={16} className="mr-2" /> Lihat
             </button>
 
             <div className="mt-6 text-left">
