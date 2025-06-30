@@ -1,6 +1,4 @@
-import Navbar from "../../components/Layouts/Navbar";
 import { useState } from "react";
-import { Footer } from "../../components/Layouts/Footer";
 import { AdvocacyCentreData } from "../../assets/data/AdvocacyCentreData";
 import { CircleArrowOutUpRight } from "lucide-react";
 import {
@@ -14,7 +12,6 @@ const AdvocacyCenter = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       <main className="overflow-x-hidden">
         {/* BANNER IMAGE */}
         <div className="relative w-screen h-[400px] sm:h-[500px] md:h-[600px] lg:h-[400px]">
@@ -73,7 +70,6 @@ const AdvocacyCenter = () => {
           </div>
         </div>
       </main>
-      {/* <Footer /> */}
     </>
   );
 };

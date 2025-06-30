@@ -12,8 +12,6 @@ import {
   X,
 } from "lucide-react";
 import { ProsidingDetailData } from "../../assets/data/ProsidingDetailData";
-import Navbar from "../../components/Layouts/Navbar";
-import { Footer } from "../../components/Layouts/Footer";
 import { ResearchCenterDetailBackButton } from "../../components/Fragments/ResearchCenterDetailSection";
 
 const ResearchCenterDetailProsiding = () => {
@@ -59,7 +57,6 @@ const ResearchCenterDetailProsiding = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       <section className="container mx-auto py-6 px-4 lg:px-15 pb-20">
         <ResearchCenterDetailBackButton link={"/research-center/prosiding"} />
 
@@ -72,7 +69,7 @@ const ResearchCenterDetailProsiding = () => {
               className="w-64 rounded-lg shadow-lg mx-auto"
             />
             <button className="mt-4 inline-flex items-center justify-center w-64 px-4 py-2 border-2 border-[#0D4690] text-[#0D4690] cursor-pointer font-semibold rounded-full hover:border-[#216EFF] transition">
-              <DownloadIcon size={20} className="mr-2" /> Download
+              <Eye size={20} className="mr-2" /> Lihat
             </button>
             <div className="mt-6 text-left">
               <span className="block font-medium mb-1">Link Dokumen</span>
@@ -163,7 +160,7 @@ const ResearchCenterDetailProsiding = () => {
                   <button
                     key={art.slug}
                     onClick={() =>
-                      navigate(`/research-center/prosiding/artikel/${art.slug}`)
+                      navigate(`/research-center/prosiding/article/${art.slug}`)
                     }
                     className="flex items-center bg-gray-100 hover:bg-gray-200 transition-colors rounded-2xl py-2 px-4 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   >
@@ -293,7 +290,6 @@ const ResearchCenterDetailProsiding = () => {
           </div>
         )}
       </section>
-      {/* <Footer /> */}
     </>
   );
 };

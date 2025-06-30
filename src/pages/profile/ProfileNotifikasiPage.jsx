@@ -1,7 +1,5 @@
 import React from "react";
-import Navbar from "../../components/Layouts/Navbar";
 import { cloneElement } from "react";
-import { Footer } from "../../components/Layouts/Footer";
 import { useNavigate } from "react-router-dom";
 import { useNotifications } from "../../contexts/NotificationContext";
 
@@ -11,7 +9,6 @@ export default function ProfileNotifikasiPage() {
 
   return (
     <main>
-      {/* <Navbar /> */}
       <div className="container mx-auto mt-10 px-15 pb-15">
         <div className="border rounded-3xl border-gray-300 px-10 pt-4 pb-10">
           <div className="flex items-center justify-between my-4">
@@ -62,7 +59,6 @@ export default function ProfileNotifikasiPage() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </main>
   );
 }

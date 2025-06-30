@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Navbar from "../../components/Layouts/Navbar";
-import { Footer } from "../../components/Layouts/Footer";
 import { ActiveActivityData } from "../../assets/data/ActiveActivityData";
 import { ApplicationStatusData } from "../../assets/data/ApplicationStatusData";
 import {
@@ -16,7 +14,6 @@ const ProfileActivityPage = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       {/* FIXED */}
       <main className="container mx-auto px-15 py-6">
         {/* TITLE PAGE */}
@@ -62,7 +59,6 @@ const ProfileActivityPage = () => {
           />
         )}
       </main>
-      {/* <Footer /> */}
     </>
   );
 };

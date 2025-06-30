@@ -1,5 +1,3 @@
-import Navbar from "../../components/Layouts/Navbar";
-import { Footer } from "../../components/Layouts/Footer";
 import { MyResearchData } from "../../assets/data/MyResearchData";
 import ResearchCenterTotalResearch from "../../components/Elements/ResearchCenterTotalResearch";
 import ResearchCenterSearchInput from "../../components/Fragments/ResearchCenterSearchInput";
@@ -21,7 +19,6 @@ const ResearchCenterMyResearchPage = () => {
 
   return (
     <section>
-      {/* <Navbar /> */}
       <Container>
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
@@ -51,7 +48,6 @@ const ResearchCenterMyResearchPage = () => {
           onFileChange={handleFileChange}
         />
       </Container>
-      {/* <Footer /> */}
     </section>
   );
 };

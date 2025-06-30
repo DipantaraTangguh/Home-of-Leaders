@@ -1,6 +1,4 @@
-import Navbar from "../../components/Layouts/Navbar";
 import { useState, useEffect } from "react";
-import { Footer } from "../../components/Layouts/Footer";
 import { BondingActivitiesData } from "../../assets/data/BondingActivitiesData";
 import { SearchBar } from "../../components/Elements/SearchBar";
 import {
@@ -27,7 +25,6 @@ const BaDetailPage = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       {/* FIXED */}
       <main className="container mx-auto px-15 py-6 my-15">
         {/* TITLE PAGE */}
@@ -56,7 +53,6 @@ const BaDetailPage = () => {
           />
         </div>
       </main>
-      {/* <Footer /> */}
     </>
   );
 };

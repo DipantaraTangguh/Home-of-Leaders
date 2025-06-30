@@ -1,5 +1,3 @@
-import Navbar from "../../components/Layouts/Navbar";
-import { Footer } from "../../components/Layouts/Footer";
 import Container from "../../components/Layouts/Container";
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
@@ -23,7 +21,6 @@ export default function ProfileSettingsPage() {
 
   return (
     <main>
-      {/* <Navbar /> */}
       <Container>
         <h2 className="text-3xl font-bold mb-12 mt-5 text-[#0D4690] mx-auto container ">
           Pengaturan
@@ -72,8 +69,6 @@ export default function ProfileSettingsPage() {
           </div>
         </div>
       </Container>
-
-      {/* <Footer /> */}
     </main>
   );
 }

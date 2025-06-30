@@ -8,9 +8,7 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import Navbar from "../../components/Layouts/Navbar";
 import { ProsidingDetailData } from "../../assets/data/ProsidingDetailData";
-import { Footer } from "../../components/Layouts/Footer";
 
 const ResearchCenterProsidingDetailArticle = () => {
   const { articleSlug } = useParams(); // slug artikel
@@ -40,7 +38,6 @@ const ResearchCenterProsidingDetailArticle = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       <section className="container mx-auto py-6 px-15 pb-20">
         <Link
           onClick={() => navigate(-1)}
@@ -179,7 +176,6 @@ const ResearchCenterProsidingDetailArticle = () => {
           </div>
         </div>
       </section>
-      {/* <Footer /> */}
     </>
   );
 };

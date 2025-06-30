@@ -1,6 +1,4 @@
-import Navbar from "../../components/Layouts/Navbar";
 import { PublicationsDetailData } from "../../assets/data/PublicationsDetailData";
-import { Footer } from "../../components/Layouts/Footer";
 import { HeaderTitle } from "../../components/Elements/HeaderTitle";
 import TotalResearch from "../../components/Elements/ResearchCenterTotalResearch";
 import ResearchCenterSearchInput from "../../components/Fragments/ResearchCenterSearchInput";
@@ -22,8 +20,6 @@ const ResearchCenterPublikasiPage = () => {
 
   return (
     <main>
-      {/* Navbar */}
-      {/* <Navbar /> */}
       {/* Container */}
       <Container>
         {/* Header */}
@@ -51,7 +47,6 @@ const ResearchCenterPublikasiPage = () => {
           onFileChange={handleFileChange}
         />
       </Container>
-      {/* <Footer /> */}
     </main>
   );
 };

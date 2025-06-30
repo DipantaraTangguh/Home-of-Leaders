@@ -31,13 +31,11 @@ const ResearchCenterDetailPublikasi = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
       <section className="container mx-auto py-6 px-15 pb-20">
         <ResearchCenterDetailBackButton link={"/research-center/publication"} />
 
         <ResearchCenterDetailMain research={research} />
       </section>
-      {/* <Footer /> */}
     </>
   );
 };
