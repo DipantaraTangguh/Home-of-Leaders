@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@config "../tailwind.config.js";
+
 body {
   font-family: "Poppins", sans-serif;
 }
