@@ -12,10 +12,16 @@ import {
 } from "../Elements/AlumniCenterDetailCard";
 import { useNavigate } from "react-router-dom";
 import { NoProgramSelected } from "../Elements/NoProgramSelected";
-import { AppliedNowPopUp, SuccessAppliedPopUp } from "../Elements/ApplyProgramPopUp";
+import {
+  AppliedNowPopUp,
+  SuccessAppliedPopUp,
+} from "../Elements/ApplyProgramPopUp";
 
-// CFF SCROLLABLE DETAILS AND SCROLLABLE CARD
-export const CFFScrollableList = ({ filteredFellows, setSelectedId }) => {
+export const CFFScrollableList = ({
+  filteredFellows,
+  selectedId,
+  onCardClick,
+}) => {
   return (
     // SCROLLABLE LIST CFF
     <div className="w-full lg:w-1/4 max-h-[80vh] border border-[#DEE2E6] rounded-[20px]">
@@ -31,9 +37,16 @@ export const CFFScrollableList = ({ filteredFellows, setSelectedId }) => {
             key={fellows.id}
             fellows={fellows}
             disableButton={true}
-            handleClicked={() => setSelectedId(fellows.id)}
+            selectedId={selectedId} // Pass selectedId untuk highlighting
+            handleClicked={() => onCardClick(fellows.id)} // Update ke onCardClick
           />
         ))}
+
+        {filteredFellows.length === 0 && (
+          <div className="text-center py-8 text-[#6C757D]">
+            Tidak ada data yang sesuai dengan pencarian
+          </div>
+        )}
       </div>
     </div>
   );
@@ -82,7 +95,35 @@ export const CFFScrollableDetail = ({ callForFellows, selectedId }) => {
 };
 
 // BA SCROLLABLE DETAILS AND SCROLLABLE CARD
-export const BAScrollableList = ({ filteredBonding, setSelectedId }) => {
+// export const BAScrollableList = ({ filteredBonding, setSelectedId }) => {
+//   return (
+//     // SCROLLABLE LIST BONDING ACTIVITIES
+//     <div className="w-full lg:w-1/4 max-h-[80vh] border border-[#DEE2E6] rounded-[20px]">
+//       {/* POSITION COUNT */}
+//       <h1 className="text-[#6C757D] font-bold px-4 py-3">
+//         Total Program: {filteredBonding.length}
+//       </h1>
+
+//       {/* SCROLLABLE CARD VERTICAL */}
+//       <div className="px-1 py-2 w-full max-h-[70vh] overflow-y-auto space-y-4">
+//         {filteredBonding.map((bonding) => (
+//           <AlumniCenterCardBA
+//             key={bonding.id}
+//             bonding={bonding}
+//             disableButton={true}
+//             handleClicked={() => setSelectedId(bonding.id)}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+export const BAScrollableList = ({
+  filteredBonding,
+  selectedId,
+  onCardClick,
+}) => {
   return (
     // SCROLLABLE LIST BONDING ACTIVITIES
     <div className="w-full lg:w-1/4 max-h-[80vh] border border-[#DEE2E6] rounded-[20px]">
@@ -98,9 +139,16 @@ export const BAScrollableList = ({ filteredBonding, setSelectedId }) => {
             key={bonding.id}
             bonding={bonding}
             disableButton={true}
-            handleClicked={() => setSelectedId(bonding.id)}
+            selectedId={selectedId} // Pass selectedId untuk highlighting
+            handleClicked={() => onCardClick(bonding.id)} // Update ke onCardClick
           />
         ))}
+
+        {filteredBonding.length === 0 && (
+          <div className="text-center py-8 text-[#6C757D]">
+            Tidak ada data yang sesuai dengan pencarian
+          </div>
+        )}
       </div>
     </div>
   );
@@ -115,8 +163,10 @@ export const BAScrollableDetail = ({ bondingActivities, selectedId }) => {
   const [showSuccessPopUp, setShowSuccessPupUp] = useState(false);
 
   const handleApplied = () => {
-    const selectedEvent = bondingActivities.find((item) => item.id === selectedId);
-    
+    const selectedEvent = bondingActivities.find(
+      (item) => item.id === selectedId
+    );
+
     if (selectedEvent.currentEvent !== "Closed") {
       setShowPopUp(true);
     }
@@ -190,7 +240,11 @@ export const BAScrollableDetail = ({ bondingActivities, selectedId }) => {
 };
 
 // IYSF SCROLLABLE DETAILS AND SCROLLABLE CARD
-export const IYSFScrollableList = ({ advocacyCentre, setSelectedId }) => {
+export const IYSFScrollableList = ({
+  advocacyCentre,
+  selectedId,
+  onCardClick,
+}) => {
   return (
     // SCROLLABLE LIST IYSF
     <div className="w-full lg:w-1/4 max-h-[80vh] border border-[#DEE2E6] rounded-[20px]">
@@ -206,9 +260,16 @@ export const IYSFScrollableList = ({ advocacyCentre, setSelectedId }) => {
             key={iysf.id}
             iysf={iysf}
             disableButton={true}
-            handleClicked={() => setSelectedId(iysf.id)}
+            selectedId={selectedId} // Pass selectedId untuk highlighting
+            handleClicked={() => onCardClick(iysf.id)} // Update ke onCardClick
           />
         ))}
+
+        {advocacyCentre.length === 0 && (
+          <div className="text-center py-8 text-[#6C757D]">
+            Tidak ada program yang tersedia
+          </div>
+        )}
       </div>
     </div>
   );

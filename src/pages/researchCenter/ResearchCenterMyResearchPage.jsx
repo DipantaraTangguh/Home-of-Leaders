@@ -1,10 +1,10 @@
-import { MyResearchData } from "../../assets/data/MyResearchData";
+import { MyResearchData } from "../../assets/data/MyresearchData";
 import ResearchCenterTotalResearch from "../../components/Elements/ResearchCenterTotalResearch";
 import ResearchCenterSearchInput from "../../components/Fragments/ResearchCenterSearchInput";
 import ResearchCenterCardList from "../../components/Fragments/ResearchCenterCardList";
 import ResearchCenterModal from "../../components/Fragments/ResearchCenterModal";
 import Container from "../../components/Layouts/Container";
-import useResearchCenterModal from "../../hooks/useResearchCenterModal";
+import useResearchCenterModal from "../../hooks/UseResearchCenterModal";
 
 const ResearchCenterMyResearchPage = () => {
   const {

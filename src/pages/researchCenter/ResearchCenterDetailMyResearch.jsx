@@ -1,12 +1,10 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import Navbar from "../../components/Layouts/Navbar";
-import { MyResearchData } from "../../assets/data/MyResearchData";
-import { Footer } from "../../components/Layouts/Footer";
 import {
   ResearchCenterDetailBackButton,
   ResearchCenterDetailMain,
 } from "../../components/Fragments/ResearchCenterDetailSection";
+import { MyResearchData } from "../../assets/data/MyresearchData";
 
 const ResearchCenterDetailMyResearch = () => {
   const { slug } = useParams();

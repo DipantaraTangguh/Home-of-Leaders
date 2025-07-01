@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { AdvocacyCentreData } from "../../assets/data/AdvocacyCentreData";
 import { CircleArrowOutUpRight } from "lucide-react";
 import {
@@ -6,9 +7,35 @@ import {
   IYSFScrollableList,
 } from "../../components/Fragments/AlumniCenterDetailSection";
 
-const AdvocacyCenter = () => {
-  // STATE VARIABLES
-  const [selectedId, setSelectedId] = useState(AdvocacyCentreData.id);
+const AdvocacyCenterPage = () => {
+  const { id } = useParams(); // Get ID from URL
+  const navigate = useNavigate();
+
+  // selectedId berdasarkan URL parameter
+  const selectedId = id ? parseInt(id) : null;
+
+  // FUNCTION FOR HANDLE CARD CLICK - UPDATE URL
+  const handleCardClick = (iysfId) => {
+    navigate(`/advocacy-center/iysf/${iysfId}`);
+  };
+
+  // FUNCTION FOR RESET SELECTION - KEMBALI KE LIST
+  const handleResetSelection = () => {
+    navigate("/advocacy-center/iysf");
+  };
+
+  // Validate if selected ID exists in data
+  useEffect(() => {
+    if (selectedId) {
+      const iysfExists = AdvocacyCentreData.find(
+        (iysf) => iysf.id === selectedId
+      );
+      if (!iysfExists) {
+        // If IYSF program doesn't exist, redirect to list
+        navigate("/advocacy-center/iysf", { replace: true });
+      }
+    }
+  }, [selectedId, navigate]);
 
   return (
     <>
@@ -59,13 +86,15 @@ const AdvocacyCenter = () => {
             {/* SCROLLABLE LIST LEFT */}
             <IYSFScrollableList
               advocacyCentre={AdvocacyCentreData}
-              setSelectedId={setSelectedId}
+              selectedId={selectedId} // Pass selectedId untuk highlighting
+              onCardClick={handleCardClick} // Pass click handler
             />
 
             {/* SCROLLABLE DETAILS RIGHT */}
             <IYSFScrollableDetail
               advocacyCentre={AdvocacyCentreData}
               selectedId={selectedId}
+              onClose={handleResetSelection} // Optional: untuk tombol close di detail
             />
           </div>
         </div>
@@ -74,4 +103,4 @@ const AdvocacyCenter = () => {
   );
 };
 
-export default AdvocacyCenter;
+export default AdvocacyCenterPage;

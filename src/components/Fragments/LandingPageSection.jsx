@@ -74,7 +74,7 @@ export function ProgramDescription() {
 
 import React, { useState } from "react";
 import { GrayLine } from "../Elements/GrayLine";
-import centers from "../../assets/data/focusAreaData";
+import centers from "../../assets/data/FocusAreaData";
 
 export function FocusArea() {
   const [activeCenter, setActiveCenter] = useState("alumni");
@@ -215,7 +215,7 @@ export function CollaborationFlow() {
   );
 }
 
-import { AlumniInformationsData } from "../../assets/data/AlumniInformationsData"
+import { AlumniInformationsData } from "../../assets/data/AlumniInformationsData";
 import { useNavigate } from "react-router-dom";
 
 const badgeStyles = {
@@ -226,7 +226,9 @@ const badgeStyles = {
 };
 
 export function AlumniSuccessStory() {
-  const [selectedAlumni, setSelectedAlumni] = useState(AlumniInformationsData[0]);
+  const [selectedAlumni, setSelectedAlumni] = useState(
+    AlumniInformationsData[0]
+  );
   const navigate = useNavigate();
 
   return (

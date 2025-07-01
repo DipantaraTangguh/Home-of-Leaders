@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Calendar, ChevronDown, Download } from "lucide-react";
-import { RecommendationLetterStatusData } from "../../assets/data/recomendationLetterStatusData";
+import { RecommendationLetterStatusData } from "../../assets/data/RecomendationLetterStatusData";
 
 export function RLHeaderBanner() {
   return (

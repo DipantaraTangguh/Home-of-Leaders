@@ -21,8 +21,10 @@ import ResetPasswordPage from "./pages/auth/ResetPasswordPage";
 
 // ALUMNI CENTER
 import AlumniCenterPage from "./pages/alumniCenter/AlumniCenterPage";
-import CffDetailPage from "./pages/alumniCenter/CffDetailPage";
+// import CffDetailPage from "./pages/alumniCenter/CffDetailPage";
 import BaDetailPage from "./pages/alumniCenter/BaDetailPage";
+import CffListPage from "./pages/alumniCenter/CffListPage";
+import BaListPage from "./pages/alumniCenter/BaListPage";
 
 // PROFILE
 import ProfileSettingsPage from "./pages/profile/ProfileSettingsPage";
@@ -70,6 +72,11 @@ function App() {
               {/* ADVOCACY CENTER IYSF PAGE */}
               <Route
                 path="/advocacy-center/iysf"
+                element={<AdvocacyCenterPage />}
+              />
+
+              <Route
+                path="/advocacy-center/iysf/:id"
                 element={<AdvocacyCenterPage />}
               />
 
@@ -126,14 +133,24 @@ function App() {
 
               {/* ALUMNI CENTER CALL FOR FELLOWS DETAIL PAGE */}
               <Route
-                path="/alumni-center/call-for-fellows/"
-                element={<CffDetailPage />}
+                path="/alumni-center/call-for-fellows"
+                element={<CffListPage />}
+              />
+
+              <Route
+                path="/alumni-center/call-for-fellows/:id"
+                element={<CffListPage />}
               />
 
               {/* ALUMNI CENTER BONDING ACTIVITIES DETAIL PAGE */}
               <Route
                 path="/alumni-center/bonding-activities/"
-                element={<BaDetailPage />}
+                element={<BaListPage />}
+              />
+
+              <Route
+                path="/alumni-center/bonding-activities/:id"
+                element={<BaListPage />}
               />
 
               {/* PROFILE DROPDOWN ALUMNI DATA PAGE */}
